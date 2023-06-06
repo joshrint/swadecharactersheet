@@ -5,7 +5,6 @@ export default function DerivedStats({pace, parry, toughness, reason, status}) {
   return (
     <>
     <div className='row row-col-1 row-col-md-2'>
-        <div className='col'>
             <div className='card derived-card'>
                 <div className='card-header'><h5>Pace</h5></div>
                 <div className='card-body'>
@@ -24,8 +23,6 @@ export default function DerivedStats({pace, parry, toughness, reason, status}) {
                     <p className='card-text'>{toughness}</p>
                 </div>
             </div>
-        </div>
-        <div className='col'>
             <div className='card derived-card'>
                 <div className='card-header'><h5>Reason</h5></div>
                 <div className='card-body'> 
@@ -42,7 +39,6 @@ export default function DerivedStats({pace, parry, toughness, reason, status}) {
                 <div className='card-body'>
                 </div>
             </div>
-        </div>
         
         
     </div>
