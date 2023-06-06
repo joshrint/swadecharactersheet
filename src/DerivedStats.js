@@ -38,8 +38,6 @@ export default function DerivedStats({pace, parry, toughness, reason, status}) {
         </div>
         <div className='card derived-card'>
             <div className='card-body'>
-                <h5 className='card-title'></h5>
-                <p className='card-text'></p>
             </div>
         </div>
     </div>
