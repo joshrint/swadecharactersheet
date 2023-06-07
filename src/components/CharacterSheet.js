@@ -4,7 +4,7 @@ import DerivedStats from './DerivedStats';
 import Popup from './Popup';
 import '../stylesheets/CharacterSheet.css';
 import axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
+//import { useNavigate, useParams } from 'react-router-dom';
 //Font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faPlus } from '@fortawesome/free-solid-svg-icons';
