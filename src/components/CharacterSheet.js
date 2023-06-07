@@ -19,7 +19,7 @@ export default function CharacterSheet() {
     const [abilityDesc, setAbilityDesc] = useState();
 
     const { id } = useParams();
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
     useEffect(() => {
         axios
