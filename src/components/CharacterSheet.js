@@ -4,7 +4,7 @@ import DerivedStats from './DerivedStats';
 import Popup from './Popup';
 import '../stylesheets/CharacterSheet.css';
 import axios from 'axios';
-//import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 //Font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -19,7 +19,6 @@ export default function CharacterSheet() {
     const [abilityDesc, setAbilityDesc] = useState();
 
     const { id } = useParams();
-    //const navigate = useNavigate();
 
     useEffect(() => {
         axios
