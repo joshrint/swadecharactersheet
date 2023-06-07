@@ -18,3 +18,17 @@ input[type='radio'] {
 input[type='checkbox'] {
     accent-color: #751d1d;
 }
+
+.edit-icon {
+    float:right;
+    margin-top: 3px;
+    opacity: 0;
+    margin-left: -1.2em;
+}
+.edit-icon:hover {
+    opacity: 1;
+}
+.add-icon{
+    float:right;
+    margin-right: 10px;
+}

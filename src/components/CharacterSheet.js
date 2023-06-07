@@ -2,8 +2,12 @@ import React, {useEffect, useState} from 'react'
 import ScoreArray from './ScoreArray'
 import DerivedStats from './DerivedStats';
 import Popup from './Popup';
-import './stylesheets/CharacterSheet.css'
-import characters from "./data/casper_teague.json";
+import '../stylesheets/CharacterSheet.css';
+import axios from 'axios';
+import { useNavigate, useParams } from 'react-router-dom';
+//Font awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 export default function CharacterSheet() {
 
@@ -14,9 +18,19 @@ export default function CharacterSheet() {
     const [abilityName, setAbilityName] = useState();
     const [abilityDesc, setAbilityDesc] = useState();
 
+    const { id } = useParams();
+    const navigate = useNavigate();
+
     useEffect(() => {
-        setCharacter(characters)
-    },[character]);
+        axios
+            .get(`https://swade-api.azurewebsites.net/api/characters/${id}`)
+            .then((res) =>{
+                setCharacter(res.data)
+            })
+            .catch((err) => {
+                console.log('Error from Character Sheet')
+            })
+    },[id]);
 
 
     const handleClose = ()=> {
@@ -26,24 +40,23 @@ export default function CharacterSheet() {
         
     }
     const handlePopup = (name, description) =>{
-        console.log(name, description, popup.show )
         setAbilityName(name);
         setAbilityDesc(description);
         setPopup({show:true});
     }
   return (
     <>
-    {character && character.length &&(
+    {character.name &&(
         <div className='container'>
             <div className='row'>
                 <div className='col'>
                     <div className='card'>
                         <div className='card-body'>
-                            <h1 className='card-title'>{character[0].name}</h1>
-                            <h5 className='card-subtitle mb-2 text-body-secondary'>Alias: {character[0].alias}</h5>
-                            <p className='card-text'>Rank: {character[0].rank}<br />
-                            Languages: {character[0].languages}<br />
-                            Faction: {character[0].faction}<br />
+                            <h1 className='card-title'>{character.name}</h1>
+                            <h5 className='card-subtitle mb-2 text-body-secondary'>Alias: {character.alias}</h5>
+                            <p className='card-text'>Rank: {character.rank}<br />
+                            Languages: {character.languages}<br />
+                            Faction: {character.faction}<br />
                             </p>
                         </div>
                     </div>
@@ -90,27 +103,28 @@ export default function CharacterSheet() {
             <div className='row'>
                 <div className='col-md'>
                 <div className='card'>
-                    <div className='card-header'><h3>Attributes</h3></div>
+                    <h3 className='card-header'>Attributes <FontAwesomeIcon icon={faPenToSquare} className='edit-icon' size="sm" /></h3>
                     <ul className="list-group list-group-flush">
-                        <li className="list-group-item"><ScoreArray diceLevel={character[0].agility} /> Agility</li>
-                        <li className="list-group-item"><ScoreArray diceLevel={character[0].smarts} /> Smarts</li>
-                        <li className="list-group-item"><ScoreArray diceLevel={character[0].spirit} /> Spirit</li>
-                        <li className="list-group-item"><ScoreArray diceLevel={character[0].strength} /> Strength</li>
-                        <li className="list-group-item"><ScoreArray diceLevel={character[0].vigor} /> Vigor</li>
+                        <li className="list-group-item"><ScoreArray diceLevel={character.agility} /> Agility</li>
+                        <li className="list-group-item"><ScoreArray diceLevel={character.smarts} /> Smarts</li>
+                        <li className="list-group-item"><ScoreArray diceLevel={character.spirit} /> Spirit</li>
+                        <li className="list-group-item"><ScoreArray diceLevel={character.strength} /> Strength</li>
+                        <li className="list-group-item"><ScoreArray diceLevel={character.vigor} /> Vigor</li>
                     </ul>       
                     </div>
                 </div>
                 <div className='col-md-4'>
-                    <DerivedStats pace={character[0].pace} parry={character[0].parry} toughness={character[0].toughness} reason={character[0].reason} status={character[0].status} />
+                    <DerivedStats pace={character.pace} parry={character.parry} toughness={character.toughness} reason={character.reason} status={character.status} />
                     
                 </div>
                 <div className='col-md'>
                     <div className='card'>
-                        <div className='card-header'><h3>Hinderances</h3></div>
+                        <h3 className='card-header'>Hinderances<FontAwesomeIcon icon={faPenToSquare} className='edit-icon' size="sm" /></h3>
                         <ul className='list-group list-group-flush'>
-                            {character[0].hinderances.map((h) =>(
-                                <li className='list-group-item'><div onClick={()=>handlePopup(h.name, h.description)}>{h.name}</div></li>
+                            {character.hinderances.map((h) =>(
+                                <li key={h.name} className='list-group-item'><span onClick={()=>handlePopup(h.name, h.description)}>{h.name}</span> <FontAwesomeIcon icon={faPenToSquare} className='edit-icon' /></li>
                             ))}
+                            <li className='list-group-item'><FontAwesomeIcon icon={faPlus} size='2xl' className='add-icon'/></li>
                         </ul>
                     </div>
                     
@@ -121,9 +135,10 @@ export default function CharacterSheet() {
                     <div className='card'>
                         <div className='card-header'><h3>Skills</h3></div>
                             <ul className='list-group list-group-flush'>
-                                {character[0].skills.map((s) =>(
-                                    <li className='list-group-item'><ScoreArray diceLevel={s.rank} /> {s.name}</li>
+                                {character.skills.map((s) =>(
+                                    <li key={s.name} className='list-group-item'><ScoreArray diceLevel={s.rank} /> {s.name} <FontAwesomeIcon icon={faPenToSquare} className='edit-icon' /></li>
                                 ))}
+                                <li className='list-group-item'><FontAwesomeIcon icon={faPlus} size='2xl' className='add-icon'/></li>
                             </ul>
                     </div>     
                 </div>
@@ -131,9 +146,10 @@ export default function CharacterSheet() {
                     <div className='card'>
                             <div className='card-header'><h3>Gear</h3></div>
                             <ul className='list-group list-group-flush'>
-                                {character[0].gear.map((g) =>(
-                                    <li className='list-group-item'>{g}</li>
+                                {character.gear.map((g) =>(
+                                    <li key={g} className='list-group-item'>{g} <FontAwesomeIcon className='edit-icon' icon={faPenToSquare} /></li>
                                 ))}
+                                <li className='list-group-item'><FontAwesomeIcon icon={faPlus} size='2xl' className='add-icon'/></li>
                             </ul>
                     </div>
                 </div>
@@ -141,9 +157,10 @@ export default function CharacterSheet() {
                     <div className='card'>
                             <div className='card-header'><h3>Edges & Advancements</h3></div>
                             <ul className='list-group list-group-flush'>
-                                {character[0].edges.map((e) => (
-                                    <li className='list-group-item'><div onClick={() => handlePopup(e.name, e.description)}>{e.name}</div></li>
+                                {character.edges.map((e) => (
+                                    <li key={e.name} className='list-group-item'><span onClick={() => handlePopup(e.name, e.description)}>{e.name}</span> <FontAwesomeIcon className='edit-icon' icon={faPenToSquare} /> </li>
                                 ))}
+                                <li className='list-group-item'><FontAwesomeIcon icon={faPlus} size='2xl' className='add-icon'/></li>
                             </ul>
                     </div>
                 </div>
@@ -160,15 +177,15 @@ export default function CharacterSheet() {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                {console.log(character[0])}
-                                {character[0].rippertech.map((rt) =>(
-                                    <tr>
+                                {character.rippertech.map((rt) =>(
+                                    <tr key={rt.name}>
                                         <td>{rt.name}</td>
                                         <td>{rt.benefit}</td>
                                     </tr>
                                 ))}
                                 </tbody>
                             </table>
+                            <p className='card-test'><FontAwesomeIcon icon={faPlus} size='2xl' className='add-icon'/></p>
                     </div>
                 </div>
                 <div className='col-md'>
@@ -185,8 +202,8 @@ export default function CharacterSheet() {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {character[0].powers.map((p) =>(
-                                        <tr>
+                                    {character.powers.map((p) =>(
+                                        <tr key={p.name}>
                                             <td>{p.name}</td>
                                             <td>{p.pp}</td>
                                             <td>{p.range}</td>
@@ -196,6 +213,7 @@ export default function CharacterSheet() {
                                     ))}
                                 </tbody>
                             </table>
+                            <p className='card-test'><FontAwesomeIcon icon={faPlus} size='2xl' className='add-icon'/></p>
                     </div>
                 </div>
             </div>
@@ -216,8 +234,8 @@ export default function CharacterSheet() {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                {character[0].weapons.map((w) =>(
-                                    <tr>
+                                {character.weapons.map((w) =>(
+                                    <tr key={w.name}>
                                         <td>{w.name}</td>
                                         <td>{w.range}</td>
                                         <td>{w.damage}</td>
@@ -229,6 +247,7 @@ export default function CharacterSheet() {
                                 ))}
                                 </tbody>
                             </table>
+                            <p className='card-test'><FontAwesomeIcon icon={faPlus} size='2xl' className='add-icon'/></p>
                     </div>
                 </div>
             </div>
