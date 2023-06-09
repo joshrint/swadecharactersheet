@@ -41,9 +41,20 @@ export default function CharacterSheet() {
                 setCharacter(res.data)
             })
             .catch((err) => {
-                console.log('Error from Character Sheet')
+                console.log('Error from Character Sheet ', err)
             })
     },[id]);
+
+    const updateHandler = () =>{
+        axios.put(`https://swade-api.azurewebsites.net/api/character/update/`+character.name, character)
+        .then((res)=>{
+            console.log(res.data)
+        })
+        .catch((err)=>{
+            console.log('Error updating data ', err)
+        });
+
+    }
 
     
 
@@ -62,6 +73,7 @@ export default function CharacterSheet() {
             return {...character, hinderances:tempHinderances}
         }
         setCharacter(updatedCharacter);
+        updateHandler();
     }
     const handleAddEdge = (e) => {
         if(e.name.length > 0){
@@ -71,6 +83,7 @@ export default function CharacterSheet() {
                 return {...character, edges:tempEdges}
             }
             setCharacter(updatedCharacter);
+            updateHandler();
         }
     }
     const handleAddGear = (e) => {
@@ -81,6 +94,7 @@ export default function CharacterSheet() {
                 return{...character, gear:tempGear}
             }
             setCharacter(updatedCharacter);
+            updateHandler();
         }
     }
     const handleAddPower = (e) => {
@@ -91,6 +105,7 @@ export default function CharacterSheet() {
                 return {...character, powers:tempPowers}
             }
             setCharacter(updatedCharacter);
+            updateHandler();
         }
     }
     const handleAddRippertech = (e) => {
@@ -101,6 +116,7 @@ export default function CharacterSheet() {
                 return {...character, rippertech:tempRT}
             }
             setCharacter(updatedCharacter);
+            updateHandler();
         }
     }
     const handleAddSkill = (e) => {
@@ -111,6 +127,7 @@ export default function CharacterSheet() {
                 return {...character, skills:tempSkills}
             }
             setCharacter(updatedCharacter);
+            updateHandler();
         }
     }
     const handleAddWeapon = (e) =>{
@@ -121,6 +138,7 @@ export default function CharacterSheet() {
                 return{...character, weapons:tempWeapon}
             }
             setCharacter(updatedCharacter);
+            updateHandler();
         }
     }
 
@@ -136,6 +154,7 @@ export default function CharacterSheet() {
            return { ...character, agility: e.agility, smarts: e.smarts, spirit: e.spirit, strength: e.strength, vigor: e.vigor }
         }
         setCharacter(updatedCharacter);
+        updateHandler();
     }
     const handleStatChange = (e) =>{
         const updatedCharacter = () => {
@@ -152,6 +171,7 @@ export default function CharacterSheet() {
             } 
         }
         setCharacter(updatedCharacter);
+        updateHandler();
     }
     const handleHinderanceChange = (e) =>{
         let tempHinderances = character.hinderances;
@@ -164,6 +184,7 @@ export default function CharacterSheet() {
             return {...character, hinderances:tempHinderances}
         }
         setCharacter(updatedCharacter);
+        updateHandler();
     }
     const handleEdgeChange = (e) =>{
         let tempEdges = character.edges;
@@ -176,6 +197,7 @@ export default function CharacterSheet() {
             return {...character, edge:tempEdges}
         }
         setCharacter(updatedCharacter);
+        updateHandler();
     }
     const handleSkillChange = (e) =>{
         let tempSkills = character.skills;
@@ -188,6 +210,7 @@ export default function CharacterSheet() {
             return {...character, skills:tempSkills}
         }
         setCharacter(updatedCharacter);
+        updateHandler();
     }
     const handleGearChange = (e) =>{
         let tempGear = character.gear;
@@ -200,6 +223,7 @@ export default function CharacterSheet() {
             return {...character, gear:tempGear}
         }
         setCharacter(updatedCharacter);
+        updateHandler();
     }
     const handleRipperTechChange = (e) => {
         let tempTech = character.rippertech;
@@ -212,6 +236,7 @@ export default function CharacterSheet() {
             return {...character, rippertech:tempTech}
         }
         setCharacter(updatedCharacter);
+        updateHandler();
     }
     const handlePowersChange = (e) =>{
         let tempPowers = character.powers;
@@ -227,6 +252,7 @@ export default function CharacterSheet() {
             return {...character, powers:tempPowers}
         }
         setCharacter(updatedCharacter);
+        updateHandler();
     }
     const handleWeaponsChange = (e) =>{
         let tempWeapons = character.weapons;
@@ -244,6 +270,7 @@ export default function CharacterSheet() {
             return {...character, weapons:tempWeapons}
         }
         setCharacter(updatedCharacter);
+        updateHandler();
     }
 
     //Handle removing item
@@ -258,6 +285,7 @@ export default function CharacterSheet() {
             return {...character, hinderances:tempHinderances}
         }
         setCharacter(updatedCharacter)
+        updateHandler();
     }
     const handleRemoveSkill = (e) =>{
         let tempSkills = character.skills;
@@ -270,6 +298,7 @@ export default function CharacterSheet() {
             return{...character, skills:tempSkills}
         }
         setCharacter(updatedCharacter);
+        updateHandler();
     }
     const handleRemoveGear = (e) =>{
         let tempGear = character.gear;
@@ -282,6 +311,7 @@ export default function CharacterSheet() {
             return{...character, gear:tempGear}
         }
         setCharacter(updatedCharacter)
+        updateHandler();
     }
     const handleRemoveEdge = (e) =>{
         let tempEdges = character.edges;
@@ -294,6 +324,7 @@ export default function CharacterSheet() {
             return{...character, edges:tempEdges}
         }
         setCharacter(updatedCharacter)
+        updateHandler();
     }
     const handleRemoveRippertech = (e) =>{
         let tempRT = character.rippertech;
@@ -306,6 +337,7 @@ export default function CharacterSheet() {
             return{...character, rippertech:tempRT}
         }
         setCharacter(updatedCharacter)
+        updateHandler();
     }
     const handleRemovePower = (e) =>{
         let tempPowers = character.powers;
@@ -318,6 +350,7 @@ export default function CharacterSheet() {
             return{...character, powers:tempPowers}
         }
         setCharacter(updatedCharacter)
+        updateHandler();
     }
     const handleRemoveWeapon = (e) =>{
         let tempWeapons = character.weapons;
@@ -330,6 +363,7 @@ export default function CharacterSheet() {
             return{...character, weapons:tempWeapons}
         }
         setCharacter(updatedCharacter)
+        updateHandler();
     }
 
   return (

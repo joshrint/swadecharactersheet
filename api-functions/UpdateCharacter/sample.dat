@@ -1,0 +1,142 @@
+{
+        "_id": 1,
+        "player":"josh",
+        "name":"Casper Teague",
+        "alias":"Mantis",
+        "rank":"Novice",
+        "languages":"English, German",
+        "faction":"Masked Crusaders",
+
+        "pace":6,
+        "parry":7,
+        "toughness":7,
+        "reason":4,
+        "status":1,
+
+        "agility":8,
+        "smarts":4,
+        "spirit":4,
+        "strength":6,
+        "vigor":8,
+
+        "skills":[
+            {
+                "name":"Athletics (A)",
+                "rank":8
+            },
+            {
+                "name":"Common Knowledge (Sm)",
+                "rank":6
+            },
+            {
+                "name":"Persuasion (Sp)",
+                "rank":6
+            },
+            {
+                "name":"Stealth (A)",
+                "rank":8
+            },
+            {
+                "name":"Notice (Sm)",
+                "rank":6
+            },
+            {
+                "name":"Fighting (A)",
+                "rank":10
+            },
+            {
+                "name":"Riding (A)",
+                "rank": 6
+            },
+            {
+                "name":"Occult",
+                "rank":4
+            },
+            {
+                "name":"Thievery (A)",
+                "rank":6
+            },
+            {
+                "name":"Shooting (A)",
+                "rank":8
+            }
+        ],
+        "gear" : ["Heavy Coat", "Knife (x4)", "Pistol", "Grappling Hook", "Throwing Knife (x6)", "Leather Satchel", "Matches", "Mirror", "Rope"],
+        "hinderances" : [
+            {
+                "name":"Phobia - Cults",
+                "description":"Phobias are overwhelming and irrational fears that plague a hero’s psyche. Whenever a character is in the presence of his phobia (GM’s call, but generally sight), he subtracts 1 from all his Trait rolls if it’s a Minor Hindrance, and 2 if it’s Major."
+            },
+            {
+                "name":"Cursed",
+                "description":"Your heroine crossed some dark power and has forever after been marked by its tainted touch. Your character may never receive beneficial blessings such as those from the Arcane Background (Miracles) Edge."
+            },
+            {
+                "name":"Disowned",
+                "description":"Your hero did something shameful or scandalous in the past, bringing disgrace or embarrassment on your family. As a result, you have been disowned. Your family refuses to acknowledge you, and your hero’s starting Status is modified by –1."
+            }
+        ],
+        "edges" :[
+            {
+                "name":"Ambidextrous",
+                "description":"Your warrior is as deft with his left hand as he is with his right. He ignores the Off-Hand penalty (see page 104). If holding a weapon in each hand, Ambidextrous characters may stack Parry bonuses (if any) from both weapons."
+            },
+            {
+                "name":"Two-Fisted",
+                "description":"If a character makes a Fighting attack with one action and another from a different hand in a later action, the second attack doesn’t inflict a Multi-Action penalty. The Off-Hand penalty still applies unless he’s Ambidextrous, however (page 104). If the character has Two-Gun Kid, the second action may also be a ranged attack."
+            },
+            {
+                "name":"Two Gun Kid",
+                "description":"Two-Gun Kid works just like Two-Fisted, but with ranged weapons, allowing her to fire or throw a weapon in each hand as two different actions but without triggering a Multi-Action penalty. If the character has Two-Fisted, the second action may also be a melee attack."
+            },
+            {
+                "name":"Exceptional Individual - Frenzy",
+                "description":"A character with Frenzy may roll a second Fighting die with any one of his Fighting attacks for the turn. The extra die may be allocated to the same or different targets as he sees fit. Resolve each separately."
+            }
+        ],
+        "rippertech":[
+            {
+                "name":"",
+                "benefit":""
+            }
+        ],
+        "powers":[
+            {
+                "name":"",
+                "pp":"",
+                "range":"",
+                "dur":"",
+                "effect":""
+            }
+        ],
+        "weapons":[
+            {
+                "name":"Knife",
+                "range":"3/6/12",
+                "damage":"Str+d4",
+                "ap":"",
+                "rof":"",
+                "wt":"",
+                "notes":""
+            },
+            {
+                "name":"Throwing Knife",
+                "range":"3/6/12",
+                "damage":"Str+d4",
+                "ap":"",
+                "rof":"",
+                "wt":"",
+                "notes":""
+            },
+            {
+                "name":"Pistol",
+                "range":"12/24/48",
+                "damage":"2d6",
+                "ap":"",
+                "rof":"",
+                "wt":"",
+                "notes":""
+            }
+        ]
+        
+    }
