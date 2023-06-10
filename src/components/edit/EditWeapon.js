@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
+import EditFooterButtons from './tools/EditFooterButtons';
 
 export default function EditWeapon(props) {
     const [show, setShow] = useState(false);
@@ -32,7 +32,7 @@ export default function EditWeapon(props) {
                     backdrop="static"
                     keyboard={false}>
                 <Modal.Header>
-                    <Modal.Title>{props.name}</Modal.Title>
+                    <Modal.Title>{props.name}</Modal.Title><button onClick={handleClose} className='btn btn-outline-secondary btn-xs close-btn'>X</button>
                 </Modal.Header>
                 <Modal.Body>
                     <label>Range</label>
@@ -49,7 +49,7 @@ export default function EditWeapon(props) {
                     <textarea rows={4} className='form-control' name="description" defaultValue={weapon.notes} onChange={(event) =>{weapon.notes = event.target.value;}}/>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={handleClose}>Close</Button> <Button className='btn btn-light' onClick={saveAndClose}>Save</Button><Button className='btn btn-danger' onClick={handleDelete}>Delete</Button>
+                    <EditFooterButtons handleDelete={handleDelete} saveAndClose={saveAndClose} />    
                 </Modal.Footer>
             </Modal>
         </>

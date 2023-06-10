@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import "../../stylesheets/EditPopup.css";
+import AddFooterButtons from './tools/AddFooterButtons';
 
 
 export default function AddGear(props) {
@@ -24,14 +24,14 @@ export default function AddGear(props) {
                     backdrop="static"
                     keyboard={false}>
                 <Modal.Header>
-                    <Modal.Title>Add Gear</Modal.Title>
+                    <Modal.Title>Add Gear</Modal.Title><button onClick={handleClose} className='btn btn-outline-secondary btn-xs close-btn'>X</button>
                 </Modal.Header>
                 <Modal.Body>
                     <label>Name</label>
                     <input type='text' className='form-control' placeholder='Edge Name' onChange={(event) =>{gear = event.target.value}} />
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={handleClose}>Close</Button> <Button className='btn btn-light' onClick={saveAndClose}>Save</Button>
+                    <AddFooterButtons saveAndClose={saveAndClose} />
                 </Modal.Footer>
             </Modal>
     </>

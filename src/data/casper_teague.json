@@ -62,7 +62,7 @@
                 "rank":8
             }
         ],
-        "gear" : ["Heavy Coat", "Knife (x4)", "Pistol", "Grappling Hook", "Throwing Knife (x6)", "Leather Satchel", "Matches", "Mirror", "Rope"],
+        "gear" : ["Heavy Coat", "Knife (x4)", "Pistol", "Grappling Hook", "Throwing Knife (x6)", "Leather Satchel", "Matches", "Mirror", "Rope", "Spyglass", "Leather Cap", "Leather Leggings", "Lockpicks", "Lighter", "Taffy"],
         "hinderances" : [
             {
                 "name":"Phobia - Cults",

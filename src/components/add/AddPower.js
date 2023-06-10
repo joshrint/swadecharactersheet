@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import "../../stylesheets/EditPopup.css";
+import AddFooterButtons from './tools/AddFooterButtons';
 
 
 export default function AddPower(props) {
@@ -30,7 +30,7 @@ export default function AddPower(props) {
                     backdrop="static"
                     keyboard={false}>
                 <Modal.Header>
-                    <Modal.Title>Add Power</Modal.Title>
+                    <Modal.Title>Add Power</Modal.Title><button onClick={handleClose} className='btn btn-outline-secondary btn-xs close-btn'>X</button>
                 </Modal.Header>
                 <Modal.Body>
                     <label>Name</label>
@@ -45,7 +45,7 @@ export default function AddPower(props) {
                     <textarea rows={5} className='form-control' name="description" defaultValue={power.effect} onChange={(event) =>{power.effect = event.target.value;}}/>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={handleClose}>Close</Button> <Button className='btn btn-light' onClick={saveAndClose}>Save</Button>
+                    <AddFooterButtons saveAndClose={saveAndClose} />
                 </Modal.Footer>
         </Modal>
         

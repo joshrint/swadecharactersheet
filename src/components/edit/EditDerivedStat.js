@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
+import AddFooterButtons from '../add/tools/AddFooterButtons';
 
 export default function EditDerivedStat(props) {
     const [show, setShow] = useState(false);
@@ -30,7 +30,7 @@ export default function EditDerivedStat(props) {
                 backdrop="static"
                 keyboard={false}>
             <Modal.Header>
-                <Modal.Title>{capitalizeFirstLetter(props.name)}</Modal.Title>
+                <Modal.Title>{capitalizeFirstLetter(props.name)}</Modal.Title><button onClick={handleClose} className='btn btn-outline-secondary btn-xs close-btn'>X</button>
             </Modal.Header>
             <Modal.Body>
                 <input type="number" className='formControl' defaultValue={stat.score} onChange={(event) =>{
@@ -38,7 +38,7 @@ export default function EditDerivedStat(props) {
                 }} />
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={handleClose}>Close</Button> <Button className='btn btn-light' onClick={saveAndClose}>Save</Button>
+                <AddFooterButtons saveAndClose={saveAndClose} />
             </Modal.Footer>
         </Modal>
     </>

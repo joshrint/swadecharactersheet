@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
+import AddFooterButtons from '../add/tools/AddFooterButtons';
 
 
 export default function EditAttributes(props) {
@@ -33,7 +33,7 @@ export default function EditAttributes(props) {
                 backdrop="static"
                 keyboard={false}>
             <Modal.Header>
-                <Modal.Title>Attributes</Modal.Title>
+                <Modal.Title>Attributes</Modal.Title><button onClick={handleClose} className='btn btn-outline-secondary btn-xs close-btn'>X</button>
             </Modal.Header>
             <Modal.Body>
                 <ul className='list-group list-group-flush'>
@@ -95,7 +95,7 @@ export default function EditAttributes(props) {
                 </ul>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={handleClose}>Close</Button> <Button className='btn btn-light' onClick={saveAndClose}>Save</Button>
+                <AddFooterButtons saveAndClose={saveAndClose}/>
             </Modal.Footer>
         </Modal>
     </>

@@ -22,6 +22,7 @@ import AddPower from './add/AddPower';
 import AddRippertech from './add/AddRippertech';
 import AddSkill from './add/AddSkill';
 import AddWeapon from './add/AddWeapon';
+import EditName from './edit/EditName';
 
 export default function CharacterSheet() {
 
@@ -45,14 +46,19 @@ export default function CharacterSheet() {
             })
     },[id]);
 
-    const updateHandler = () =>{
-        axios.put(`https://swade-api.azurewebsites.net/api/character/update/`+character.name, character)
-        .then((res)=>{
-            console.log(res.data)
-        })
-        .catch((err)=>{
-            console.log('Error updating data ', err)
-        });
+    const updateHandler = async (e) =>{
+        try {
+            axios.put(`https://swade-api.azurewebsites.net/api/character/update/`+character.name, e)
+            .then((res)=>{
+                console.log(res.data)
+            })
+            .catch((err)=>{
+                console.log('Error updating data ', err)
+            });
+        } catch (error) {
+            console.log(error)
+        }
+        console.log(character);
 
     }
 
@@ -149,12 +155,23 @@ export default function CharacterSheet() {
         setPopup({show:true});
     }
     // Handle character changes
+
+    const handleTopBarChange = (e) => {
+        const updatedCharacter = () => {
+                return { ...character, alias:e.alias, rank: e.rank, languages:e.languages, faction:e.faction}
+             }
+        setCharacter(updatedCharacter);
+        updateHandler(e);
+        
+     
+    }
+
     const handleAbilityChange = (e) => {
         const updatedCharacter = () => {
            return { ...character, agility: e.agility, smarts: e.smarts, spirit: e.spirit, strength: e.strength, vigor: e.vigor }
         }
         setCharacter(updatedCharacter);
-        updateHandler();
+        updateHandler(e);
     }
     const handleStatChange = (e) =>{
         const updatedCharacter = () => {
@@ -171,7 +188,7 @@ export default function CharacterSheet() {
             } 
         }
         setCharacter(updatedCharacter);
-        updateHandler();
+        updateHandler(e);
     }
     const handleHinderanceChange = (e) =>{
         let tempHinderances = character.hinderances;
@@ -184,7 +201,7 @@ export default function CharacterSheet() {
             return {...character, hinderances:tempHinderances}
         }
         setCharacter(updatedCharacter);
-        updateHandler();
+        updateHandler(tempHinderances);
     }
     const handleEdgeChange = (e) =>{
         let tempEdges = character.edges;
@@ -197,7 +214,7 @@ export default function CharacterSheet() {
             return {...character, edge:tempEdges}
         }
         setCharacter(updatedCharacter);
-        updateHandler();
+        updateHandler(tempEdges);
     }
     const handleSkillChange = (e) =>{
         let tempSkills = character.skills;
@@ -210,7 +227,7 @@ export default function CharacterSheet() {
             return {...character, skills:tempSkills}
         }
         setCharacter(updatedCharacter);
-        updateHandler();
+        updateHandler(tempSkills);
     }
     const handleGearChange = (e) =>{
         let tempGear = character.gear;
@@ -236,7 +253,7 @@ export default function CharacterSheet() {
             return {...character, rippertech:tempTech}
         }
         setCharacter(updatedCharacter);
-        updateHandler();
+        updateHandler(tempTech);
     }
     const handlePowersChange = (e) =>{
         let tempPowers = character.powers;
@@ -252,7 +269,7 @@ export default function CharacterSheet() {
             return {...character, powers:tempPowers}
         }
         setCharacter(updatedCharacter);
-        updateHandler();
+        updateHandler(tempPowers);
     }
     const handleWeaponsChange = (e) =>{
         let tempWeapons = character.weapons;
@@ -270,8 +287,9 @@ export default function CharacterSheet() {
             return {...character, weapons:tempWeapons}
         }
         setCharacter(updatedCharacter);
-        updateHandler();
+        updateHandler(tempWeapons);
     }
+    
 
     //Handle removing item
     const handleRemoveHinderance = (e) => {
@@ -374,7 +392,7 @@ export default function CharacterSheet() {
                 <div className='col'>
                     <div className='card'>
                         <div className='card-body'>
-                            <h1 className='card-title'>{character.name}</h1>
+                            <h1 className='card-title'>{character.name} <EditName name={character.name} rank={character.rank} alias={character.alias} languages={character.languages} faction={character.faction} handleTopBarChange={handleTopBarChange} /></h1>
                             <h5 className='card-subtitle mb-2 text-body-secondary'>Alias: {character.alias}</h5>
                             <p className='card-text'>Rank: {character.rank}<br />
                             Languages: {character.languages}<br />
@@ -389,33 +407,22 @@ export default function CharacterSheet() {
                 <div className='col-md'>
                     <div className='card'>
                         <ul className='list-group list-group-flush'>
-                            <li className='list-group-item'><form><b>Wounds:&#160;</b>
-                                
-                                    <label className='radio-inline'>
-                                        <input type="radio" name="wound" />1 
-                                    </label>
-                                    <label className='radio-inline'>
-                                        <input type="radio" name="wound" />2
-                                    </label>
-                                    <label className='radio-inline'>
-                                        <input type="radio" name="wound" />3
-                                    </label>
-                                    <label className='radio-inline'>
-                                        <input type="radio" name="wound" />Incapacitated
-                                    </label>
-                                </form>
+                            <li className='list-group-item'><b>Wounds:&#160;</b>
+                                <select className='form-control wounds'>
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>Incapacitated</option>
+                                </select>
                             </li>
-                            <li className='list-group-item'><form><b>Fatigue:</b> 
-                                <label className='radio-inline'>
-                                        <input type="radio" name="fatigue" />Fatigued 
-                                </label>
-                                <label className='radio-inline'>
-                                        <input type="radio" name="fatigue" />Exhausted 
-                                </label>
-                                <label className='radio-inline'>
-                                        <input type="radio" name="fatigue" />Incapacitated 
-                                </label>
-                            </form>
+                            <li className='list-group-item'><b>Fatigue:&#160;</b> 
+                            <select className='form-control wounds'>
+                                <option>None</option>
+                                <option>Fatigued</option> 
+                                <option>Exhausted</option> 
+                                <option>Incapacitated</option> 
+                            </select>
                             </li>
                             <li className='list-group-item'><b>Shaken:</b> <input className="form-check-input" type="checkbox" /></li>
                         </ul>

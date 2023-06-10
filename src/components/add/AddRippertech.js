@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import "../../stylesheets/EditPopup.css";
+import AddFooterButtons from './tools/AddFooterButtons';
 
 
 export default function AddRippertech(props) {
@@ -27,7 +27,7 @@ export default function AddRippertech(props) {
                     backdrop="static"
                     keyboard={false}>
                 <Modal.Header>
-                    <Modal.Title>Add Rippertech</Modal.Title>
+                    <Modal.Title>Add Rippertech</Modal.Title><button onClick={handleClose} className='btn btn-outline-secondary btn-xs close-btn'>X</button>
                 </Modal.Header>
                 <Modal.Body>
                     <label>Name</label>
@@ -36,7 +36,7 @@ export default function AddRippertech(props) {
                     <textarea rows={5} className='form-control' name="description"  onChange={(event) =>{rippertech.benefit = event.target.value;}}/>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={handleClose}>Close</Button> <Button className='btn btn-light' onClick={saveAndClose}>Save</Button>
+                    <AddFooterButtons saveAndClose={saveAndClose} />
                 </Modal.Footer>
         </Modal>
         
