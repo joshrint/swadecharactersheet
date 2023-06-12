@@ -33,9 +33,14 @@ export default function EditDerivedStat(props) {
                 <Modal.Title>{capitalizeFirstLetter(props.name)}</Modal.Title><button onClick={handleClose} className='btn btn-outline-secondary btn-xs close-btn'>X</button>
             </Modal.Header>
             <Modal.Body>
-                <input type="number" className='formControl' defaultValue={stat.score} onChange={(event) =>{
+                {stat.skill === "wealth" ? <input type="number" step="0.01" min="0" max="10" className='formControl' defaultValue={stat.score} onChange={(event) =>{
+                    stat.score = event.target.value;
+                }} /> 
+                : <input type="number" className='formControl' defaultValue={stat.score} onChange={(event) =>{
                     stat.score = parseInt(event.target.value);
                 }} />
+                }
+                
             </Modal.Body>
             <Modal.Footer>
                 <AddFooterButtons saveAndClose={saveAndClose} />

@@ -28,7 +28,7 @@ export default function AddGear(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <label>Name</label>
-                    <input type='text' className='form-control' placeholder='Edge Name' onChange={(event) =>{gear = event.target.value}} />
+                    <input type='text' className='form-control' placeholder='Gear Name' onChange={(event) =>{gear = event.target.value}} />
                 </Modal.Body>
                 <Modal.Footer>
                     <AddFooterButtons saveAndClose={saveAndClose} />

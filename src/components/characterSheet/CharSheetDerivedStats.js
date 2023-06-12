@@ -1,9 +1,16 @@
 import React from 'react';
-import "../stylesheets/DerivedStats.css";
+import "../../stylesheets/DerivedStats.css";
+import EditDerivedStat from '../edit/EditDerivedStat';
 
-import EditDerivedStat from './edit/EditDerivedStat';
 
-export default function DerivedStats({pace, parry, toughness, reason, status, handleStatChange}) {
+
+export default function CharSheetDerivedStats({pace, parry, toughness, reason, status, wealth, handleChange, updateHandler}) {
+
+    const handleStatChange = (e) =>{
+        handleChange({"name":e.stat, "value":e.score});
+        updateHandler(JSON.parse(`{"${e.skill}":"${e.score.toString()}"}`));
+    }
+
   return (
     <>
     <div className='row row-col-1 row-col-md-2'>
@@ -38,7 +45,9 @@ export default function DerivedStats({pace, parry, toughness, reason, status, ha
                 </div>
             </div>
             <div className='card derived-card  px-0'>
+                <h5 className='card-header'>Wealth<EditDerivedStat name={"wealth"} stat={wealth} handleStatChange={handleStatChange} /></h5>
                 <div className='card-body'>
+                    <p className='card-text'>£{wealth}</p>
                     
                 </div>
             </div>

@@ -8,11 +8,16 @@
         "languages":"English, German",
         "faction":"Masked Crusaders",
 
+        "wounds":0,
+        "fatigue":"none",
+        "shaken":false,
+
         "pace":6,
         "parry":7,
         "toughness":7,
         "reason":4,
         "status":1,
+        "wealth":"£2.47",
 
         "agility":8,
         "smarts":4,
