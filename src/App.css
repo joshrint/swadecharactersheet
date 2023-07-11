@@ -1,6 +1,11 @@
+body {
+  background-color: #61636b;
+  height: 100%;
+  overflow: auto;
+}
 .App {
   text-align: center;
-  background-color: #61636b;
+  margin-top: 10px;
 }
 
 .App-logo {

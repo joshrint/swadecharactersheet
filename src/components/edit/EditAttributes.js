@@ -10,7 +10,7 @@ export default function EditAttributes(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    let abilities={
+    let attributes={
         "agility": props.agility,
         "smarts": props.smarts,
         "spirit": props.spirit,
@@ -19,7 +19,7 @@ export default function EditAttributes(props) {
     }
 
     const saveAndClose = () => {
-        props.handleAbilityChange(abilities);
+        props.handleAbilityChange(attributes);
         setShow(false);
     }
     
@@ -39,7 +39,7 @@ export default function EditAttributes(props) {
                 <ul className='list-group list-group-flush'>
                     <li className='list-group-item'>Agility: <select className='form-control' name="agility" id="agility" defaultValue={props.agility} 
                     onChange={(event) => {
-                        abilities.agility = parseInt(event.target.value);                        
+                        attributes.agility = parseInt(event.target.value);                        
                     }} 
                     >
                             <option value={4}>d4</option>
@@ -50,7 +50,7 @@ export default function EditAttributes(props) {
                         </select></li>
                     <li className='list-group-item'>Smarts:<select className='form-control' name="smarts" id="smarts" defaultValue={props.smarts} 
                         onChange={(event) => {
-                            abilities.smarts = parseInt(event.target.value);                        
+                            attributes.smarts = parseInt(event.target.value);                        
                         }}
                     >
                             <option value={4}>d4</option>
@@ -61,7 +61,7 @@ export default function EditAttributes(props) {
                         </select></li>
                     <li className='list-group-item'>Spirit:<select className='form-control' name="spirit" id="spirit" defaultValue={props.spirit}
                         onChange={(event) => {
-                            abilities.spirit = parseInt(event.target.value);                        
+                            attributes.spirit = parseInt(event.target.value);                        
                         }}
                     >
                             <option value={4}>d4</option>
@@ -72,7 +72,7 @@ export default function EditAttributes(props) {
                         </select></li>
                     <li className='list-group-item'>Strength:<select className='form-control' name="strength" id="strength" defaultValue={props.strength}
                         onChange={(event) => {
-                            abilities.strength = parseInt(event.target.value);                        
+                            attributes.strength = parseInt(event.target.value);                        
                         }}
                     >
                             <option value={4}>d4</option>
@@ -83,7 +83,7 @@ export default function EditAttributes(props) {
                         </select> </li>
                     <li className='list-group-item'>Vigor:<select className='form-control' name="vigor" id="vigor" defaultValue={props.vigor}
                         onChange={(event) => {
-                            abilities.vigor = parseInt(event.target.value);                        
+                            attributes.vigor = parseInt(event.target.value);                        
                         }}
                     >
                             <option value={4}>d4</option>

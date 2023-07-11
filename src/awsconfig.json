@@ -1,0 +1,6 @@
+{"Auth": {
+    "mandatorySignIn": true,
+    "region": "us-west-2",
+    "userPoolId": "us-west-2_xyAayTF3t",
+    "userPoolWebClientId": "39ksv69n5mg154h8jiu5keqc0k"
+  }}

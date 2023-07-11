@@ -1,0 +1,14 @@
+.nav {
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.right-aligned {
+    justify-content: flex-end;
+}
+
+.fa-caret-down {
+    
+}
