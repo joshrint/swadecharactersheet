@@ -27,11 +27,27 @@ input[type='checkbox'] {
 }
 .edit-icon:hover {
     opacity: 1;
+    cursor: pointer;
+}
+.accordion-edit-icon {
+    float:right;
+    margin-top: 3px;
+    opacity: .5;
+    margin-left: -1.2em;
+}
+.accordion-edit-icon:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 .add-icon{
     float:right;
+    opacity: .5;
     margin-top: 3px;
     margin-left: -1.2em;
+}
+.add-icon:hover{
+    opacity: 1;
+    cursor: pointer;
 }
 .wounds {
     width: 90%;

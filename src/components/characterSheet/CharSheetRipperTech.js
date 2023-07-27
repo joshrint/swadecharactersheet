@@ -1,7 +1,10 @@
 import React from 'react';
 import AddRippertech from '../add/AddRippertech';
 import EditRippertech from '../edit/EditRippertech';
-import InfoPopup from './tools/InfoPopup';
+import { Card } from 'react-bootstrap';
+import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 export default function CharSheetRipperTech({rippertech, handleChange, updateHandler}) {
     
@@ -35,27 +38,28 @@ export default function CharSheetRipperTech({rippertech, handleChange, updateHan
     }
     return (
     <>
-    <div className='card'>
-        <h3 className='card-header'>Rippertech<AddRippertech handleAddRippertech={handleAddRippertech} /></h3>
-        <table className='table'>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Benefit</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
+    <Card>
+        <Card.Header>
+            <h3>Rippertech<AddRippertech handleAddRippertech={handleAddRippertech} /></h3>
+        </Card.Header>
             {rippertech.map((rt) =>(
-                <tr key={rt.name}>
-                    <td>{rt.name}</td>
-                    <td><InfoPopup name={rt.name} description={rt.benefit} /></td>
-                    <td><EditRippertech name={rt.name} benefit={rt.benefit} handleRipperTechChange={handleRipperTechChange} handleRemoveRippertech={handleRemoveRippertech} /></td>
-                </tr>
+                <Accordion key={rt.name}>
+                    <AccordionSummary
+                    expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
+                    aria-controls='panel1a-content'
+                    id="panel1a-header">
+                        <h5>{rt.name}</h5>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography align='left'>
+                            {rt.benefit}
+                            <EditRippertech name={rt.name} benefit={rt.benefit} handleRipperTechChange={handleRipperTechChange} handleRemoveRippertech={handleRemoveRippertech} />
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                
             ))}
-            </tbody>
-        </table>
-    </div>
+    </Card>
     </>
   )
 }

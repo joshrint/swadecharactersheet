@@ -13,6 +13,7 @@ import CharSheetEdges from './characterSheet/CharSheetEdges';
 import CharSheetRipperTech from './characterSheet/CharSheetRipperTech';
 import CharSheetPowers from './characterSheet/CharSheetPowers';
 import CharSheetWeapons from './characterSheet/CharSheetWeapons';
+import { CircularProgress } from '@mui/material';
 
 export default function CharacterSheet() {
 
@@ -58,7 +59,7 @@ export default function CharacterSheet() {
 
   return (
     <>
-    {character.name &&(
+    {character.name ? (
         <div className='container'>
             <div className='row'>
                 <div className='col'>
@@ -113,7 +114,7 @@ export default function CharacterSheet() {
                 </div>
             </div>
         </div>
-        )}
+        ) : <CircularProgress />}
     </>
   )
 }

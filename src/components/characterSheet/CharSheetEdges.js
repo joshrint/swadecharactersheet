@@ -1,7 +1,10 @@
 import React from 'react';
 import EditEdge from '../edit/EditEdge';
 import AddEdge from '../add/AddEdge';
-import InfoPopup from './tools/InfoPopup';
+//import InfoPopup from './tools/InfoPopup';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 
 export default function CharSheetEdges({edges, handleChange, updateHandler}) {
     const handleAddEdge =(e) =>{
@@ -37,11 +40,23 @@ export default function CharSheetEdges({edges, handleChange, updateHandler}) {
     <>
     <div className='card'>
         <h3 className='card-header'>Edges<AddEdge handleAddEdge={handleAddEdge} /></h3>
-        <ul className='list-group list-group-flush'>
-            {edges.map((e) => (
-                <li key={e.name} className='list-group-item'><InfoPopup name={e.name} description={e.description} /> <EditEdge name={e.name} description={e.description} handleEdgeChange={handleEdgeChange} handleRemoveEdge={handleRemoveEdge} /> </li>
-            ))}
-        </ul>
+        {edges.map((e) =>(
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
+                    aria-controls='panel1a-content'
+                    id="panel1a-header"
+                >
+                    <h6>{e.name}</h6>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography align='left'>
+                        {e.description}
+                        <EditEdge name={e.name} description={e.description} handleEdgeChange={handleEdgeChange} handleRemoveEdge={handleRemoveEdge} />
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+        ))}
     </div>
     </>
   )

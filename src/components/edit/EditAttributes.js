@@ -1,21 +1,29 @@
 import { useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
+import {Modal} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
 import AddFooterButtons from '../add/tools/AddFooterButtons';
+import SelectDieType from '../tools/SelectDieType';
 
 
 export default function EditAttributes(props) {
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-    let attributes={
+    const [attributes, setAttributes] = useState({
         "agility": props.agility,
         "smarts": props.smarts,
         "spirit": props.spirit,
         "strength": props.strength,
         "vigor": props.vigor
+    })
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const handleSelect = (diceLevel, attribute) =>{
+        setAttributes((prevalue) =>{
+            return {
+                ...prevalue, [attribute]: diceLevel
+            }
+        })
     }
 
     const saveAndClose = () => {
@@ -37,61 +45,20 @@ export default function EditAttributes(props) {
             </Modal.Header>
             <Modal.Body>
                 <ul className='list-group list-group-flush'>
-                    <li className='list-group-item'>Agility: <select className='form-control' name="agility" id="agility" defaultValue={props.agility} 
-                    onChange={(event) => {
-                        attributes.agility = parseInt(event.target.value);                        
-                    }} 
-                    >
-                            <option value={4}>d4</option>
-                            <option value={6}>d6</option>
-                            <option value={8}>d8</option>
-                            <option value={10}>d10</option>
-                            <option value={12}>d12</option>
-                        </select></li>
-                    <li className='list-group-item'>Smarts:<select className='form-control' name="smarts" id="smarts" defaultValue={props.smarts} 
-                        onChange={(event) => {
-                            attributes.smarts = parseInt(event.target.value);                        
-                        }}
-                    >
-                            <option value={4}>d4</option>
-                            <option value={6}>d6</option>
-                            <option value={8}>d8</option>
-                            <option value={10}>d10</option>
-                            <option value={12}>d12</option>
-                        </select></li>
-                    <li className='list-group-item'>Spirit:<select className='form-control' name="spirit" id="spirit" defaultValue={props.spirit}
-                        onChange={(event) => {
-                            attributes.spirit = parseInt(event.target.value);                        
-                        }}
-                    >
-                            <option value={4}>d4</option>
-                            <option value={6}>d6</option>
-                            <option value={8}>d8</option>
-                            <option value={10}>d10</option>
-                            <option value={12}>d12</option>
-                        </select></li>
-                    <li className='list-group-item'>Strength:<select className='form-control' name="strength" id="strength" defaultValue={props.strength}
-                        onChange={(event) => {
-                            attributes.strength = parseInt(event.target.value);                        
-                        }}
-                    >
-                            <option value={4}>d4</option>
-                            <option value={6}>d6</option>
-                            <option value={8}>d8</option>
-                            <option value={10}>d10</option>
-                            <option value={12}>d12</option>
-                        </select> </li>
-                    <li className='list-group-item'>Vigor:<select className='form-control' name="vigor" id="vigor" defaultValue={props.vigor}
-                        onChange={(event) => {
-                            attributes.vigor = parseInt(event.target.value);                        
-                        }}
-                    >
-                            <option value={4}>d4</option>
-                            <option value={6}>d6</option>
-                            <option value={8}>d8</option>
-                            <option value={10}>d10</option>
-                            <option value={12}>d12</option>
-                        </select> </li>
+                    <li className='list-group-item'>Agility: 
+                        <SelectDieType handleSelect={handleSelect} diceLevel={attributes.agility} attribute={'agility'} /></li>
+                    <li className='list-group-item'>Smarts:
+                        <SelectDieType handleSelect={handleSelect} diceLevel={attributes.smarts} attribute={'smarts'} />
+                        </li>
+                    <li className='list-group-item'>Spirit:
+                        <SelectDieType handleSelect={handleSelect} diceLevel={attributes.spirit} attribute={'spirit'} />
+                        </li>
+                    <li className='list-group-item'>Strength:
+                        <SelectDieType handleSelect={handleSelect} diceLevel={attributes.strength} attribute={'strength'} />
+                        </li>
+                    <li className='list-group-item'>Vigor:
+                    <SelectDieType handleSelect={handleSelect} diceLevel={attributes.vigor} attribute={'vigor'} />
+                     </li>
                 </ul>
             </Modal.Body>
             <Modal.Footer>

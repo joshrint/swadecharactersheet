@@ -1,7 +1,10 @@
 import React from 'react'
 import AddHinderance from '../add/AddHinderance';
 import EditHinderance from '../edit/EditHinderance';
-import InfoPopup from './tools/InfoPopup';
+//import InfoPopup from './tools/InfoPopup';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 
 export default function CharSheetHinderances({hinderances, updateHandler, handleChange}) {
     const handleAddHinderance = (e) => {
@@ -36,11 +39,27 @@ export default function CharSheetHinderances({hinderances, updateHandler, handle
     <>
         <div className='card'>
             <h3 className='card-header'>Hinderances<AddHinderance handleAddHinderance={handleAddHinderance} /></h3>
-            <ul className='list-group list-group-flush'>
+            {hinderances.map((h) => (
+                <Accordion>
+                    <AccordionSummary
+                        expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
+                        aria-controls='panel1a-content'
+                        id='panel1a-header'>
+                            <h6>{h.name}</h6>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <Typography align='left'>
+                                {h.description}
+                                <EditHinderance name={h.name} description={h.description} handleHinderanceChange={handleHinderanceChange} handleRemoveHinderance={handleRemoveHinderance} />
+                            </Typography>
+                        </AccordionDetails>
+                </Accordion>
+            ))}
+            {/*<ul className='list-group list-group-flush'>
                 {hinderances.map((h) =>(
                     <li key={h.name} className='list-group-item'><InfoPopup name={h.name} description={h.description} /> <EditHinderance name={h.name} description={h.description} handleHinderanceChange={handleHinderanceChange} handleRemoveHinderance={handleRemoveHinderance} /></li>
                 ))}            
-            </ul> 
+            </ul>*/}
         </div>
     </>
   )

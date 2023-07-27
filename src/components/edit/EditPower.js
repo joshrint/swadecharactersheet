@@ -24,7 +24,7 @@ export default function EditPower(props) {
     
     return (
         <>
-            <FontAwesomeIcon icon={faPenToSquare} className='edit-icon' onClick={handleShow} />
+            <FontAwesomeIcon icon={faPenToSquare} className='accordion-edit-icon' onClick={handleShow} />
             <Modal show={show}
                     onHide={handleClose}
                     backdrop="static"

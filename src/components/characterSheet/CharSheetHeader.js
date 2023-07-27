@@ -9,7 +9,6 @@ export default function CharSheetHeader({name, alias, rank, languages, faction, 
             handleChange(element);
             headerChange = {...headerChange, [element.name]:element.value};
         });
-        console.log(headerChange)
         updateHandler(headerChange);
     }
 

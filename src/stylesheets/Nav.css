@@ -1,4 +1,4 @@
-.nav {
+/*.nav {
     background-color: white;
     border-radius: 5px;
     margin-top: 10px;
@@ -9,6 +9,113 @@
     justify-content: flex-end;
 }
 
-.fa-caret-down {
+.dropdown {
+    transition: height 1s ease;
+  }
+
+.active{
+    background-color: #642CA9;
+    color: #fff;
+    border-radius: 0px 15px 15px 0px;
+    border: 0px solid #FFB8DE;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 15px;
+}
+
+.nav-item{
+    background-color: #fff;
+    border-radius: 0px 15px 15px 0px;
+    border: 2px solid #FFB8DE;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 20px;
+    padding: 15px;
+    transition: background-color 2s ease-out 5ms;
     
+
+}
+.char-dropdown{
+    background-color: #13262F;
+    border-radius: 0px 15px 15px 0px;
+    border: 2px solid #13262F;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right:5px;
+    padding: 15px;
+    color:#fff;
+    
+}
+.char-item{
+    background-color: #fff;
+    border-radius: 0px 25px 25px 0px;
+    border: 2px solid #13262F;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right:25px;
+    padding: 15px;
+    color:#13262F;
+}
+.char-item:hover {
+
+}
+
+.nav-item:hover {
+    background-color: #FFDDE1;
+    border: 2px solid #FFB8DE;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 100vh !important;
+    z-index: 100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+#sidebar-wrapper{
+    min-height: 100vh !important;
+    width: 100vw;
+    margin-left: -1rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+} */
+.toggle-menu {
+    background-color: #642CA9;
+    color: #fff;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    float:left;
+    margin-top: 3px;
+    /*margin-right: -1.2em;*/
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle-menu:hover {
+    background-color: #FFDDE1;
+    cursor: pointer;
+}
+.top-nav{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+    top: 0;
+    left:0;
 }

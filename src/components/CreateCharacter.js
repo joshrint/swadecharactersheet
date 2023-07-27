@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Col, Row, Container} from 'react-bootstrap';
+import { Container, Box, Stack, Paper } from '@mui/material';
 import {useNavigate} from "react-router-dom";
 import StepOne from './createCharacter/StepOne';
 import StepTwo from './createCharacter/StepTwo';
@@ -14,6 +14,8 @@ import StepTen from './createCharacter/StepTen';
 import Final from './createCharacter/Final';
 import '../stylesheets/CreateCharacter.css';
 import axios from 'axios';
+import CreateStepper from './createCharacter/CreateStepper';
+
 
 
 export default function CreateCharacter({username}) {
@@ -34,34 +36,39 @@ export default function CreateCharacter({username}) {
     "toughness":0,
     "reason":0,
     "status":0,
-    "wealth":"",
+    "wealth":5,
 
-    "agility":0,
-    "smarts":0,
-    "spirit":0,
-    "strength":0,
-    "vigor":0,
+    "agility":1,
+    "smarts":1,
+    "spirit":1,
+    "strength":1,
+    "vigor":1,
 
     "skills":[
       {
-        "name":"Athletics (A)",
-        "rank":6
+        "name":"Athletics",
+        "gov":'Ag',
+        "rank":2
       },
       {
-        "name":"Common Knowledge (Sm)",
-        "rank":6
+        "name":"Common Knowledge",
+        "gov":"Sm",
+        "rank":2
       },
       {
-        "name":"Persuasion (Sp)",
-        "rank":6
+        "name":"Persuasion",
+        "gov":'Sp',
+        "rank":2
       },
       {
-        "name":"Stealth (A)",
-        "rank":6
+        "name":"Stealth",
+        "gov":'Ag',
+        "rank":2
       },
       {
-        "name":"Notice (Sm)",
-        "rank":6
+        "name":"Notice",
+        "gov":'Sm',
+        "rank":2
       }
     ],
     "gear" : [],
@@ -74,11 +81,13 @@ export default function CreateCharacter({username}) {
 }
   
   const [newCharacter, setNewCharacter] = useState(baseCharacter);
-
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
+  const [completed, setCompleted] = useState({});
+  const [attributeScore, setAttributeScore] = useState(5);
+  const [bonusScore, setBonusScore] = useState(0);
+  const steps = ['Begin', 'Attributes', 'Stats', 'Hinderances', 'Edges', 'Skills', 'Rippertech', 'Powers', 'Weapons', 'Gear', 'Done']
 
   const nextStep = () => {
-    console.log("Step "+step);
     setStep(step + 1);
   };
   const prevStep = () => {
@@ -94,6 +103,10 @@ export default function CreateCharacter({username}) {
         ...prevalue, [name]:value
       }
     })
+  }
+
+  const handleAttributeChange = (e) =>{
+    setAttributeScore(e)
   }
 
   const handleEdit = (e) =>{
@@ -116,153 +129,120 @@ export default function CreateCharacter({username}) {
         console.log(error)
     }
 }
+
+  const totalSteps = () => {
+    return steps.length;
+  }
+
+  const completedSteps = () => {
+    return Object.keys(completed).length;
+  }
+
+  const isLastStep = () => {
+    return step === totalSteps() -1;
+  }
+
+  const allStepsCompleted = () =>{
+    return completedSteps() === totalSteps();
+  }
+
+  const handleComplete = () => {
+    const newCompleted = completed;
+    newCompleted[step] = true;
+    setCompleted(newCompleted);
+    handleNext();
+  };
+
+  const handleStep=(index) =>{
+    setStep(index)
+  }
+  const handleNext=() =>{
+    const newActiveStep = isLastStep() && !allStepsCompleted() ?
+      steps.findIndex((step, i) => !(i in completed))
+      : step +1;
+    setStep(newActiveStep)
+  }
   
   const navigate = useNavigate();
+  
   const handleReset = () =>{
-    setStep(1);
+    setStep(0);
     setNewCharacter(baseCharacter);
+    setCompleted({});
     navigate('/');
   }
   
-  switch (step) {
+  const renderForm = (step) =>{
+    switch (step) {
     
-    case 1:
-      return (
-        <div>
-          <Container>
-            <Row>
-              <Col>
-                <StepOne nextStep={nextStep} handleChange={handleChange} values={newCharacter} />
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      );
-    case 2:
-      return (
-        <div>
-          <Container>
-            <Row>
-              <Col>
-                <StepTwo nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} values={newCharacter} />
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      );
-    case 3:
-      return (
-        <div>
-          <Container>
-            <Row>
-              <Col>
-                <StepThree nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} values={newCharacter} />
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      );
-    case 4:
-      return (
-        <div>
-          <Container>
-            <Row>
-              <Col>
-                <StepFour nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} values={newCharacter} />
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      );
-    case 5:
-      return (
-        <div>
-          <Container>
-            <Row>
-              <Col>
-                <StepFive nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} values={newCharacter} />
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      );
-    case 6:
-      return (
-        <div>
-          <Container>
-            <Row>
-              <Col>
-                <StepSix nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} values={newCharacter} />
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      );
-    case 7:
-      return (
-        <div>
-          <Container>
-            <Row>
-              <Col>
-                <StepSeven nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} values={newCharacter} />
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      );
-    case 8:
-      return (
-        <div>
-          <Container>
-            <Row>
-              <Col>
-                <StepEight nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} values={newCharacter} />
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      );
-    case 9:
-      return (
-        <div>
-          <Container>
-            <Row>
-              <Col>
-                <StepNine nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} values={newCharacter} />
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      );
-    case 10:
-      return (
-        <div>
-          <Container>
-            <Row>
-              <Col>
-                <StepTen nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} values={newCharacter} />
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      );
-    case 11:
+      case 0:
         return (
+          <StepOne nextStep={nextStep} handleChange={handleChange} handleNext={handleNext} handleComplete={handleComplete} values={newCharacter} />
+        );
+      case 1:
+        return (
+          <StepTwo nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} handleComplete={handleComplete} values={newCharacter} attributeScore={attributeScore} handleAttributeChange={handleAttributeChange} />
+        );
+      case 2:
+        return (
+          <StepThree nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} handleComplete={handleComplete} values={newCharacter} />
+        );
+      case 3:
+        return (
+          <StepFour nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} handleComplete={handleComplete} values={newCharacter} bonusScore={bonusScore} setBonusScore={setBonusScore} />
+        );
+      case 4:
+        return (
+          <StepFive nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} handleComplete={handleComplete} values={newCharacter} bonusScore={bonusScore} setBonusScore={setBonusScore} />
+        );
+      case 5:
+        return (
+          <StepSix nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} handleComplete={handleComplete} values={newCharacter} bonusScore={bonusScore} setBonusScore={setBonusScore} />
+        );
+      case 6:
+        return (
+          <StepSeven nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} handleComplete={handleComplete} values={newCharacter} />
+        );
+      case 7:
+        return (
+          <StepEight nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} handleComplete={handleComplete} values={newCharacter} />
+        );
+      case 8:
+        return (
+          <StepNine nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} handleComplete={handleComplete} values={newCharacter} />
+        );
+      case 9:
+        return (
+          <StepTen nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} handleComplete={handleComplete} values={newCharacter} />
+        );
+      case 10:
+          return (
+            <Final values={newCharacter} handleEdit={handleEdit} handleReset={handleReset} handleSubmit={handleSubmit} />
+          );
+      default:
+        return(
           <div>
-            <Container>
-              <Row>
-                <Col>
-                  <Final values={newCharacter} handleEdit={handleEdit} handleReset={handleReset} handleSubmit={handleSubmit} />
-                </Col>
-              </Row>
-            </Container>
+            <h1>Error</h1>
           </div>
         );
-    default:
-      return(
-        <div>
-          <h1>Error</h1>
-        </div>
-      );
+    }
   }
+  /**/
+  return (
+    <>
+      <Container>
+        <Box>
+          <Stack spacing={2}>
+            <Paper>
+              <CreateStepper step={step} steps={steps} completed={completed} handleStep={handleStep} handleNext={handleNext} handleComplete={handleComplete} />
+            </Paper>
+                   
+            <Paper elevation={3}>
+              {renderForm(step)}
+            </Paper>
+          </Stack>
+        </Box>
+      </Container>
+    </>
+  )
 }

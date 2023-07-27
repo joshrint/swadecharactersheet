@@ -34,10 +34,8 @@ function App({user}) {
     <Container>
     <Router>
     <div className="App">
+      <TopNav characters={charNames} username={user.username} />
       <Row>
-        <Col xs lg="2">
-          <TopNav characters={charNames} username={user.username} />
-        </Col>
         <Col >
           <Routes>
             <Route exact path='/' element={<CharacterList characters={charNames} username={user.username} />} />

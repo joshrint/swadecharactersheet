@@ -20,7 +20,6 @@ export default function CharSheetSkills({skills, handleChange, updateHandler}) {
             }
         });
         handleChange({"name":"skills", "value":tempSkills});
-        console.log(tempSkills);
         updateHandler({"skills": tempSkills});
         
     }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import CharCard from './CharCard';
 import {Row, Col} from "react-bootstrap";
+import { CircularProgress } from '@mui/material';
 
 
 export default function CharacterList({username}) {
@@ -20,7 +21,7 @@ export default function CharacterList({username}) {
     }, []);
 
     const charList = 
-        characters.length === 0 ? 'No characters on record' : characters.map((character, c) =>
+        characters.length === 0 ? <CircularProgress /> : characters.map((character, c) =>
             character.player === username ? 
                 <Row  key={c}>
                     <Col>

@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
-import {Row, Card, Button} from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import {Drawer, ListItem, ListItemIcon, ListItemText, Divider} from '@mui/material';
 import {Auth} from 'aws-amplify';
-import {Link} from 'react-router-dom';
+import { useLocation, useNavigate} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faCirclePlus, faRightFromBracket, faUser, faDiceD20, faBars } from '@fortawesome/free-solid-svg-icons';
 import '../../stylesheets/Nav.css';
 
 export default function TopNav({characters, username}) {
     const [show, setShow] = useState(false);
+    const [open, setOpen] = useState(false);
+    
     async function signOut(){
         try {
             await Auth.signOut();
@@ -15,41 +17,91 @@ export default function TopNav({characters, username}) {
             console.log('error signing out:', error)
         }
     }
+    const location = useLocation();
 
-    const showCharacters = () =>{
+    const {pathname} = location;
+
+    const splitLocation = pathname.split("/");
+
+    const navigate = useNavigate();
+
+    const handleNav = (path) =>{
+        navigate(path);
+        setOpen(false);
+    }
+
+    useEffect(() =>{
+        if (splitLocation[1] === 'character'){
+            setShow(true);
+        }
+    },[splitLocation, show])
+
+
+    /*const showCharacters = () =>{
         if (show) {
             setShow(false);
         } else {
             setShow(true);
         }
-    }
+    }*/
+
+    /*const formatCharacterName = (name) =>{
+        let formatName = name.replace(" ", "%20")
+        return formatName
+    } */
+
+    const data = [
+        {name:'Home', icon: <FontAwesomeIcon icon={faHouse} />, path:"/"},
+        {name:'New Character', icon:<FontAwesomeIcon icon={faCirclePlus} />, path:'/create-character'}
+    ]
     
-    const charList = 
+    const charList =         
         characters.length === 0 ? 'No characters on record' : characters.map((character, c) => 
-            character.player === username ? 
-                <span key={character.name}>
-                    <a href={`/character/${character.name}`} >{character.name}</a>
-                </span>
+            character.player === username ?
+                <ListItem button key={character.name} onClick={()=>handleNav(`/character/${character.name}`)}>
+                    <ListItemText secondary={character.name} />
+                </ListItem>
+                
             : <div key={c}></div>
         )
+    
+    const getList = () => (
+        <div style={{ width: 250}}>
+            {data.map((item, index) =>(
+                <ListItem button key={index} onClick={()=>handleNav(item.path)}>
+                    <ListItemIcon>{item.icon}</ListItemIcon>
+                    <ListItemText primary={item.name} />
+                </ListItem>
+            ))}
+        </div>
+    );
 
   return (
     <>
-        <Card>
-            <Card.Title>{username}</Card.Title>
-            <Row>
-                <Link to="/"><Button variant="primary" onClick={signOut}>Logout</Button></Link>
-            </Row>
-            <Row>
-                <a href='/'>Home</a>
-                <a href='/create-character'>New Character</a>
-            </Row>
-            <Row>
-                <div onClick={showCharacters}>My Characters {show ? <FontAwesomeIcon icon={faCaretUp} /> :<FontAwesomeIcon icon={faCaretDown} />}</div>
-                {show ? charList : <></>}
-            </Row>
-        </Card>
- 
+            <div className='top-nav'><span className='toggle-menu' onClick={() => setOpen(true)}><FontAwesomeIcon icon={faBars} /></span></div>
+        
+        <Drawer
+            anchor={'left'}
+            open={open}
+            onClose={() => setOpen(false)}>
+                <ListItem>
+                    <ListItemIcon><FontAwesomeIcon icon={faUser} /></ListItemIcon>
+                    <ListItemText primary={username} />
+                </ListItem>
+                <Divider />
+                {getList()}
+                <Divider />
+                    <ListItem>
+                        <ListItemIcon><FontAwesomeIcon icon={faDiceD20} /></ListItemIcon>
+                        <ListItemText primary='My Characters' />
+                    </ListItem>
+                    {charList}
+                <Divider />
+                    <ListItem button onClick={signOut}>
+                        <ListItemIcon><FontAwesomeIcon icon={faRightFromBracket} /></ListItemIcon>
+                        <ListItemText primary="Log Out"/>
+                    </ListItem>
+            </Drawer>
     </>
   )
 }

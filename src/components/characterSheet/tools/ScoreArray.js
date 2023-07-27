@@ -15,11 +15,11 @@ import '../../../stylesheets/ScoreArray.css';
 export default function ScoreArray({diceLevel}) {
   return (
     <>
-        {diceLevel >= 4 ? <img src={d4_selected} alt="d4red" className='dice'/>: <img src={d4} alt='d4' className='dice' /> }
-        {diceLevel >= 6? <img src={d6_selected} alt='d6red' className='dice'/>: <img src={d6} alt='d6' className='dice' /> }
-        {diceLevel >= 8 ? <img src={d8_selected} alt='d8red' className='dice'/>: <img src={d8} alt='d8' className='dice' /> }
-        {diceLevel >= 10 ? <img src={d10_selected} alt='d10red' className='dice'/>: <img src={d10} alt='d10' className='dice' /> }
-        {diceLevel >= 12 ? <img src={d12_selected} alt='d12red' className='dice'/>: <img src={d12} alt='d12' className='dice' /> }
+        {diceLevel >= 1 ? <img src={d4_selected} alt="d4red" className='dice'/>: <img src={d4} alt='d4' className='dice' /> }
+        {diceLevel >= 2? <img src={d6_selected} alt='d6red' className='dice'/>: <img src={d6} alt='d6' className='dice' /> }
+        {diceLevel >= 3 ? <img src={d8_selected} alt='d8red' className='dice'/>: <img src={d8} alt='d8' className='dice' /> }
+        {diceLevel >= 4 ? <img src={d10_selected} alt='d10red' className='dice'/>: <img src={d10} alt='d10' className='dice' /> }
+        {diceLevel >= 5 ? <img src={d12_selected} alt='d12red' className='dice'/>: <img src={d12} alt='d12' className='dice' /> }
     </>
   )
 }

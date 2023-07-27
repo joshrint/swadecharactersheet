@@ -3,11 +3,12 @@
  */
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
-import { Form, Col, Row, Button, Card } from 'react-bootstrap';
+import { faCaretDown, faTrashCan  } from '@fortawesome/free-solid-svg-icons';
+import { Card, Button, CardContent, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+
 import AddHinderance from '../add/AddHinderance';
 
-export default function StepFour({nextStep, prevStep, handleChange, values}) {
+export default function StepFour({prevStep, handleChange, handleComplete, values, bonusScore, setBonusScore}) {
   
   const handleAddHinderance = (e) =>{
     let tempHinderances = [];
@@ -15,46 +16,70 @@ export default function StepFour({nextStep, prevStep, handleChange, values}) {
       tempHinderances = values.hinderances;
     } 
     tempHinderances.push(e);
+    if(e.severity === 'minor'){
+      setBonusScore(bonusScore + 1);
+    } else if (e.severity==='major'){
+      setBonusScore(bonusScore + 2)
+    }
+
     handleChange({"name":"hinderances", "value":tempHinderances});
   }
   const handleRemoveHinderance = (e) =>{
     let tempHinderances = values.hinderances;
     for(let i = 0; i < tempHinderances.length; i++){
         if(tempHinderances[i].name === e){
-            tempHinderances.splice(i, 1);
+          if(tempHinderances[i].severity === 'minor'){
+            setBonusScore(bonusScore - 1);
+          } else if (tempHinderances[i].severity==='major'){
+            setBonusScore(bonusScore - 2)
+          }  
+          tempHinderances.splice(i, 1);
         }
     }
+    
     handleChange({"name":"hinderances", "value": tempHinderances});
   }
   
-  const submitFormData =() =>{
-    nextStep();
+  const validateSubmit = () => {
+    handleComplete()
   }
-
   return (
     <>
       <Card>
-        <Form onSubmit={submitFormData}>
-        <Card.Header><h3>Hinderances<AddHinderance handleAddHinderance={handleAddHinderance} /></h3></Card.Header>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h3">
+            Hinderances <AddHinderance handleAddHinderance={handleAddHinderance} />
+          </Typography>
+          <Typography>
+          </Typography>
           {values.hinderances && values.hinderances.length ? (
-              <>
-              {values.hinderances.map((h) =>(
-                <Row key={h.name}>
-                  <Col sm="3">{h.name}</Col>
-                  <Col sm="8">{h.description}</Col> 
-                  <Col>
-                    <FontAwesomeIcon onClick={() =>handleRemoveHinderance(h.name)} icon={faDeleteLeft} style={{float:"right"}} />
-                  </Col>
-                </Row>
-              ))}
-              </>
-            ): <div>None</div>  }
-          <Card.Footer>
-            
-            <Button onClick={prevStep}>Previous</Button>
-            <Button type='submit'>Next</Button>
-          </Card.Footer>
-        </Form>
+            <>
+            {values.hinderances.map((h) =>(
+              <Accordion key={h.name}>
+                <AccordionSummary
+                    expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
+                    aria-controls='panel1a-content'
+                    id='panel1a-header'>
+                        <Typography><FontAwesomeIcon onClick={() =>handleRemoveHinderance(h.name)} icon={faTrashCan} style={{float:"left", marginRight:'10px'}} /> <b>{h.name}</b> </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography align='left'>
+                          Severity: {h.severity}
+                        </Typography>
+                        <Typography align='left' sx={{marginTop:"10px"}}>
+                          {h.description}
+                        </Typography>
+                  </AccordionDetails>
+                </Accordion>
+            ))}
+            </>
+          ): <div>None</div>}
+
+          <Typography sx={{marginTop:"20px"}}>
+            <Button onClick={prevStep} >Back</Button><Button onClick={validateSubmit} sx={{mr: 1}}>Next</Button>
+          </Typography>
+
+        </CardContent>
       </Card>
     </>
   )

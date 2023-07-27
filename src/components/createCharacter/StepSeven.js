@@ -3,11 +3,11 @@
  */
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
-import { Form, Col, Row, Button, Card } from 'react-bootstrap';
+import { faCaretDown, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { Accordion, AccordionSummary, Card, CardContent, Typography, Button, AccordionDetails } from '@mui/material';
 import AddRippertech from '../add/AddRippertech'
 
-export default function StepSeven({nextStep, prevStep, handleChange, values}) {
+export default function StepSeven({nextStep, prevStep, handleChange, values, handleComplete}) {
   const handleAddRippertech = (e) =>{
     let tempRT = values.rippertech;
     tempRT.push(e);
@@ -24,32 +24,43 @@ export default function StepSeven({nextStep, prevStep, handleChange, values}) {
     handleChange({"name":"rippertech", "value": tempRT});
   }
 
-  const submitFormData =() =>{
-    nextStep();
+  const validateSubmit = () => {
+    handleComplete()
   }
   return (
     <>
       <Card>
-        <Form onSubmit={submitFormData}>
-        <Card.Header><h3>Rippertech<AddRippertech  handleAddRippertech={handleAddRippertech}/></h3></Card.Header>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h3">
+            Rippertech <AddRippertech  handleAddRippertech={handleAddRippertech}/>
+          </Typography>
           {values.rippertech && values.rippertech.length > 0 ? (
             <>
-              {values.rippertech.map((r) =>(
-                <Row key={r.name}>
-                  <Col sm="3">{r.name}</Col>
-                  <Col sm="8" style={{textAlign:"left"}}>{r.benefit} </Col>
-                  <Col>
-                    <FontAwesomeIcon onClick={() =>handleRemoveRippertech(r.name)} icon={faDeleteLeft} style={{float:"right"}} />
-                  </Col>  
-                </Row>
+              {values.rippertech.map((r) => (
+                <Accordion key={r.name}>
+                  <AccordionSummary
+                    expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
+                    aria-controls='panel1a-content'
+                    id='panel1a-header'>
+                      <Typography>
+                        <FontAwesomeIcon onClick={() =>handleRemoveRippertech(r.name)} icon={faTrashCan} style={{float:"left", marginRight:'15px'}} />
+                        {r.name}
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography align='left'>
+                          {r.benefit}
+                        </Typography>
+                      </AccordionDetails>
+                </Accordion>
               ))}
             </>
           ): <div>None</div>}
-        <Card.Footer>
-          <Button onClick={prevStep}>Previous</Button>
-          <Button type='submit'>Next</Button>
-        </Card.Footer>
-        </Form>
+
+          <Typography sx={{marginTop:"20px"}}>
+            <Button onClick={prevStep} >Back</Button><Button onClick={validateSubmit} sx={{mr: 1}}>Next</Button>
+          </Typography>
+        </CardContent>
       </Card>
     </>
   )

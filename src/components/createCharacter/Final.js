@@ -1,32 +1,33 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
-import { Form, Col, Row, Button, Card, ListGroup } from 'react-bootstrap';
+import { faPenToSquare, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { Form, Col, Row, Card, ListGroup } from 'react-bootstrap';
+import { Accordion, Button, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import ScoreArray from '../characterSheet/tools/ScoreArray';
-import InfoPopup from '../characterSheet/tools/InfoPopup';
-import ShowPowers from '../characterSheet/tools/ShowPowers';
 
 export default function Final({values, handleSubmit, handleEdit, handleReset}) {
   return (
     <>
     <Form>
       <Row>
+        <Col>
         <Card>
           <Card.Body>
-            <Card.Title>Name: {values.name}<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(1)} /></Card.Title>
+            <Card.Title>Name: {values.name}<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(0)} /></Card.Title>
             <Card.Subtitle>Alias: {values.alias}</Card.Subtitle>
             <Card.Text>
-              Rank: {values.rank}<br />
-              Languages: {values.languages}<br />
-              Faction: {values.faction}<br />
+              <b>Rank:</b> {values.rank}<br />
+              <b>Languages:</b> {values.languages}<br />
+              <b>Faction:</b> {values.faction}<br />
             </Card.Text>
           </Card.Body>
         </Card>
+        </Col>
       </Row>
       <Row>
         <Col>
           <Card>
-            <Card.Header><h4>Attributes<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(2)} /></h4></Card.Header>
+            <Card.Header><h4>Attributes<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(1)} /></h4></Card.Header>
             <ListGroup variant="flush">
               <ListGroup.Item><ScoreArray diceLevel={values.agility} /> Agility</ListGroup.Item>
               <ListGroup.Item><ScoreArray diceLevel={values.smarts} /> Smarts</ListGroup.Item>
@@ -39,7 +40,7 @@ export default function Final({values, handleSubmit, handleEdit, handleReset}) {
         <Col>
           <Card>
             <ListGroup variant="flush">
-              <ListGroup.Item><h4><FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(3)} /></h4>Pace: {values.pace} </ListGroup.Item>
+              <ListGroup.Item><h4><FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(2)} /></h4>Pace: {values.pace} </ListGroup.Item>
               <ListGroup.Item>Parry: {values.parry}</ListGroup.Item>
               <ListGroup.Item>Toughness: {values.toughness}</ListGroup.Item>
               <ListGroup.Item>Reason: {values.reason}</ListGroup.Item>
@@ -50,43 +51,67 @@ export default function Final({values, handleSubmit, handleEdit, handleReset}) {
         </Col>
         <Col>
           <Card>
-            <Card.Header><h4>Hinderances<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(4)} /></h4></Card.Header>
-            <ListGroup variant="flush">
+            <Card.Header><h4>Hinderances<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(3)} /></h4></Card.Header>
+            
               {values.hinderances.map((h) =>(
-                <ListGroup.Item key={h.name}><InfoPopup name={h.name} description={h.description} /></ListGroup.Item>
-              ))}
-            </ListGroup>
+                <Accordion key={h.name}>
+                  <AccordionSummary
+                  expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
+                  aria-controls='panel1a-content'
+                  id="panel1a-header">
+                    <h5>{h.name}</h5>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography align='left'>
+                      {h.description}
+                    </Typography>    
+                  </AccordionDetails>
+                </Accordion>
+                ))}
+            
           </Card>
         </Col>
       </Row>
       <Row>
         <Col>
           <Card>
-            <Card.Header><h4>Skills<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(6)} /></h4></Card.Header>
+            <Card.Header><h4>Skills<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(5)} /></h4></Card.Header>
             <ListGroup>
               {values.skills.map((s)=>(
-                <ListGroup.Item key={s.name}><ScoreArray diceLevel={s.rank} /> {s.name}</ListGroup.Item>
+                <ListGroup.Item key={s.name}><ScoreArray diceLevel={s.rank} /> {s.name} ({s.gov})</ListGroup.Item>
               ))}
             </ListGroup>
           </Card>
         </Col>
         <Col>
           <Card>
-            <Card.Header><h4>Gear<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(10)} /></h4></Card.Header>
+            <Card.Header><h4>Gear<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(9)} /></h4></Card.Header>
             <ListGroup variant='flush'>
               {values.gear.map((g) =>(
-                <ListGroup.Item key={g}>{g}</ListGroup.Item>
+                <ListGroup.Item key={g.name}>{g.name}</ListGroup.Item>
               ))}
             </ListGroup>
           </Card>
         </Col>
         <Col>
           <Card>
-            <Card.Header><h4>Edges<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(5)} /></h4></Card.Header>
+            <Card.Header><h4>Edges<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(4)} /></h4></Card.Header>
             <ListGroup variant='flush'>
               {values.edges.map((e) =>(
-                <ListGroup.Item key={e.name}><InfoPopup name={e.name} description={e.description} /></ListGroup.Item>
-              ))}
+                <Accordion key={e.name}>
+                  <AccordionSummary
+                    expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
+                    aria-controls='panel1a-content'
+                    id="panel1a-header">
+                      <h5>{e.name}</h5>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography align='left'>
+                        {e.description}
+                      </Typography>
+                    </AccordionDetails>
+                </Accordion>
+               ))}
             </ListGroup>
           </Card>
         </Col>
@@ -94,52 +119,51 @@ export default function Final({values, handleSubmit, handleEdit, handleReset}) {
       <Row>
         <Col>
           <Card>
-            <Card.Header><h4>Rippertech<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(7)} /></h4></Card.Header>
-            <table className='table'>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Benefit</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
+            <Card.Header><h4>Rippertech<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(6)} /></h4></Card.Header>
                 {values.rippertech.map((rt) =>(
-                    <tr key={rt.name}>
-                        <td>{rt.name}</td>
-                        <td><InfoPopup name={rt.name} description={rt.benefit} /></td>
-                    </tr>
+                  <Accordion>
+                    <AccordionSummary
+                      expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
+                      aria-controls='panel1a-content'
+                      id="panel1a-header">
+                        <h5>{rt.name}</h5>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Typography align='left'>
+                          {rt.benefit}
+                        </Typography>
+                      </AccordionDetails>
+                  </Accordion>
                 ))}
-                </tbody>
-            </table>
           </Card>
         </Col>
         <Col>
           <Card>
-            <Card.Header><h4>Powers<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(8)} /></h4></Card.Header>
-            <table className='table'>
-              <thead>
-                  <tr>
-                      <th>Name</th>
-                      <th>PP</th>
-                      <th>Range</th>
-                      <th>Dur</th>
-                      <th>Effect</th>
-                      <th></th>
-                  </tr>
-              </thead>
-              <tbody>
+            <Card.Header><h4>Powers<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(7)} /></h4></Card.Header>
                   {values.powers.map((p) =>(
-                      <tr key={p.name}>
-                          <td>{p.name}</td>
-                          <td>{p.pp}</td>
-                          <td>{p.range}</td>
-                          <td>{p.dur}</td>
-                          <td><ShowPowers name={p.name} pp={p.pp} range={p.range} dur={p.dur} effect={p.effect} /></td>
-                      </tr>
+                    <Accordion>
+                      <AccordionSummary
+                      expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
+                      aria-controls='panel1a-content'
+                      id="panel1a-header">
+                        <h5>{p.name}</h5>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Typography align='left'>
+                          <b>PP:</b> {p.pp}
+                        </Typography>
+                        <Typography align='left'>
+                          <b>Range:</b> {p.range}
+                        </Typography>
+                        <Typography align='left'>
+                          <b>Dur:</b> {p.dur}
+                        </Typography>
+                        <Typography align='left'>
+                          <b>Effect:</b> {p.effect}
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
                   ))}
-              </tbody>
-          </table>
           </Card>
         </Col>
       </Row>
