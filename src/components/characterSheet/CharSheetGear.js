@@ -14,8 +14,8 @@ export default function CharSheetGear({gear, handleChange, updateHandler}) {
     const handleGearChange = (e) =>{
         let tempGear = gear;
         for (let i = 0; i < tempGear.length; i++) {
-            if(e.oldName === tempGear[i]){
-                tempGear[i]=e.name;
+            if(e.oldName === tempGear[i].name){
+                tempGear[i].name=e.name;
             }
         }
         handleChange({"name":"gear", "value":tempGear})
@@ -24,7 +24,7 @@ export default function CharSheetGear({gear, handleChange, updateHandler}) {
     const handleRemoveGear = (e)=>{
         let tempGear = gear;
         for(let i = 0; i < tempGear.length; i++){
-            if(tempGear[i] === e){
+            if(tempGear[i].name === e){
                 tempGear.splice(i, 1);
             }
         }
@@ -37,7 +37,7 @@ export default function CharSheetGear({gear, handleChange, updateHandler}) {
             <h3 className='card-header'>Gear<AddGear handleAddGear={handleAddGear} /></h3>
             <ul className='list-group list-group-flush'>
                 {gear.map((g) =>(
-                    <li key={g} className='list-group-item'>{g} <EditGear name={g} handleGearChange={handleGearChange} handleRemoveGear={handleRemoveGear} /></li>
+                    <li key={g.name} className='list-group-item'>{g.name} <EditGear name={g.name} handleGearChange={handleGearChange} handleRemoveGear={handleRemoveGear} /></li>
                 ))}
             </ul>
     </div>

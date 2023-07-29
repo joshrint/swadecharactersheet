@@ -40,7 +40,7 @@ export default function CharSheetHinderances({hinderances, updateHandler, handle
         <div className='card'>
             <h3 className='card-header'>Hinderances<AddHinderance handleAddHinderance={handleAddHinderance} /></h3>
             {hinderances.map((h) => (
-                <Accordion>
+                <Accordion key={h.name}>
                     <AccordionSummary
                         expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
                         aria-controls='panel1a-content'

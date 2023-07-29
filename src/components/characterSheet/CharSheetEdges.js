@@ -41,7 +41,7 @@ export default function CharSheetEdges({edges, handleChange, updateHandler}) {
     <div className='card'>
         <h3 className='card-header'>Edges<AddEdge handleAddEdge={handleAddEdge} /></h3>
         {edges.map((e) =>(
-            <Accordion>
+            <Accordion key={e.name}>
                 <AccordionSummary
                     expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
                     aria-controls='panel1a-content'
