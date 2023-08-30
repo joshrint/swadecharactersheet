@@ -29,6 +29,18 @@ input[type='checkbox'] {
     opacity: 1;
     cursor: pointer;
 }
+
+.new-icon {
+    float:right;
+    margin-top: 3px;
+    opacity: 0.3;
+    margin-left: -1.2em;
+}
+.new-icon:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
 .accordion-edit-icon {
     float:right;
     margin-top: 3px;

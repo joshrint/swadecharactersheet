@@ -120,6 +120,7 @@ export default function CreateCharacter({username}) {
             'Content-Type': 'application/json'
           }})
         .then((res)=>{
+            navigate('/');
             console.log(res.status)
         })
         .catch((err)=>{
@@ -217,7 +218,7 @@ export default function CreateCharacter({username}) {
         );
       case 10:
           return (
-            <Final values={newCharacter} handleEdit={handleEdit} handleReset={handleReset} handleSubmit={handleSubmit} />
+            <Final values={newCharacter} handleEdit={handleEdit} handleChange={handleChange} handleReset={handleReset} handleSubmit={handleSubmit} />
           );
       default:
         return(

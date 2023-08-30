@@ -1,16 +1,15 @@
 import React from 'react'
-import AddHinderance from '../add/AddHinderance';
-import EditHinderance from '../edit/EditHinderance';
+import AddHinderance from '../../add/AddHinderance';
+import EditHinderance from '../../edit/EditHinderance';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 
-export default function CharSheetHinderances({hinderances, updateHandler, handleChange}) {
+export default function NewCharSheetHinderances({hinderances, handleChange}) {
     const handleAddHinderance = (e) => {
         let tempHinderances = hinderances;
         tempHinderances.push(e);
         handleChange({"name":"hinderances", "value":tempHinderances});
-        updateHandler({"hinderances":tempHinderances});
         
     }
     const handleHinderanceChange = (e) =>{
@@ -21,7 +20,6 @@ export default function CharSheetHinderances({hinderances, updateHandler, handle
             }
         });
         handleChange({"name":"hinderances", "value":tempHinderances})
-        updateHandler({"hinderances":tempHinderances});
     }
     
     const handleRemoveHinderance = (e) =>{
@@ -32,7 +30,6 @@ export default function CharSheetHinderances({hinderances, updateHandler, handle
             }
         }
         handleChange({"name":"hinderances", "value": tempHinderances});
-        updateHandler({"hinderances":tempHinderances});
     }
   return (
     <>
@@ -49,7 +46,7 @@ export default function CharSheetHinderances({hinderances, updateHandler, handle
                         <AccordionDetails>
                             <Typography align='left'>
                                 {h.description}
-                                <EditHinderance name={h.name} editclass={"edit-icon"} description={h.description} handleHinderanceChange={handleHinderanceChange} handleRemoveHinderance={handleRemoveHinderance} />
+                                <EditHinderance name={h.name} description={h.description} handleHinderanceChange={handleHinderanceChange} handleRemoveHinderance={handleRemoveHinderance} />
                             </Typography>
                         </AccordionDetails>
                 </Accordion>

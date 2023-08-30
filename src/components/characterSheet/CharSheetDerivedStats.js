@@ -7,7 +7,7 @@ import EditDerivedStat from '../edit/EditDerivedStat';
 export default function CharSheetDerivedStats({pace, parry, toughness, reason, status, wealth, handleChange, updateHandler}) {
 
     const handleStatChange = (e) =>{
-        handleChange({"name":e.stat, "value":e.score});
+        handleChange({"name":e.skill, "value":e.score});
         updateHandler(JSON.parse(`{"${e.skill}":"${e.score.toString()}"}`));
     }
 

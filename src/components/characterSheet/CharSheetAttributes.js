@@ -18,6 +18,7 @@ export default function CharSheetAttributes({agility, smarts, spirit, strength, 
                                                                 spirit={spirit}
                                                                 strength={strength}
                                                                 vigor={vigor}
+                                                                editclass={"edit-icon"}
                                                                 handleAbilityChange={handleAbilityChange}
                                                                   /></h3>
         <ul className="list-group list-group-flush">

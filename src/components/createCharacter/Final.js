@@ -4,8 +4,26 @@ import { faPenToSquare, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { Form, Col, Row, Card, ListGroup } from 'react-bootstrap';
 import { Accordion, Button, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import ScoreArray from '../characterSheet/tools/ScoreArray';
+import EditAttributes from '../edit/EditAttributes';
+import EditNewHeader from '../edit/EditNewHeader';
+import NewCharSheetHinderances from './finalCharSheet/NewCharSheetHinderances';
 
-export default function Final({values, handleSubmit, handleEdit, handleReset}) {
+export default function Final({values, handleSubmit, handleChange, handleEdit, handleReset}) {
+  const handleAbilityChange = (attributes) =>{
+    handleChange({"name":"agility", "value":attributes.agility});
+    handleChange({"name":"smarts", "value":attributes.smarts});
+    handleChange({"name":"spirit", "value":attributes.spirit});
+    handleChange({"name":"strength", "value":attributes.strength});
+    handleChange({"name":"vigor", "value":attributes.vigor});
+  }
+  const handleHeaderChange = (e) => {
+    let headerChange;
+    e.forEach(element => {
+        handleChange(element);
+        headerChange = {...headerChange, [element.name]:element.value};
+    });
+  }
+  
   return (
     <>
     <Form>
@@ -13,7 +31,7 @@ export default function Final({values, handleSubmit, handleEdit, handleReset}) {
         <Col>
         <Card>
           <Card.Body>
-            <Card.Title>Name: {values.name}<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(0)} /></Card.Title>
+            <Card.Title>Name: {values.name}<EditNewHeader name={values.name} editclass={"new-icon"} rank={values.rank} alias={values.alias} languages={values.languages} faction={values.faction} handleHeaderChange={handleHeaderChange} /></Card.Title>
             <Card.Subtitle>Alias: {values.alias}</Card.Subtitle>
             <Card.Text>
               <b>Rank:</b> {values.rank}<br />
@@ -27,7 +45,13 @@ export default function Final({values, handleSubmit, handleEdit, handleReset}) {
       <Row>
         <Col>
           <Card>
-            <Card.Header><h4>Attributes<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(1)} /></h4></Card.Header>
+            <Card.Header><h4>Attributes <EditAttributes agility={values.agility}
+                                                        smarts={values.smarts}
+                                                        spirit={values.spirit}
+                                                        strength={values.strength}
+                                                        vigor={values.vigor}
+                                                        editclass={"new-icon"}
+                                                        handleAbilityChange={handleAbilityChange} /></h4></Card.Header>
             <ListGroup variant="flush">
               <ListGroup.Item><ScoreArray diceLevel={values.agility} /> Agility</ListGroup.Item>
               <ListGroup.Item><ScoreArray diceLevel={values.smarts} /> Smarts</ListGroup.Item>
@@ -50,26 +74,7 @@ export default function Final({values, handleSubmit, handleEdit, handleReset}) {
           </Card>
         </Col>
         <Col>
-          <Card>
-            <Card.Header><h4>Hinderances<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(3)} /></h4></Card.Header>
-            
-              {values.hinderances.map((h) =>(
-                <Accordion key={h.name}>
-                  <AccordionSummary
-                  expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
-                  aria-controls='panel1a-content'
-                  id="panel1a-header">
-                    <h5>{h.name}</h5>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography align='left'>
-                      {h.description}
-                    </Typography>    
-                  </AccordionDetails>
-                </Accordion>
-                ))}
-            
-          </Card>
+          <NewCharSheetHinderances hinderances={values.hinderances} handleChange={handleChange} />
         </Col>
       </Row>
       <Row>

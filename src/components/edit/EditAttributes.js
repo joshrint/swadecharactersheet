@@ -35,7 +35,7 @@ export default function EditAttributes(props) {
   return (
     <>
         
-        <FontAwesomeIcon icon={faPenToSquare} className='edit-icon' onClick={handleShow} />
+        <FontAwesomeIcon icon={faPenToSquare} className={props.editclass} onClick={handleShow} />
         <Modal show={show}
                 onHide={handleClose}
                 backdrop="static"
