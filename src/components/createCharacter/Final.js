@@ -7,6 +7,7 @@ import ScoreArray from '../characterSheet/tools/ScoreArray';
 import EditAttributes from '../edit/EditAttributes';
 import EditNewHeader from '../edit/EditNewHeader';
 import NewCharSheetHinderances from './finalCharSheet/NewCharSheetHinderances';
+import NewCharSheetDerivedStats from './finalCharSheet/NewCharSheetDerived';
 
 export default function Final({values, handleSubmit, handleChange, handleEdit, handleReset}) {
   const handleAbilityChange = (attributes) =>{
@@ -62,16 +63,8 @@ export default function Final({values, handleSubmit, handleChange, handleEdit, h
           </Card>
         </Col>
         <Col>
-          <Card>
-            <ListGroup variant="flush">
-              <ListGroup.Item><h4><FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(2)} /></h4>Pace: {values.pace} </ListGroup.Item>
-              <ListGroup.Item>Parry: {values.parry}</ListGroup.Item>
-              <ListGroup.Item>Toughness: {values.toughness}</ListGroup.Item>
-              <ListGroup.Item>Reason: {values.reason}</ListGroup.Item>
-              <ListGroup.Item>Status: {values.status}</ListGroup.Item>
-              <ListGroup.Item>Wealth: {values.wealth}</ListGroup.Item>
-            </ListGroup>
-          </Card>
+          <NewCharSheetDerivedStats parry={values.parry} pace={values.pace} toughness={values.toughness} reason={values.reason} status={values.status} wealth={values.wealth} handleChange={handleChange} />
+          
         </Col>
         <Col>
           <NewCharSheetHinderances hinderances={values.hinderances} handleChange={handleChange} />

@@ -1,4 +1,18 @@
 .derived-card{
-    margin: 5px 2px 1px 2px auto;
-    max-width: 48%;
+    
+    
+}
+.col-left {
+    margin-right: 0px;
+    padding-right: 5px;
+}
+
+.col-right {
+    margin-left: 0px;
+    padding-left: 5px;
+}
+
+.last-row {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }

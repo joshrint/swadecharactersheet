@@ -40,7 +40,7 @@ export default function CharSheetSkills({skills, handleChange, updateHandler}) {
                         <h3 className='card-header'>Skills <AddSkill handleAddSkill={handleAddSkill} /></h3>
                             <ul className='list-group list-group-flush'>
                                 {skills.map((s) =>(
-                                    <li key={s.name} className='list-group-item'><ScoreArray diceLevel={s.rank} /> {s.name} <EditSkills className={"edit-icon"} name={s.name} rank={s.rank} handleSkillChange={handleSkillChange} handleRemoveSkill={handleRemoveSkill} /></li>
+                                    <li key={s.name} className='list-group-item'><ScoreArray diceLevel={s.rank} /> {s.name} <EditSkills editclass={"edit-icon"} name={s.name} rank={s.rank} handleSkillChange={handleSkillChange} handleRemoveSkill={handleRemoveSkill} /></li>
                                 ))}
                                 
                             </ul>
