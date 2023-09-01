@@ -1,14 +1,14 @@
 import React from 'react';
-import AddGear from '../add/AddGear';
-import EditGear from '../edit/EditGear';
+import AddGear from '../../add/AddGear';
+import EditGear from '../../edit/EditGear';
 
-export default function CharSheetGear({gear, handleChange, updateHandler}) {
+export default function NewCharSheetGear({gear, handleChange}) {
     const handleAddGear = (e) =>{
+        console.log(e)
         if(e.name.length > 0){
             let tempGear = gear;
             tempGear.push(e);
             handleChange({"name":"gear", "value":tempGear})
-            updateHandler({"gear":tempGear});
         }
     }
     const handleGearChange = (e) =>{
@@ -19,7 +19,6 @@ export default function CharSheetGear({gear, handleChange, updateHandler}) {
             }
         }
         handleChange({"name":"gear", "value":tempGear})
-        updateHandler({"gear":tempGear});
     }
     const handleRemoveGear = (e)=>{
         let tempGear = gear;
@@ -29,7 +28,6 @@ export default function CharSheetGear({gear, handleChange, updateHandler}) {
             }
         }
         handleChange({"name":"gear", "value":tempGear})
-        updateHandler({"gear":tempGear});
     }
   return (
     <>

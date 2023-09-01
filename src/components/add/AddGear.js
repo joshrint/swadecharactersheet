@@ -11,7 +11,7 @@ export default function AddGear(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    let gear = "";
+    let gear = {name:"", cost:""};
     const saveAndClose = () => {
         props.handleAddGear(gear)
         setShow(false);
@@ -28,7 +28,7 @@ export default function AddGear(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <label>Name</label>
-                    <input type='text' className='form-control' placeholder='Gear Name' onChange={(event) =>{gear = event.target.value}} />
+                    <input type='text' className='form-control' placeholder='Gear Name' onChange={(event) =>{gear.name = event.target.value}} />
                 </Modal.Body>
                 <Modal.Footer>
                     <AddFooterButtons saveAndClose={saveAndClose} />

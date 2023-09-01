@@ -48,7 +48,7 @@ export default function NewCharSheetDerivedStats({pace, parry, toughness, reason
                 </div>
             </div>
         </div>
-        <div className='row'>
+        <div className='row last-row'>
             <div className='col col-left'>
                 <div className='card derived-card  px-0'>
                     <h5 className='card-header'>Status<EditDerivedStat name={"status"} editclass={'new-icon'} stat={status} handleStatChange={handleStatChange}  /></h5>

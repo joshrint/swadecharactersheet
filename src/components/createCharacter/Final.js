@@ -1,22 +1,19 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPenToSquare, faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import { Form, Col, Row, Card, ListGroup } from 'react-bootstrap';
-import { Accordion, Button, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
-import ScoreArray from '../characterSheet/tools/ScoreArray';
-import EditAttributes from '../edit/EditAttributes';
+import { Form, Col, Row, Card } from 'react-bootstrap';
+import { Button } from '@mui/material';
 import EditNewHeader from '../edit/EditNewHeader';
 import NewCharSheetHinderances from './finalCharSheet/NewCharSheetHinderances';
 import NewCharSheetDerivedStats from './finalCharSheet/NewCharSheetDerived';
+import NewCharSheetAttributes from './finalCharSheet/NewCharSheetAttributes';
+import NewCharSheetSkills from './finalCharSheet/NewCharSheetSkills';
+import NewCharSheetGear from './finalCharSheet/NewCharSheetGeear';
+import NewCharSheetEdges from './finalCharSheet/NewCharSheetEdges';
+import NewCharSheetRipperTech from './finalCharSheet/NewCharSheetRipperTech';
+import NewCharSheetPowers from './finalCharSheet/NewCharSheetPowers';
+import NewCharSheetWeapons from './finalCharSheet/NewCharSheetWeapons';
 
 export default function Final({values, handleSubmit, handleChange, handleEdit, handleReset}) {
-  const handleAbilityChange = (attributes) =>{
-    handleChange({"name":"agility", "value":attributes.agility});
-    handleChange({"name":"smarts", "value":attributes.smarts});
-    handleChange({"name":"spirit", "value":attributes.spirit});
-    handleChange({"name":"strength", "value":attributes.strength});
-    handleChange({"name":"vigor", "value":attributes.vigor});
-  }
+  
   const handleHeaderChange = (e) => {
     let headerChange;
     e.forEach(element => {
@@ -45,26 +42,10 @@ export default function Final({values, handleSubmit, handleChange, handleEdit, h
       </Row>
       <Row>
         <Col>
-          <Card>
-            <Card.Header><h4>Attributes <EditAttributes agility={values.agility}
-                                                        smarts={values.smarts}
-                                                        spirit={values.spirit}
-                                                        strength={values.strength}
-                                                        vigor={values.vigor}
-                                                        editclass={"new-icon"}
-                                                        handleAbilityChange={handleAbilityChange} /></h4></Card.Header>
-            <ListGroup variant="flush">
-              <ListGroup.Item><ScoreArray diceLevel={values.agility} /> Agility</ListGroup.Item>
-              <ListGroup.Item><ScoreArray diceLevel={values.smarts} /> Smarts</ListGroup.Item>
-              <ListGroup.Item><ScoreArray diceLevel={values.spirit} /> Spirit</ListGroup.Item>
-              <ListGroup.Item><ScoreArray diceLevel={values.strength} /> Strength</ListGroup.Item>
-              <ListGroup.Item><ScoreArray diceLevel={values.vigor} /> Vigor</ListGroup.Item>
-            </ListGroup>
-          </Card>
+          <NewCharSheetAttributes agility={values.agility} smarts={values.smarts} spirit={values.smarts} strength={values.smarts} vigor={values.vigor} handleChange={handleChange} />
         </Col>
         <Col>
           <NewCharSheetDerivedStats parry={values.parry} pace={values.pace} toughness={values.toughness} reason={values.reason} status={values.status} wealth={values.wealth} handleChange={handleChange} />
-          
         </Col>
         <Col>
           <NewCharSheetHinderances hinderances={values.hinderances} handleChange={handleChange} />
@@ -72,130 +53,26 @@ export default function Final({values, handleSubmit, handleChange, handleEdit, h
       </Row>
       <Row>
         <Col>
-          <Card>
-            <Card.Header><h4>Skills<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(5)} /></h4></Card.Header>
-            <ListGroup>
-              {values.skills.map((s)=>(
-                <ListGroup.Item key={s.name}><ScoreArray diceLevel={s.rank} /> {s.name} ({s.gov})</ListGroup.Item>
-              ))}
-            </ListGroup>
-          </Card>
+          <NewCharSheetSkills skills={values.skills} handleChange={handleChange} />
         </Col>
         <Col>
-          <Card>
-            <Card.Header><h4>Gear<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(9)} /></h4></Card.Header>
-            <ListGroup variant='flush'>
-              {values.gear.map((g) =>(
-                <ListGroup.Item key={g.name}>{g.name}</ListGroup.Item>
-              ))}
-            </ListGroup>
-          </Card>
+          <NewCharSheetGear gear={values.gear} handleChange={handleChange} />
         </Col>
         <Col>
-          <Card>
-            <Card.Header><h4>Edges<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(4)} /></h4></Card.Header>
-            <ListGroup variant='flush'>
-              {values.edges.map((e) =>(
-                <Accordion key={e.name}>
-                  <AccordionSummary
-                    expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
-                    aria-controls='panel1a-content'
-                    id="panel1a-header">
-                      <h5>{e.name}</h5>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography align='left'>
-                        {e.description}
-                      </Typography>
-                    </AccordionDetails>
-                </Accordion>
-               ))}
-            </ListGroup>
-          </Card>
+          <NewCharSheetEdges edges={values.edges} handleChange={handleChange} />
         </Col>
       </Row>
       <Row>
         <Col>
-          <Card>
-            <Card.Header><h4>Rippertech<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(6)} /></h4></Card.Header>
-                {values.rippertech.map((rt) =>(
-                  <Accordion>
-                    <AccordionSummary
-                      expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
-                      aria-controls='panel1a-content'
-                      id="panel1a-header">
-                        <h5>{rt.name}</h5>
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        <Typography align='left'>
-                          {rt.benefit}
-                        </Typography>
-                      </AccordionDetails>
-                  </Accordion>
-                ))}
-          </Card>
+          <NewCharSheetRipperTech rippertech={values.rippertech} handleChange={handleChange} />
         </Col>
         <Col>
-          <Card>
-            <Card.Header><h4>Powers<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(7)} /></h4></Card.Header>
-                  {values.powers.map((p) =>(
-                    <Accordion>
-                      <AccordionSummary
-                      expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
-                      aria-controls='panel1a-content'
-                      id="panel1a-header">
-                        <h5>{p.name}</h5>
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        <Typography align='left'>
-                          <b>PP:</b> {p.pp}
-                        </Typography>
-                        <Typography align='left'>
-                          <b>Range:</b> {p.range}
-                        </Typography>
-                        <Typography align='left'>
-                          <b>Dur:</b> {p.dur}
-                        </Typography>
-                        <Typography align='left'>
-                          <b>Effect:</b> {p.effect}
-                        </Typography>
-                      </AccordionDetails>
-                    </Accordion>
-                  ))}
-          </Card>
+          <NewCharSheetPowers powers={values.powers}  handleChange={handleChange} />
         </Col>
       </Row>
       <Row>
         <Col>
-          <Card>
-            <Card.Header><h4>Weapons<FontAwesomeIcon icon={faPenToSquare} className='edit-new-icon' onClick={() => handleEdit(9)} /></h4></Card.Header>
-            <table className='table'>
-              <thead>
-                  <tr>
-                      <th>Name</th>
-                      <th>Range</th>
-                      <th>Damage</th>
-                      <th>AP</th>
-                      <th>ROF</th>
-                      <th>WT</th>
-                      <th>Notes</th>
-                  </tr>
-              </thead>
-              <tbody>
-              {values.weapons.map((w) =>(
-                  <tr key={w.name}>
-                      <td>{w.name}</td>
-                      <td>{w.range}</td>
-                      <td>{w.damage}</td>
-                      <td>{w.ap}</td>
-                      <td>{w.rof}</td>
-                      <td>{w.wt}</td>
-                      <td>{w.notes}</td>
-                  </tr>
-              ))}
-              </tbody>
-            </table>
-          </Card>
+          <NewCharSheetWeapons weapons={values.weapons} handleChange={handleChange} />
         </Col>
       </Row>
       <Row>

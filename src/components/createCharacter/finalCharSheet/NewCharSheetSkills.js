@@ -3,7 +3,7 @@ import AddSkill from '../../add/AddSkill';
 import EditSkills from '../../edit/EditSkills';
 import ScoreArray from '../../characterSheet/tools/ScoreArray';
 
-export default function CharSheetSkills({skills, handleChange, updateHandler}) {
+export default function NewCharSheetSkills({skills, handleChange}) {
     const handleAddSkill = (e) =>{
         if(e.name.length > 0){
             let tempSkills = skills;
