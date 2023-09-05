@@ -43,7 +43,7 @@ export default function CharSheetPowers({powers, handleChange, updateHandler}) {
     <Card>
         <Card.Header><h3>Powers<AddPower handleAddPower={handleAddPower} /></h3></Card.Header>
                 {powers.map((p) =>(
-                    <Accordion>
+                    <Accordion key={p.name}>
                         <AccordionSummary
                         expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
                         aria-controls='panel1a-content'
@@ -62,7 +62,10 @@ export default function CharSheetPowers({powers, handleChange, updateHandler}) {
                             </Typography>
                             <Typography align='left'>
                                 <b>Effect: </b>{p.effect}
+                            </Typography>
+                            <Typography>
                                 <EditPower name={p.name} pp={p.pp} range={p.range} dur={p.dur} effect={p.effect} handlePowersChange={handlePowersChange} handleRemovePower={handleRemovePower} />
+                                <br />
                             </Typography>
                         </AccordionDetails>
                     </Accordion>

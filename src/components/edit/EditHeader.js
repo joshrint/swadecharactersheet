@@ -5,6 +5,8 @@ import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
 import "../../stylesheets/EditPopup.css";
 import AddFooterButtons from '../add/tools/AddFooterButtons';
 import ranks from '../characterSheet/tools/Ranks';
+import AddRippertech from '../add/AddRippertech';
+import AddPower from '../add/AddPower';
 
 export default function EditHeader(props) {
     const [show, setShow] = useState(false);
@@ -32,6 +34,17 @@ export default function EditHeader(props) {
         props.handleHeaderChange(header)
         setShow(false);
     }
+
+    const checkRipperTechandPowers = () =>{
+        if (props.rippertech === 0) {
+            return false
+        } else if (props.powers === 0){
+            return false
+        } else {
+            return true
+        }
+    }
+
     
   return (
     <>
@@ -56,8 +69,26 @@ export default function EditHeader(props) {
                 <input type="text" defaultValue={header[2].value} className='form-control' onChange={(event) => header[2].value = event.target.value} />
                 <label>Faction</label>
                 <input type="text" defaultValue={header[3].value} className='form-control' onChange={(event) => header[3].value = event.target.value} />
+
+                
                 
             </Modal.Body>
+            { checkRipperTechandPowers() ? <></> :
+                <>
+                <Modal.Header>
+                <Modal.Title>Add Rippertech or Powers</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                {props.rippertech > 0 ? <></> 
+                    :
+                    <div>Add Rippertech <AddRippertech handleAddRippertech={props.handleAddRippertech} /></div>}
+                {props.powers > 0 ? <></>
+                    :
+                    <div>Add Powers <AddPower handleAddPower={props.handleAddPower} /></div>}
+                </Modal.Body>
+                </>
+            }
+            
             <Modal.Footer>
                 <AddFooterButtons saveAndClose={saveAndClose} />
             </Modal.Footer>

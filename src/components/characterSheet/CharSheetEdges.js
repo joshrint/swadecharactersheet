@@ -52,7 +52,10 @@ export default function CharSheetEdges({edges, handleChange, updateHandler}) {
                 <AccordionDetails>
                     <Typography align='left'>
                         {e.description}
+                    </Typography>
+                    <Typography>
                         <EditEdge name={e.name} description={e.description} handleEdgeChange={handleEdgeChange} handleRemoveEdge={handleRemoveEdge} />
+                        <br />
                     </Typography>
                 </AccordionDetails>
             </Accordion>

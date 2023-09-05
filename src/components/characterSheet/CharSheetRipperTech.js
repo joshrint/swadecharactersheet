@@ -53,7 +53,10 @@ export default function CharSheetRipperTech({rippertech, handleChange, updateHan
                     <AccordionDetails>
                         <Typography align='left'>
                             {rt.benefit}
+                        </Typography>
+                        <Typography>
                             <EditRippertech name={rt.name} benefit={rt.benefit} handleRipperTechChange={handleRipperTechChange} handleRemoveRippertech={handleRemoveRippertech} />
+                            <br />
                         </Typography>
                     </AccordionDetails>
                 </Accordion>

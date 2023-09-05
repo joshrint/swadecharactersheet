@@ -63,7 +63,7 @@ export default function CharacterSheet() {
         <div className='container'>
             <div className='row'>
                 <div className='col'>
-                    <CharSheetHeader name={character.name} alias={character.alias} rank={character.rank} languages={character.languages} faction={character.faction} updateHandler={updateHandler} handleChange={handleChange} />
+                    <CharSheetHeader name={character.name} alias={character.alias} rank={character.rank} languages={character.languages} faction={character.faction} rippertech={character.rippertech.length} powers={character.powers.length} updateHandler={updateHandler} handleChange={handleChange} />
                     
                 </div>
             </div>
@@ -101,17 +101,18 @@ export default function CharacterSheet() {
                 </div>
             </div>
             <div className='row justify-content-md-center'>
-                <div className='col-md'>
+                {character.rippertech.length > 0 ? <div className='col-md'>
                     <CharSheetRipperTech rippertech={character.rippertech} handleChange={handleChange} updateHandler={updateHandler} />
-                </div>
-                <div className='col-md'>
-                    <CharSheetPowers powers={character.powers} handleChange={handleChange} updateHandler={updateHandler} />
-                </div>
-            </div>
-            <div className='row justify-content-md-center'>
+                </div> : <></>}
                 <div className='col-md'>
                     <CharSheetWeapons weapons={character.weapons} handleChange={handleChange} updateHandler={updateHandler} />
                 </div>
+                {character.powers.length > 0 ? <div className='col-md'>
+                    <CharSheetPowers powers={character.powers} handleChange={handleChange} updateHandler={updateHandler} />
+                </div> : <></>} 
+            </div>
+            <div className='row justify-content-md-center'>
+                
             </div>
         </div>
         ) : <CircularProgress />}

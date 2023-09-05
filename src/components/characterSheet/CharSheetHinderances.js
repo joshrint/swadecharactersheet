@@ -49,7 +49,10 @@ export default function CharSheetHinderances({hinderances, updateHandler, handle
                         <AccordionDetails>
                             <Typography align='left'>
                                 {h.description}
+                            </Typography>
+                            <Typography>
                                 <EditHinderance name={h.name} editclass={"edit-icon"} description={h.description} handleHinderanceChange={handleHinderanceChange} handleRemoveHinderance={handleRemoveHinderance} />
+                                <br />
                             </Typography>
                         </AccordionDetails>
                 </Accordion>

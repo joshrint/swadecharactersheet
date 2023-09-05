@@ -1,6 +1,10 @@
 import React from 'react';
 import AddWeapon from '../add/AddWeapon';
 import EditWeapon from '../edit/EditWeapon';
+import { Card } from 'react-bootstrap';
+import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 export default function CharSheetWeapons({weapons, handleChange, updateHandler}) {
     const handleAddWeapon = (e) =>{
@@ -38,6 +42,53 @@ export default function CharSheetWeapons({weapons, handleChange, updateHandler})
     }
   return (
     <>
+        <Card>
+            <Card.Header><h3>Weapons<AddWeapon handleAddWeapon={handleAddWeapon} /></h3></Card.Header>
+            {weapons.map((w) =>(
+                <Accordion key={w.name}>
+                    <AccordionSummary
+                        expandIcon={<FontAwesomeIcon icon={faCaretDown} />}
+                        aria-controls='panel1a-content'
+                        id="panel1a-header">
+                            <h5>{w.name}</h5>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            {w.range.length > 0 ? <Typography align='left'>
+                                <b>Range: </b>{w.range}
+                            </Typography>
+                            : <></>}
+                            {w.damage.length > 0 ? <Typography align='left'>
+                                <b>Damage: </b>{w.damage}
+                            </Typography>
+                            : <></>}
+                            {w.ap.length > 0 ? <Typography align='left'>
+                                <b>AP: </b>{w.ap}
+                            </Typography>
+                            : <></>}
+                            {w.rof.length > 0 ? <Typography align='left'>
+                                <b>ROF: </b>{w.rof}
+                            </Typography>
+                            : <></>}
+                            {w.wt.length > 0 ? <Typography align='left'>
+                                <b>WT: </b>{w.wt}
+                            </Typography>
+                            : <></>}
+                            {w.notes.length > 0 ? <Typography align='left'>
+                                <b>Notes: </b>{w.notes}
+                            </Typography>
+                            : <></>}
+                            <Typography>
+                                <EditWeapon name={w.name} range={w.range} damage={w.damage} ap={w.ap} rof={w.rof} wt={w.wt} notes={w.notes} handleWeaponsChange={handleWeaponsChange} handleRemoveWeapon={handleRemoveWeapon} />
+                                < br />
+                            </Typography>
+                        </AccordionDetails>
+                </Accordion>
+            ))}
+        </Card>
+    </>
+  )  
+  /*return (
+    <>
     <div className='card'>
         <h3 className='card-header'>Weapons<AddWeapon handleAddWeapon={handleAddWeapon} /></h3>
         <table className='table'>
@@ -70,5 +121,5 @@ export default function CharSheetWeapons({weapons, handleChange, updateHandler})
         </table>
     </div>
     </>
-  )
+  )*/
 }
