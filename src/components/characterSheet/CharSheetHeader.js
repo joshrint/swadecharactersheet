@@ -1,5 +1,6 @@
 import React from 'react';
 import EditHeader from '../edit/EditHeader';
+import ranks from './tools/Ranks';
 
 export default function CharSheetHeader({name, alias, rank, languages, faction, updateHandler, handleChange}) {
   
@@ -17,7 +18,7 @@ export default function CharSheetHeader({name, alias, rank, languages, faction, 
         <div className='card-body'>
             <h1 className='card-title'>{name} <EditHeader name={name} rank={rank} alias={alias} languages={languages} faction={faction} handleHeaderChange={handleHeaderChange} /></h1>
             <h5 className='card-subtitle mb-2 text-body-secondary'>Alias:{alias}</h5>
-            <p className='card-text'>Rank: {rank}<br />
+            <p className='card-text'>Rank: {ranks[rank].name}<br />
                             Languages: {languages}<br />
                             Faction: {faction}<br />
                             </p>

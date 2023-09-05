@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import CharCard from './CharCard';
-import {Row, Col} from "react-bootstrap";
-import { CircularProgress } from '@mui/material';
+import {Row, Col, Card} from "react-bootstrap";
+import { CardActionArea, CircularProgress, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 
 export default function CharacterList({username}) {
@@ -49,12 +50,22 @@ export default function CharacterList({username}) {
                         <CharCard character={character} handleDelete={handleDelete} />
                     </Col>
                 </Row>
-            : <div key={c}></div>
+            : <div key={c}>
+            </div>
         )
   return (
     <>
         <div className='container'>
             {charList}
+            <Row>
+                    <Card>
+                        <CardActionArea component={Link} to={'/create-character'}>
+                            <Typography gutterBottom variant='h5' component='h2'>
+                                Create New Character
+                            </Typography>
+                        </CardActionArea>
+                    </Card>
+                </Row>
         </div>
     </>
     

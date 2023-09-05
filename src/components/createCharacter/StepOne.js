@@ -2,7 +2,8 @@
 Character Name, Alias, rank, faction, and languages.
 Character Sheet Header
 */
-import {React, useState, useEffect} from 'react'
+import {React, useState, useEffect} from 'react';
+import ranks from '../characterSheet/tools/Ranks';
 import {Card, CardContent, Typography, Button, MenuItem, FormControl, Select, Grid, TextField, Alert} from '@mui/material';
 
 export default function StepOne({ handleChange, values, prevStep, handleComplete}) {
@@ -156,7 +157,12 @@ export default function StepOne({ handleChange, values, prevStep, handleComplete
                 id="rank"
                 value={values.rank}
                 variant="standard"
-                onChange={(e) => handleChange({"name":"faction", "value": e.target.value})}>
+                onChange={(e) => handleChange({"name":"rank", "value": e.target.value})}>
+                  {ranks.map((rank) =>(
+                    <MenuItem key={rank.value} value={rank.value}>
+                      {rank.name}
+                    </MenuItem>
+                  ))}
                   <MenuItem value="novice">Novice</MenuItem>
                   <MenuItem value="seasoned">Seasoned</MenuItem>
                   <MenuItem value="veteran">Veteran</MenuItem>

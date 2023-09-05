@@ -2,6 +2,7 @@ import React from 'react';
 import { Form, Col, Row, Card } from 'react-bootstrap';
 import { Button } from '@mui/material';
 import EditNewHeader from '../edit/EditNewHeader';
+import ranks from '../characterSheet/tools/Ranks';
 import NewCharSheetHinderances from './finalCharSheet/NewCharSheetHinderances';
 import NewCharSheetDerivedStats from './finalCharSheet/NewCharSheetDerived';
 import NewCharSheetAttributes from './finalCharSheet/NewCharSheetAttributes';
@@ -32,7 +33,7 @@ export default function Final({values, handleSubmit, handleChange, handleEdit, h
             <Card.Title>Name: {values.name}<EditNewHeader name={values.name} editclass={"new-icon"} rank={values.rank} alias={values.alias} languages={values.languages} faction={values.faction} handleHeaderChange={handleHeaderChange} /></Card.Title>
             <Card.Subtitle>Alias: {values.alias}</Card.Subtitle>
             <Card.Text>
-              <b>Rank:</b> {values.rank}<br />
+              <b>Rank:</b> {ranks[values.rank].name}<br />
               <b>Languages:</b> {values.languages}<br />
               <b>Faction:</b> {values.faction}<br />
             </Card.Text>

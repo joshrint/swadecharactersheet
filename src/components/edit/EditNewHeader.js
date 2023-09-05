@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare} from '@fortawesome/free-solid-svg-icons';
 import "../../stylesheets/EditPopup.css";
 import AddFooterButtons from '../add/tools/AddFooterButtons';
+import ranks from '../characterSheet/tools/Ranks';
 
 export default function EditNewHeader(props) {
     const [show, setShow] = useState(false);
@@ -51,11 +52,9 @@ export default function EditNewHeader(props) {
                 <input type="text" defaultValue={header[1].value} className='form-control' onChange={(event) => header[1].value = event.target.value} />
                 <label>Rank</label>
                 <select defaultValue={header[2].value} className='form-control' onChange={(event) => header[2].value = event.target.value}>
-                    <option value={"Novice"}>Novice</option>
-                    <option value={"Seasoned"}>Seasoned</option>
-                    <option value={"Veteran"}>Veteran</option>
-                    <option value={"Heroic"}>Heroic</option>
-                    <option value={"Legendary"}>Legendary</option>  
+                    {ranks.map((rank) =>(
+                        <option key={rank.value} value={rank.value}>{rank.name}</option>
+                    ))} 
                 </select> 
                 <label>Languages</label>
                 <input type="text" defaultValue={header[3].value} className='form-control' onChange={(event) => header[3].value = event.target.value} />
