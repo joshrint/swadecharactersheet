@@ -163,11 +163,6 @@ export default function StepOne({ handleChange, values, prevStep, handleComplete
                       {rank.name}
                     </MenuItem>
                   ))}
-                  <MenuItem value="novice">Novice</MenuItem>
-                  <MenuItem value="seasoned">Seasoned</MenuItem>
-                  <MenuItem value="veteran">Veteran</MenuItem>
-                  <MenuItem value="heroic">Heroic</MenuItem>
-                  <MenuItem value="legendary">Legendary</MenuItem>
                 </Select>
               </FormControl>
           </Grid>

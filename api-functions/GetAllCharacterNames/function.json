@@ -9,7 +9,7 @@
         "get",
         "post"
       ],
-      "route": "GetAllCharactersNames"
+      "route": "GetAllCharactersNames/{id}"
     },
     {
       "type": "http",

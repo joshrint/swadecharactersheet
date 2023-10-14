@@ -6,7 +6,8 @@ module.exports = async function (context, req) {
     try {
         const database = await mongoClient.db("rippers");
         const collection = database.collection("characters");
-        const results = await collection.find({}, { name: 1 }).toArray();
+        const { id } = req.params;
+        const results = await collection.find({player: id}, { name: 1 }).toArray();
         context.res = {
             "headers": {
                 "content-type": "application/json"
