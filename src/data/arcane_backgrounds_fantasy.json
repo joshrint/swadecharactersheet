@@ -1,0 +1,354 @@
+[
+    {
+        "_id":"FCE057",
+        "name":"Alchemist",
+        "level":"Novice",
+        "requirements":"Novice, Smarts d6+",
+        "type":"Background",
+        "effect":"Alchemists create potions, oils, elixirs, and other consumables imbued with magical abilities. Their potions aren't like those listed in the Treasure chapter—those last for years, require investment of funds, and are created with the Crafting rules (page 169).<br /> Instead, alchemists imbue their potions, grenades, and oils with the powers they've learned. Narratively, their concoctions are created “off-camera” some time prior to their use. In game terms, they're “cast” as the player needs them—pulling various vials or containers from their alchemist's bag or bandoleer and activating them as needed.<br /> - <b>ARCANE SKILL:</b> Alchemy (Smarts)<br /> - <b>STARTING POWERS:</b> Any three from the list below.<br /> - <b>POWER POINTS:</b> 15 <br /> - <b>AVAILABLE POWERS:</b> <i>Banish, beast friend, blast, blind, boost/lower Trait, burst, confusion, darksight, deflection, detect/conceal arcana, empathy, entangle, environmental protection, farsight, fear, fly, growth/shrink, healing, intangibility, invisibility, light/darkness, protection, puppet, relief, resurrection, shape change, sloth/speed, slumber, smite, speak language, wall walker, warrior's gift.</i> - <b>POWER EDGES</b>: Alchemists may not take Power Edges except for Artificer, Master Artificer, New Powers, Power Points, and Edges specifically noted for Arcane Background (Alchemist).<br /> - <b>POWER MODIFIERS:</b> Alchemists can't use the Selective Power Modifier.<br /> - <b>ALCHEMIST'S BAG:</b> Concoctions are stored in an alchemist's bag, as are the ingredients, glassware, and other scientific equipment she needs to create them. An alchemist can't activate her powers without her bag. As long as the alchemist has access to her bag, she can also make Alchemical Items (see page 60).<br /> - COMPONENTS: Alchemists' potions, elixirs, pills, and grenades are expendable, giving them the Material Components Hindrance."
+    },
+    {
+        "_id":"FCE058",
+        "name":"Chemist",
+        "level":"Novice",
+        "requirements":"Novice, Arcane Background (Alchemist), Alchemy d8+",
+        "type":"Power",
+        "effect":"The alchemist's concoctions last one week rather than 48 hours when given to others. See the Alchemist Arcane Background on page 90 for more information."
+    },
+    {
+        "_id":"FCE059",
+        "name":"Master Alchemist",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background (Alchemist), Alchemy d10+",
+        "type":"Power",
+        "effect":"Alchemists craft permanent potions like any other (see Crafting on page 169). Some are particularly adept at it, however, and can create potent potables while traveling using alternate ingredients.<br /> Master Alchemist allows the scientist to create potions at half the usual cost and as if she had access to Simple Workshop as long as she has her alchemist's bag or makeshift supplies the GM feels contain necessary ingredients or reasonable facsimiles."
+    },
+    {
+        "_id":"FCE060",
+        "name":"Bard",
+        "level":"Novice",
+        "requirements":"Novice, Spirit d6+",
+        "type":"Background",
+        "effect":"Bards cast spells by singing, reciting poetry, or performing dramatic quotes. Some bards work their spells in other ways, such as captivating dances or farcical plays. They are usually erudite individuals, traveling the land to regale audiences with bawdy songs and epic poems.<br /> - ARCANE SKILL: Performance (Spirit)<br /> - <b>STARTING POWERS:</b> <i>Boost/lower Trait, sound/silence</i> and one other powerchosen from the list below.<br /> - POWER POINTS: 10<br /> - <b>AVAILABLE POWERS:</b> <i>Arcane protection, banish, beast friend, boost/lower Trait, confusion, detect/conceal arcana, dispel, divination, drain Power Points, empathy, fear, healing, mind link, mind reading, puppet, relief, sloth/speed, slumber, smite, sound/silence, speak language, stun, warrior's gift.</i><br /> - <b>MAGIC:</b> Bards may take Edges t hat require Arcane Background (Magic).<br /> - <b>ARMOR INTERFERENCE (Minor):</b> Bulky armor interferes with a bard's grace and dexterity. They have the Armor Interference (Minor) Hindrance.<br /> - <b>SHARP TONGUED:</b> Bards may use Performance as Taunt to Test a foe. They may also ignore the Repetition advice given under Tests (see Savage Worlds), as long as they recite different verses, stanzas, lyrics, etc. Bards may also substitute Performance for Taunt to meet Edge Requirements."
+    },
+    {
+        "_id":"FCE061",
+        "name":"Dirge",
+        "level":"Heroic",
+        "requirements":"Heroic, Arcane Background(Bard)",
+        "type":"Power",
+        "effect":"This baleful performance builds dread among the bard's foes. At the bard's discretion, any enemy within 10” (20 yards) and line of sight who spends a Benny to Soak or reroll a Trait or damage roll subtracts 2 from the total.<br /> The bard must be able to speak, sing, or play her instrument to use this ability."
+    },
+    {
+        "_id":"FCE062",
+        "name":"Inspire Heroics",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background(Bard), Performance d8+",
+        "type":"Power",
+        "effect":"Bards inspire their comrades with epic tales of valor and bravery. Once during any combat encounter (GM's call), the bard can spend a Benny to gain five Inspiration tokens. This is a limited free action.<br /> For the remainder of the encounter, the bard may give these tokens to anyone within a Range of Smarts except himself. This may be done at any time (as long as the bard is conscious). The recipient must use the token immediately—it cannot be saved. Each Inspiration token allows a character to reroll a Trait or damage roll. A Trait or damage roll may only benefit from a single Inspiration Token, even if there are multiple bards present. Further rerolls require spending a Benny or a special ability.<br /> Inspiration tokens aren't Bennies, don't trigger Edges that use Bennies (such as Elan), and can't be used as such in any other way such as drawing new Action Cards or Soaking Wounds."
+    },
+    {
+        "_id":"FCE063",
+        "name":"Instrument",
+        "level":"Novice",
+        "requirements":"Novice, Arcane Background(Bard)",
+        "type":"Power",
+        "effect":"Singing bards often use musical instruments to accentuate their ballads, striking chords or hitting high notes at particularly inspiring parts of their songs. Dancing bards may use streamers or swords as their instrument of choice, while oratory bards might incorporate elaborate props or masks.<br /> A bard who uses an instrument of some kind when casting a spell adds +1 to her Performance roll. The bonus only applies when Performance is used as an arcane skill. Of course the instrument requires one or more hands to play."
+    },
+    {
+        "_id":"FCE064",
+        "name":"Cleric",
+        "level":"Novice",
+        "requirements":"Novice, Spirit d6+",
+        "type":"Background",
+        "effect":"Clerics draw their power from a divine presence of some sort, including gods, nature, spirits, or their revered ancestors. They invoke miracles from these entities by reciting prayers or performing rituals they believe are in their deity's best interests.<br /> A cleric's particular service depends on the deity he serves. A list of “domains” the Game Master can assign to a particular source of power can be found on page 114.<br /> - <b>ARCANE SKILL:</b> Faith (Spirit)<br /> - <b>STARTING POWERS:</b> <i>Healing, sanctuary,</i> and three other powers from their chosen Domain (see page 114).<br /> - <b>POWER POINTS:</b> 10 <br /> - <b>AVAILABLE POWERS:</b> Choose a domain from those listed on pages 114 through 115 or create your own based on the world and the divine beings that watch over it.<br /> - <b>MIRACLES:</b> Clerics may take Edges that require Arcane Background (Miracles).<br /> - <b>HOLY SYMBOL:</b> Clerics who prominently display the symbol of their deity or religion in one hand get a free reroll on all Faith rolls. This means they cannot hold a shield or weapon in that hand.<br /> - <b>VOW:</b> Clerics must have a Vow (Major) to their deity or religion. If they fail to uphold their deity's values, they subtract 2 from Faith rolls for a week. Truly sacrilegious acts might rob them of their powers entirely until they atone in some way."
+    },
+    {
+        "_id":"FCE065",
+        "name":"Destroy Undead",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background(Cleric)",
+        "type":"Power",
+        "effect":"The undead are abominations to good clerics. The dead have passed on to their just rewards and should not return to the land of the living. It is little wonder then that these holy men and women are so often called to stand against the raging hordes of the undead.<br /> Evil clerics can also destroy those undead creatures that stand in their path. Perhaps it is their affinity with unnatural things, or perhaps their deity simply grants the power to clear their servants' path to greater mayhem.<br /> As a limited action, the champion spends one Power Point to channel positive energy in a Large Blast Template centered on herself. Every undead creature within the template automatically takes 2d6 damage (or 3d6 damage for two Power Points)."
+    },
+    {
+        "_id":"FCE066",
+        "name":"Mercy",
+        "level":"Novice",
+        "requirements":"Novice, Arcane Background(Cleric), Faith d8+",
+        "type":"Power",
+        "effect":"As an action, the cleric can spend 1 Power Point and grant “Mercy” to any one character within a Range equal to her Spirit, automatically removing one of the following states: Distracted, Vulnerable, or Shaken."
+    },
+    {
+        "_id":"FCE067",
+        "name":"Diabolist",
+        "level":"Novice",
+        "requirements":"Novice, Smarts d6+",
+        "type":"Background",
+        "effect":"Dwellers in darkness, demons from the abyss, or spirits from devilish dimensions are the servants of the diabolist. He conjures them to do his bidding, entrapping or binding these otherworldy entities to fulfill his most arduous tasks and bedevil his foes.<br /> A diabolist's Trappings always smack of corruption and deviltry. Their core power is summon ally, which conjures demonic, ghostly, or other malevolent spirits into the world.<br /> Their conjurings smell of brimstone, offensive powers use fire or darkness, and those around them may hear insane whispers as their summoned servants coalesce into existence. <br /> Diabolists aren't necessarily evil—they may just come from a place where such powers are common, or have decided to use the powers of the Abyss against those things that dare to leave its punishing environs.<br /> - <b>ARCANE SKILL:</b> Spellcasting (Smarts) <br /> - <b>STARTING POWERS:</b> <i>Banish, havoc, summon ally,</i> and two other powers chosen from the list below.<br /> - <b>POWER POINTS:</b> 10<br /> - <b>AVAILABLE POWERS:</b> <i>Arcane protection, banish, barrier, blast, blind, bolt, lower Trait (but not boost), burst, confusion, curse, damage field, darksight, deflection, detect/conceal arcana, disguise, dispel, divination, drain Power Points, elemental manipulation (fire only), entangle, environmental protection, farsight, fear, fly, havoc, illusion, light/darkness, lock/unlock, locate, plane shift, protection, puppet, scrying, sloth/speed, smite, sound/silence, speak language, summon ally, telekinesis, teleport, wall walker, warrior's gift, zombie.</i><br /> - <b>MAGIC:</b> Diabolists may take Edges that require Arcane Background (Magic).<br /> - <b>ARMOR INTERFERENCE (Major):</b> Bulky armor interferes with a diabolist's complex somatic movements. They have the Armor Interference (Major) Hindrance.<br /> - <b>CORRUPTION:</b> Diabolists consort with extra-planar entities, most of them evil or at least mischievous. They have the Corruption Hindrance (page 28).<br /> - <b>SUMMONING:</b> Diabolists may conjure demonic soldiers (page 185) with the summon ally power at Novice Rank, for four Power Points. At Seasoned Rank, they may call forth hellhounds (page 185) for 5 points. At Veteran Rank they may summon a nightmare (page 186) for 7 points."
+    },
+    {
+        "_id":"FCE068",
+        "name":"Hell's Wrath",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background(Diabolist)",
+        "type":"Power",
+        "effect":"Diabolists channel fiery, Hellish power that can boil flesh and melt bone. Once this Edge is taken, the diabolist's bolt, blast, and burst powers cause +2 damage."
+    },
+    {
+        "_id":"FCE069",
+        "name":"Infernal Armor",
+        "level":"Novice",
+        "requirements":"Novice, Arcane Background(Diabolist)",
+        "type":"Power",
+        "effect":"As an action, a diabolist can limn his clothes (or armor if wearing any) with a Hellish glow that grants him +2 armor. This lasts as long as the diabolist wishes, but marks him as a channeler of dark magic and makes Stealth virtually impossible."
+    },
+    {
+        "_id":"FCE070",
+        "name":"Druid",
+        "level":"Novice",
+        "requirements":"Novice, Spirit d6+",
+        "type":"Background",
+        "effect":"Druids protect the wilderness, serve as priests for their local communities, or wander the world communing with nature and holding back the constant encroachment of civilization. Most druids quickly acquire a heartwood staff (see below).<br /> - ARCANE SKILL: Faith (Spirit) <br /> - STARTING POWERS:</b> <i>Beast friend, environmental protection, shape change,</i> and two other powers chosen from the Nature Domain list on page 115. <br /> - POWER POINTS: 10 <br /> - <b>AVAILABLE POWERS:</b> See the Nature Domain on page 115.<br /> - <b>MIRACLES:</b> Druids may take Edges that require Arcane Background (Miracles).<br /> - <b>ARMOR INTERFERENCE (Minor):</b> Bulky armor interferes with a druid's ability to sense and commune with nature. They have the Armor Interference (Minor) Hindrance. <br /> - <b>COMPONENTS:</b> Druids require small artifacts of their environment to cast their spells: sea shells, berries, twigs, etc. They have the  Components Hindrance.<br /> - <b>ONE WITH NATURE:</b> The base Duration of summon animal is increased to one hour. The Duration is also increased to one hour for the shape change spell as long as the druid (or his target) takes the form of a natural animal (GM's call based on the setting; see the summon animal table on page  for examples).<br /> - <b>WILDERNESS STRIDE:</b> Druids pass through rough terrain such as dense forest, rocky hills, or desert sands with ease. They ignore movement penalties for Difficult Ground.<br /> - <b>VOW:</b> Druids have a Vow (Major) to guard and protect nature. If they willingly allow significant destruction to the natural world or order (GM's call), they subtract 2 from Faith rolls for a week. Catastrophic destruction might rob them of their powers entirely until they atone in some way."
+    },
+    {
+        "_id":"FCE071",
+        "name":"Heatwood Staff",
+        "level":"Novice",
+        "requirements":"Novice, Arcane Background(Druid)",
+        "type":"Power",
+        "effect":"Some druids focus their powers through a staff made from rare wood, such as the heart of a great oak or the last palm from a dying desert oasis.<br /> If such a staff is lost or broken, the druid must spend at least eight hours in an old forest with at least a few trees a hundred years old or more. There he may make a Faith roll at -2 once per day to forge another. This sacrifices the tree it's taken from.<br /> - <b>HEARTWOOD STAFF:</b> Str+d8, Min Str d6, Weight 6 lbs., Parry +1, Reach 1, requires two hands. After the druid hits with the staff, he may spend a Power Point to cause an extra d6 damage. This die may Ace."
+    },
+    {
+        "_id":"FCE072",
+        "name":"True Form",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background(Druid)",
+        "type":"Power",
+        "effect":"While shape changed, the druid can speak and cast powers at a -2 penalty even if in a form that usually wouldn't allow it.<br /> Some druids essentially “live” in their animal form, maintaining their bestial shape for days on end. Doing so gradually erodes the druid’s humanity. For every day the druid spends more than half her time in animal form, she must make a Spirit roll. Failure reduces her Spirit a die type until she remains in human form for an entire week. If her Spirit is reduced below d4 in this manner, the druid becomes that creature forever."
+    },
+    {
+        "_id":"FCE073",
+        "name":"Elementalist",
+        "level":"Novice",
+        "requirements":"Novice, Smarts d6+",
+        "type":"Background",
+        "effect":"Those who practice elemental magic call on the planes of earth, fire, water, and air for their powers.<br /> - <b>ARCANE SKILL:</b> Spellcasting (Smarts) <br /> - <b>STARTING POWERS:</b> Elemental manipulation ( native element only), environmental protection (native element only), and three other powers chosen from the list below. <br /> - <b>POWER POINTS:</b> 10<br /> - <b>AVAILABLE POWERS:</b> <i>Barrier, blast, bolt, burrow (earth only), burst, confusion, damage field (fire only), def lection, divination, elemental manipulation (native element only), entangle, environmental protection (native element only), fly (air only), havoc (air only), healing (water only), plane shift (native elemental planes only), protection, relief (water only), summon monster (elementals of their chosen element only), telekinesis (air only)</i>.<br /> - <b>MAGIC:</b> Elementalists may take Edges that require Arcane Background (Magic).<br /> - <b>ARMOR INTERFERENCE</b> (Major): Bulky armor makes it more difficult to channel power from the elemental forces. They have the Armor Interference (Major) Hindrance. - <b>ELEMENTAL ORIGIN:</b> An elementalist must choose her primary element when she first takes this Edge. All of her powers use that element as its Trapping (she may not change the Trappings of her powers). Additional elements may be embraced via the Elemental Master Edge (see below).<br /> - <b>ELEMENTAL SYNERGY:</b> When the character is near a significant source of her chosen element, she gets a reroll on her arcane skill. Significant sources include a bonfire for flame, a lake for water, gale-force winds for air, or piles of excavated earth, stone, etc. for earth (simply standing on the ground, on natural boulders, etc. isn't sufficient to empower the mage).<br /> Conversely, if the element is in scarce supply, the mage subtracts 2 from her Spellcasting rolls. Thematically, this includes a water mage in a desert, an earth mage in a cloudship, a fire mage with no fire present, or an air mage in a deep dungeon or cave. If the element is essentially absent, she cannot cast at all."
+    },
+    {
+        "_id":"FCE074",
+        "name":"Elemental Absorption",
+        "level":"Novice",
+        "requirements":"Novice, Arcane Background(Elementalist)",
+        "type":"Power",
+        "effect":"The elements fill and sustain you. Your Toughness increases by +2 while experiencing elemental synergy (see above)."
+    },
+    {
+        "_id":"FCE075",
+        "name":"Elemental Mastery",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background(Elementalist)",
+        "type":"Power",
+        "effect":"Elementalists must choose an elemental origin when they become mages: earth, fire, water, or air. This Edge grants them domain over another elemental force. They may change the Trappings of their powers between the elements they've mastered at will.<br /> Elemental Master may be taken multiple times to gain all four elements (or more if such exist in the Game Master's world)."
+    },
+    {
+        "_id":"FCE076",
+        "name":"Illusionist",
+        "level":"Novice",
+        "requirements":"Novice, Smarts d6+",
+        "type":"Background",
+        "effect":"Illusionists are extremely limited in their power selection, but are masters of the incredibly versatile illusion spell. Some manipulate light to create mirages, others conjure ethereal phantasms, and some even trick the observer's mind into believing what isn't there. <br /> - <b>ARCANE SKILL:</b> Spellcasting (Smarts)<br /> - <b>STARTING POWERS:</b> <i>Illusion, light/ darkness, sound/silence,</i> and two other powers chosen from the list below.<br /> - <b>POWER POINTS:</b> 10<br /> - <b.AVAILABLE POWERS:</b> <i>Confusion, deflection, detect/conceal arcana, disguise, fear, illusion, invisibility, light/darkness, sound/silence.</i><br /> - <b>MAGIC:</b> Illusionists may take Edges that require Arcane Background (Magic).<br /> - <b>ARMOR INTERFERENCE (Major):</b> Bulky armor interferes with an illusionist's manual dexterity and the intense concentration it takes to maintain their visual chicanery. They have the Armor Interference (Major) Hindrance.<br /> - <b>STRONG ILLUSIONS:</b> The caster's illusion spells can fill a Large Blast Template and always have the Strong modifier for free. If a foe successfully disbelieves, however, he sees through all that caster's illusions for the remainder of the encounter."
+    },
+    {
+        "_id":"FCE077",
+        "name":"Deadly Illusion",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background (Illusionist), Spellcasting d10+",
+        "type":"Power",
+        "effect":"The caster may take the Deadly Power Modifier for their illusions at no additional Power Point cost."
+    },
+    {
+        "_id":"FCE078",
+        "name":"Master of Illusion",
+        "level":"Novice",
+        "requirements":"Novice, Arcane Background(Illusionist), Spellcasting d8+",
+        "type":"",
+        "effect":"The caster's illusions have the Mobility and Sound Power Modifiers at no additional Power Point cost."
+    },
+    {
+        "_id":"FCE079",
+        "name":"Necromancer",
+        "level":"Novice",
+        "requirements":"Novice, Smarts d6+",
+        "type":"Background",
+        "effect":"Those who practice necromancy learn how to blur the line between the worlds of the living and the dead. Loathed by most, necromancers nevertheless relish in the great power conferred on them by death's dark energy.<br /> - <b>ARCANE SKILL:</b> Spellcasting (Smarts) <br /> - <b>STARTING POWERS:</b> <i>Detect/conceal arcana, dispel, zombie,</i> and two other powers chosen from the list below.<br /> - <b>POWER POINTS:</b> 10 <br /> - <b>AVAILABLE POWERS:</b> <i>Arcane protection, banish, barrier, blind, bolt, boost/lower Trait, confusion, darksight, deflection, detect/conceal arcana, dispel, divination, drain Power Points, empathy, entangle, farsight, fear, fly, havoc, healing, intangibility, invisibility, light/darkness, lock/unlock, mind link, mind reading, mind wipe, object reading, protection, relief, resurrection, sloth/speed, slumber, smite, sound/silence, stun, summon undead, telekinesis, teleport, wall walker, warrior’s gift, zombie.</i> <br /> - <b>MAGIC:</b> Necromancers may take Edges that require Arcane Background (Magic).<br /> - <b>CORRUPTION:</b> Necromancers deal in the dark magic of unlife. They have the Corruption Hindrance.<br /> - <b>RAISE THE DEAD:</b> Zombie is a Novice- Rank power for necromancers and the Duration is increased to four hours."
+    },
+    {
+        "_id":"FCE080",
+        "name":"Soul Jar",
+        "level":"Legendary",
+        "requirements":"Legendary, Arcane Background(Necromancer), Occult d10+",
+        "type":"Power",
+        "effect":"The necromancer's mastery over the dark arts has finally allowed him to cheat death by hiding his soul.<br /> Doing so turns the necromancer Undead, though he may continue to look alive and well for the duration of his natural lifespan. Eventually, however, time takes its toll, and the necromancer’s true state becomes visible.<br /> Choose a small to medium size vessel: a gemstone, a statuette, skull, vase, sword, etc. to act as the soul’s container. If the necromancer is slain, the soul inhabits a new corpse 2d6 days later. If the vessel is destroyed, the soul is destroyed as well, so most necromancers hide their soul jars in a vault or other secure location."
+    },
+    {
+        "_id":"FCE081",
+        "name":"Undead Familiar",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background(Necromancer)",
+        "type":"Power",
+        "effect":"The necromancer gains an undead animal companion that serves as his familiar. This works exactly as the Familiar Edge (page 36) except the creature gains the Undead ability: Undead: +2 Toughness; +2 to recover from being Shaken; no additional damage from Called Shots; ignores 1 point of Wound penalties; doesn't breathe; immune to disease and poison."
+    },
+    {
+        "_id":"FCE082",
+        "name":"Shaman",
+        "level":"Novice",
+        "requirements":"Novice, Spirit d6+",
+        "type":"Background",
+        "effect":"Shamans are the spiritual backbone of those who choose to live far from the corrupting influence of civilization. They make great use of the natural world, worshiping it and exploiting it for the good of others.<br /> <b>ARCANE SKILL:</b> Faith (Spirit)<br /> - <b>STARTING POWERS:</b> <i>Arcane protection, relief,</i> and three other powers chosen from the list below. <br /> - <b>STARTING POWER POINTS:</b> 10<br /> - <b>AVAILABLE POWERS:</b> <i>Arcane protection, banish, barrier, beast friend, blast, blessing, sblind, bolt, boost/lower Trait, burrow, burst, confusion, damage field, darksight, deflection, detect/conceal arcana, disguise, dispel, divination, drain Power Points, elemental manipulation, empathy, entangle, environmental protection, farsight, fear, havoc, healing, mystic intervention, object reading, protection, relief, resurrection, shape change, sloth/speed, slumber, smite, sound/silence, speak language, stun, summon animal, summon monster, wall walker, warrior's gift.</i><br /> - <b>ARMOR INTERFERENCE (Minor):</b> Shamans need access to the natural world and the spirits within, unhindered by the weight of armor. They have the Armor Interference (Minor) Hindrance.<br /> - <b>MIRACLES:</b> Shamans may take Edges that require Arcane Background Miracles).<br /> - <b>FAVORED POWER:</b> Shamans choose one of their starting powers and may ignore up to two points of any penalties (Multi-Action, Wounds, Fatigue, etc.) when activating that power. <br /> - <b>FETISH:</b> Shamans use a fetish connected to their tribe, people, or culture to focus their powers. This is usually a handheld stick draped in bones or tokens that carry some special significance to them. Without the fetish, a shaman subtracts 2 from her arcane skill rolls.<br /> - <b>QUIRK:</b> Shamans are changed by their interactions with spirits. They have the Quirk Hindrance."
+    },
+    {
+        "_id":"FCE083",
+        "name":"Primal Magic",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background(Shaman)",
+        "type":"Power",
+        "effect":"Primal Magic adds +2 to the damage of any power that causes damage such as blast, bolt, burst, or damage field.<br /> If the caster rolls a Critical Failure, however, primordial energies flood into the world, Stunning everyone in a Large Blast Template centered on the caster (including the caster!)."
+    },
+    {
+        "_id":"FCE084",
+        "name":"Sacred Fetish",
+        "level":"Novice",
+        "requirements":"Novice, Arcane Background(Shaman), Faith d8+",
+        "type":"Power",
+        "effect":"Fetishes are devices that help a shaman focus her powers. A sacred fetish is one that's been blessed or sanctified in some way. As long as she has the fetish in hand or prominently displayed on her person, she gets one free reroll whenever she fails a Faith roll.<br /> Should a sacred fetish be lost or destroyed, the shaman may replace it by visiting her tribe for some item of sentimental worth or creating a new device that captures the essence of her people."
+    },
+    {
+        "_id":"FCE085",
+        "name":"Sorcerer",
+        "level":"Novice",
+        "requirements":"Novice, Smarts d6+",
+        "type":"Background",
+        "effect":"Sorcerers channel and embrace the raw power of the cosmos. They treat with great and ancient forces greater even than the gods. They wreak terrible havoc, and inevitably pay an even more terrible price. Sorcerers brim with raw power, usually taken by force or subterfuge from some ancient and unknowable source. Occasionally they catch the attention of this font and its dark eye latches onto them, searing the sorcerer's soul with its unholy gaze.<br /> - ARCANE SKILL: Spellcasting (Smarts)<br /> - <b>STARTING POWERS:</b> Three powers chosen from the list below.<br /> - <b>STARTING POWER POINTS:</b> 15 <br /> - <b>AVAILABLE POWERS:</b> <i>Arcane protection, banish, barrier, beast friend, blast, blessing, blind, bolt, boost/lower Trait, burrow, burst, confusion, damage field, darksight, deflection, detect/conceal arcana, disguise, dispel, divination, drain Power Points, elemental manipulation, empathy, entangle, environmental protection, farsight, fear, havoc, healing, mystic intervention, object reading, protection, relief, resurrection, shape change, sloth/speed, slumber, smite, sound/silence, speak language, stun, summon ally, summon animal, summon monster, wall walker, warrior's gift.</i><br /> - <b>ARMOR INTERFERENCE (Minor):</b> Bulky armor interferes with the somatic gestures needed to steal mana from their source. They have the Armor Interference (Minor) Hindrance.<br /> - <b>CRITICAL FAILURE:</b> Sorcerers who roll a Critical Failure on a Spellcasting roll are Fatigued, Stunned, and gain Corruption (see below).<br /> - <b>CORRUPTION:</b> Sorcerers entreat with ancient, powerful, and distant masters. Sometimes those entities' touch brings ruin on the spellcaster's body and soul. They have the Corruption Hindrance.<br /> - <b>OVERPOWER:</b> Overpower increases a Spellcasting total after it's rolled by +1 for 1 Power Point, +2 for 3 Power Points, or +3 for 5 Power Points. It may not be used to improve a Critical Failure."
+    },
+    {
+        "_id":"FCE086",
+        "name":"Great Power",
+        "level":"Veteran",
+        "requirements":"Veteran, Arcane Background(Sorcerer)",
+        "type":"Power",
+        "effect":"The sorcerer may spend a Benny to cast any single power of up to 20 Power Points at a -2 penalty to his Spellcasting roll. Leftover points are not saved. If the power fails, the sorcerer permanently loses a die type in any one attribute of his choice."
+    },
+    {
+        "_id":"FCE087",
+        "name":"Phenomenal Power",
+        "level":"Heroic",
+        "requirements":"Heroic, Arcane Background(Sorcerer)",
+        "type":"Power",
+        "effect":"This works exactly like Great Power but allows the sorcerer to spend Conviction to cast any spell available in the setting. (He still adds his Conviction bonus to the roll as well.)"
+    },
+    {
+        "_id":"FCE088",
+        "name":"Summoner",
+        "level":"Novice",
+        "requirements":"Novice, Smarts d6+",
+        "type":"Background",
+        "effect":"These mages specialize in summoning creatures from the natural world or other planes of existence to bear their burdens for them. They are similar to diabolists except their servants are typically of animal intelligence, and while fierce, are no more malevolent in intent than any other beast.<br /> - <b>ARCANE SKILL:</b> Spellcasting (Smarts) <br /> - <b>STARTING POWERS:</b> <i>beast friend, boost/lower Trait (Limitation: Summoned creatures only), summon ally,</i> and two other powers chosen from the list below. <br /> - <b>POWER POINTS:</b> 15 <br /> - <b>AVAILABLE POWERS:</b> <i>Arcane protection, boost/lower Trait, burrow, darksight, detect/ conceal arcana, farsight, fly, growth/shrink, healing (Limitation: Self and Summoned creatures only), locate, shape change, sloth/speed (Limitation: Summoned creatures only), summon ally, summon animal, summon monster, wall walker.</i><br /> - <b>MAGIC:</b> Summoners may take Edges that require Arcane Background (Magic).<br /> - <b>ARMOR INTERFERENCE (Minor):</b> Bulky armor interferes with the somatic gestures needed to communicate with summoned minions. Summoners subtract 4 from Spellcasting rolls and Agility and Agility-based skill rolls if using medium or heavy armor or shields.<br /> - <b>MASTER SUMMONER:</b> A s ummoner reduces the cost of summon ally, summon animal, and summon monster by 2 (to a minimum of 1), and the spells' Durations are measured in minutes rather than rounds."
+    },
+    {
+        "_id":"FCE089",
+        "name":"Arcane Barding",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background(Summoner), Summon Animal",
+        "type":"Power",
+        "effect":"The caster's animals appear swathed in eldritch barding forged from magical energies. This increases their Toughness by +2 and cannot be dispelled."
+    },
+    {
+        "_id":"FCE090",
+        "name":"Ferocious Summoning",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background(Summoner), Summon Monster",
+        "type":"Power",
+        "effect":"A summoner with this Edge has learned to conjure fiercer, more experienced beasts with the summon monster power. He may grant them any one Combat Edge of his Rank or lower."
+    },
+    {
+        "_id":"FCE091",
+        "name":"Great Summoning",
+        "level":"Heroic",
+        "requirements":"Heroic, Arcane Background(Summoner), Summon Animal, Summon Monster",
+        "type":"Power",
+        "effect":"The mage can conjure beasts most others can't, including a barghest for 5 points, a mammoth for 7 points, a frost mammoth for 8 points, a tyrannosaurus rex for 8 points, or a young dragon for 11 points."
+    },
+    {
+        "_id":"FCE092",
+        "name":"Tinkerer",
+        "level":"Novice",
+        "requirements":"Novice, Smarts d6+",
+        "type":"Background",
+        "effect":"Inventors in fantasy settings rarely go on adventures. Most are firmly ensconced in their laboratories, surrounded by eclectic machines, spinning orreries, and long tables covered in bubbling concoctions.<br /> Some eventually leave their confines to explore the wider world, however, carrying portable inventions with them to protect themselves from the people and things who would do them harm. <br /> Tinkerers are highly specialized versions of the Weird Science Arcane Background who rely entirely on mechanical devices. <br /> - <b>ARCANE SKILL:</b> Repair (Smarts) <br /> - <b>STARTING POWERS:</b> Any two from the list below. <br /> - <b>POWER POINTS:</b> 15 <br /> - <b>AVAILABLE POWERS:</b> <i>Blind, bolt, blast, burst, confusion, damage field, darksight, detect/conceal arcana, entangle, environmental protection, farsight, fly, light/darkness, lock/unlock, slumber, stun, wall walker.</i><br /> - <b>WEIRD SCIENCE:</b> Tinkerers may take Edges that require Arcane Background (Weird Science).<br /> - <b>CRITICAL FAILURE:</b> A tinkerer who rolls a Critical Failure when activating a device doesn't take Fatigue, but can't use that power again until the device is repaired (an hour's work and a successful Repair roll).<br /> - <b>POWERS ARE DEVICES:</b> A tinkerer's powers are expressed entirely through devices, such as foldable wings for the fly power, goggles for darksight or farsight, or a flintlock pistol for bolt. Tinkerers can give their devices to others, allowing them to “cast” them using the tinkerer's Repair skill as theirown (the ally gets a Wild Die only if they're also a Wild Card). This uses the tinkerer's Power Points as usual, and treats the ally as the caster for purposes of Range and the like. Allies may not use Power Modifiers when using the inventor's devices as they don't know how to properly “tinker” with them. <br /> - <b>LOST DEVICES:</b> If an enemy takes away a tinkerer's device, any powers associated with it can't be used until it's recovered or remade (d6 hours x the power's Rank). <br /> - <b>TOOLS:</b> Tinkerer's can't use Power Modifiers without their tool kit—a satchel, belt, or bag of spanners, screwdrivers, hammers, and other tools they use to tweak their inventions. <br /> - <b>JINX:</b> A tinkerer can make a Repair roll on any mechanical device he can touch. If successful, the machine suffers a malfunction and stops working until it's fixed (a Repair roll as an action, at -2 if the tinkerer got a raise)."
+    },
+    {
+        "_id":"FCE093",
+        "name":"Construct Familiar",
+        "level":"Novice",
+        "requirements":"Novice, Arcane Background(Tinkerer)",
+        "type":"Power",
+        "effect":"The tinkerer gains a magically animated animal companion made of metal, clockwork gears, or other machina. This works exactly like the Familiar Edge (page 36) except the creature gains the Construct ability: Constructs add +2 when attempting to recover from being Shaken, ignore 1 point of Wound penalties, don't breathe or eat and are immune to disease and poison, don't Bleed Out, and Wounds are removed with Repair instead of Healing with no “Golden Hour.”"
+    },
+    {
+        "_id":"FCE094",
+        "name":"Tinkerer's Armor",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background(Tinkerer)",
+        "type":"Power",
+        "effect":"The tinkerer modified his armor with cleverly placed springs, elastic straps, and reinforced bracers.<br /> As long as the tinkerer wears at least leather armor and has four hours and some material odds and ends to make the proper adjustments, he can reduce the Minimum Strength of leather armor (+2) or greater by one die type. He may apply any one of the following effects with a minute's work and a Repair roll (and may choose a different effect later if he likes):<br /> - ARMS: The tinkerer adds + 2 to his melee damage and gets a free reroll on Strength rolls (not damage rolls). <br /> - TORSO: Increase the Armor value of the chest and back by +2. <br /> - LEGS: The tinkerer can jump twice his normal distance and adds +4 to his Pace. Breakdown: Any time the wearer suffers a Wound, roll a die. Odd, the armor's additional effect falls apart and requires four hours work and a Repair roll to replace the appropriate mechanisms."
+    },
+    {
+        "_id":"FCE095",
+        "name":"Warlock/Witch",
+        "level":"Novice",
+        "requirements":"Novice, Smarts d6+",
+        "type":"Background",
+        "effect":"Warlocks (male) and witches (female) learn their craft from a mix of sources. They might learn one spell from an old wizard's grimoire, another from their grandmother's notes, and another from shadowy beings that lurk in the dark woods. <br /> Warlocks and witches are often feared, even by those communities they serve. Desperate locals quietly seek their aid in times of personal crisis, but may chastise them by day—or even participate in a “witch hunt” should some calamity be attributed to their “consorting with dark spirits.” For this reason, even good warlocks and witches tend to be wary, protective, and secretive. Those of a more vengeful nature retaliate in terrible ways, inflicting curses and other maladies on the populations who persecute them. <br /> - ARCANE SKILL: Spellcasting (Smarts) <br /> - <b>STARTING POWERS:</b. Any three chosen from the list below. <br /> - STARTING POWER POINTS: 10 <br /> - <b>AVAILABLE POWERS:</b> <i>Arcane protection, banish, barrier, beast friend, blast, blessing, blind, bolt, boost/lower Trait, burrow, burst, confusion, conjure item, curse, darksight, deflection, detect/conceal arcana, disguise, dispel, divination, drain Power Points, elemental manipulation, empathy, entangle, environmental protection, farsight, fear, fly, growth/shrink, havoc, healing, illusion, invisibility, light/darkness, lock/unlock, locate, mystic intervention, object reading, mind reading, mind wipe, protection, puppet, relief, scrying, shape change, sloth/speed, slumber, smite, sound/silence, speak language, stun, summon ally, summon animal, telekinesis, wall walker, warrior's gift, wish.</i> <br /> - <b>MAGIC:</b> Witches/warlocks may take Edges that require Arcane Background (Magic). <br /> - <b>ARMOR INTERFERENCE (Major):</b> Warlocks and witches must move quietly, make intricate somatic gestures, and access their hex bags. They have the Armor Interference (Major) Hindrance. <br /> - <b>COMPONENTS:</b> Witches a nd warlocks require bits and baubles for their spells, from eye of newt to the hair of a hanged man. They have the Material Components Hindrance (page 28), which they store in their “hex bags.” <br /> - CORRUPTION: Warlocks and witches gather power and knowledge from a variety of sources, some of which bring ruin to their mind and body. They have the Corruption Hindrance.<br /> - <b>COVEN:</b> Though warlocks and witches tend to live alone in isolated areas of the world, they occasionally gather with others of their kind to exchange knowledge, cast rituals, or fight some common threat. Covens tend to have an odd number of members, and no more than 13 at a time. Witches and warlocks may freely transfer Power Points between other members of their coven at any time, as long as they're within 12” (24 yards) of each other. They do not need line of sight to do so. <br /> - FAMILIAR: Witches and warlocks maintain their connection to the natural world via small magical pets. They start with the Familiar Edge (page 36).<br /> - <b>PREPARED POWERS:</b> As long as witches have access to their hex bags, they may prepare and retain up to two powers per day (page 111). In addition to any other effects, a Critical Failure when casting a retained power means the hex bag must be replenished (in a market or a day spent making a Survival roll in a suitable environment)."
+    },
+    {
+        "_id":"FCE096",
+        "name":"The Evil Eye",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background(Warlock/Witch)",
+        "type":"Power",
+        "effect":"Powerful witches and warlocks are known for their baleful stares. Locals call this the “evil eye,” even if the mage is actually pure of heart.<br /> Once per encounter, as a free action, a witch may target an intelligent being within 6” (12 yards). For the rest of that encounter, the target must make a Spirit roll at -2 to spend a Benny. If the roll is failed the Benny is lost without effect."
+    },
+    {
+        "_id":"FCE097",
+        "name":"the Witching Hour",
+        "level":"Seasoned",
+        "requirements":"Seasoned, Arcane Background(Warlock/Witch)",
+        "type":"Power",
+        "effect":"Witches and warlocks are more powerful between the hours of midnight and 1 am (or some other suitable time in your campaign world). During this hour, a witch or warlock cannot Critically Fail a roll (it's just a normal failure), and gets a free Soak roll anytime she takes a Wound!"
+    },
+    {
+        "_id":"FCE098",
+        "name":"Wizard",
+        "level":"Novice",
+        "requirements":"Novice, Smarts d6+",
+        "type":"Background",
+        "effect":"The classic spellcaster of any fantasy campaign is the wizard. She might be an apprentice fresh from a magical academy, an aged mage who learned her craft by trial and error, or someone gifted from birth with eldritch affinity.<br /> Wizards have the largest spell selection of all the Arcane Backgrounds, but no inherent special abilities, and no access to critical powers such as healing or relief. <br />- <b>ARCANE SKILL:</b> Spellcasting (Smarts)<br /> - <b>STARTING POWERS:</b> <i>Detect/conceal arcana, dispel, lock/unlock,</i> and three other powers chosen from the list below. <br /> - <b>POWER POINTS:</b> 15 <br /> - <b>AVAILABLE POWERS:</b> <i>Arcane protection, barrier, beast friend, blast, blind, bolt, boost/lower Trait, burrow, burst, confusion, conjure item, curse, damage field, darksight, deflection, detect/conceal arcana, disguise, dispel, drain Power Points, elemental manipulation, empathy, environmental protection, entangle, farsight, fear, fly, growth/shrink, havoc, illusion, intangibility, invisibility, light/darkness, locate, lock/unlock, mind reading, mind wipe, mystic intervention, object reading, planar binding, plane shift, protection, puppet, scrying, shape change, sloth/speed, slumber, smite, speak language, stun, summon ally, telekinesis, teleport, time stop, wall walker, warrior's gift, wish, zombie. </i><br /> - MAGIC:</b> Wizards may take Edges that require Arcane Background (Magic). <br /> - <b>ARMOR INTERFERENCE (Major):</b> Bulky armor interferes with the precise patterns they must make when working their magics. They have the Armor Interference (Major) Hindrance.<br /> - <b>COMPONENTS:</b> Wizard spells require various bits and baubles, such as gemstones or powders, giving them the Material Components Hindrance (see page 29)."
+    },
+    {
+        "_id":"FCE099",
+        "name":"Eldritch Inspiration",
+        "level":"Heroic",
+        "requirements":"Heroic, Arcane Background(Wizard)",
+        "type":"Power",
+        "effect":"Great wizards gather esoteric information and collect it in various scrolls, manuals, and tomes collectively called spellbooks. As long as a wizard has access to his spellbooks, he may spend a Benny to cast any power of his Rank or lower. The power may be maintained normally but afterwards is forgotten (the wizard doesn't add it to his list of powers).<br /> A wizard may not use this ability if his spellbook is taken away."
+    },
+    {
+        "_id":"FCE100",
+        "name":"Spellbooks",
+        "level":"Novice",
+        "requirements":"Novice, Arcane Background(Wizard)",
+        "type":"Power",
+        "effect":"A wizard's spellbooks contain copious notes on magical processes, arcane observations, and thaumaturgical insights. Whenever he takes the New Powers Edge, he gets three new powers instead of two. He also gains an immediate power of his Rank or lower on taking this Edge."
+    }
+]

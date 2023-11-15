@@ -1,0 +1,110 @@
+[
+    {
+        "_id": "FCH001",
+        "name": "Amorous",
+        "level": 1,
+        "effect": "The character is easily enamored with a pretty face. Perhaps it's lust or lechery, or perhaps he just has a keen appreciation of natural beauty.<br /> Amorous characters suffer an additional 2 penalty to resist Tests by any character with the Attractive or Very Attractive Edge."
+    },
+    {
+        "_id": "FCH002",
+        "name": "Arcane Sensitivity",
+        "level": 1,
+        "effect": "A spell gone wrong, an old curse, a strange bloodline, or some other mishap caused your hero to be more susceptible to arcane energy than others.<br /> As a Minor Hindrance, subtract 2 when making a Trait roll to resist a power, including arcane creature abilities (GM's call)."
+    },
+    {
+        "_id": "FCH003",
+        "name": "Arcane Sensitivity",
+        "level": 2,
+        "effect": "A spell gone wrong, an old curse, a strange bloodline, or some other mishap caused your hero to be more susceptible to arcane energy than others.<br /> As a Major Hindrance, subtract 4 when making a Trait roll to resist a power, including arcane creature abilities (GM's call)."
+    },
+    {
+        "_id": "FCH004",
+        "name": "Armor Interference",
+        "level": 1,
+        "effect": "This Hindrance may only be taken by those with an Arcane Background. <br /> Those with this Hindrance subtract 4 from arcane skill rolls, and cannot use other abilities granted by their Arcane Background Edge or any Edge that has Arcane Background as a Requirement when wearing medium or heavy armor, or using a medium or heavy shield. The character may wear cloth or light armor, or use light shields, without interference."
+    },
+    {
+        "_id": "FCH005",
+        "name": "Armor Interference",
+        "level": 2,
+        "effect": "This Hindrance may only be taken by those with an Arcane Background. <br /> Those with this Hindrance subtract 4 from arcane skill rolls, and cannot use other abilities granted by their Arcane Background Edge or any Edge that has Arcane Background as a Requirement when wearing light, medium or heavy armor, or using a medium or heavy shield. The character may wear cloth armor without interference."
+    },
+    {
+        "_id": "FCH006",
+        "name": "Blunderer",
+        "level": 2,
+        "effect": "Some heroes take a while to master their craft. Select a skill central to your character, such as Spellcasting for a wizard or Fighting for a warrior. The hero suffers a Critical Failure whenever she fails a roll and that skill die is a 1."
+    },
+    {
+        "_id": "FCH007",
+        "name": "Corruption",
+        "level": 2,
+        "effect": "This Hindrance may only be taken by a character with an Arcane Background. <br /> The caster's magic draws on some foul, evil, or tainted source. Whenever he rolls a Critical Failure on his arcane skill roll, he gains a new Minor Hindrance, or trades or upgrades a Minor Hindrance gained by Corruption for a Major Hindrance, that reflects his degrading mind and body. A wizard might become Jealous (Minor), for example, as he realizes how difficult it is to gather his power. Then Bloodthirsty (Major) as his rage turns to violent thoughts.<br /> These Hindrances last until the spelluser's next Advance, at which time he may remove one Minor Hindrance, or reduce or trade a Major Hindrance for a Minor. This is in addition to his regular Advance."
+    },
+    {
+        "_id": "FCH008",
+        "name": "Cursed",
+        "level": 2,
+        "effect": "Your heroine crossed some dark power and has forever after been marked by its tainted touch. Beneficial magical powers and effects intended to aid her, including those cast by allies or even herself, suffer a -2 penalty to the arcane skill roll. Worse, if the roll is a Critical Failure, the caster is Stunned! The penalty applies if the Cursed character is within an area effect power or targeted by the Additional Recipients modifier.<br /> The Curse has no effect on hostile powers."
+    },
+    {
+        "_id": "FCH009",
+        "name": "Doomed",
+        "level": 2,
+        "effect": "Death is eager for your hero. Perhaps she cheated it at some point in her path, or was brought back from the dead and owes the Ferryman a fee. Whatever the reason, the heroine subtracts 2 from Soak rolls."
+    },
+    {
+        "_id": "FCH010",
+        "name": "Grim",
+        "level": 1,
+        "effect": "The hero is serious, taciturn, and finds mirth tiresome. He's Provoked (see Savage Worlds) on any successful Taunt—whether the opponent has the Provoke Edge or not.<br /> Provoked characters subtract 2 from rolls to affect any opponent except the one who insulted him. This lasts until a Joker is drawn (by either side) or someone else successfully Taunts the dour ruffian.<br /> Grim also counts as a Requirement for the Menacing Edge (see Savage Worlds)."
+    },
+    {
+        "_id": "FCH011",
+        "name": "Idealistic",
+        "level": 1,
+        "effect": "You see things in black and white and struggle with more nuanced dilemmas. Most of the time this is an admirable virtue, but it causes great issues when on the horns of a moral dilemma, such as whether to hand a starving poacher over to the king's guards or let him get away with his desperate but perhaps necessary crime."
+    },
+    {
+        "_id": "FCH012",
+        "name": "Jingoistic",
+        "level": 1,
+        "effect": "The character dislikes people from other cultures and believes his own to be far superior—a snooty city dweller, for example, might dislike “uncouth” barbarians or the citizens of a rival citystate. He cannot help belittling other cultures at every opportunity.<br /> As a Minor Hindrance, the targets of his ire may not benefit from his Command Edges. He cannot keep from insulting them and subtracts 2 from Persuasion rolls when interacting with them."
+    },
+    {
+        "_id": "FCH013",
+        "name": "Jingoistic",
+        "level": 2,
+        "effect": "The character dislikes people from other cultures and believes his own to be far superior—a snooty city dweller, for example, might dislike “uncouth” barbarians or the citizens of a rival citystate. He cannot help belittling other cultures at every opportunity.<br /> As a Major Hindrance, the targets of his ire may not benefit from his Command Edges. He cannot keep from insulting them and subtracts 4 from Persuasion rolls when interacting with them."
+    },
+    {
+        "_id": "FCH014",
+        "name": "Material Components",
+        "level": 2,
+        "effect": "This Hindrance may only be taken by those with an Arcane Background.<br /> The spellcaster's powers consume material items. Maybe a wizard needs a piece of brimstone to cast a fireball (blast with a fire Trapping) or a priestess needs a splash of holy water for her goddess to grant smite.<br /> Such items are assumed to be at hand— usually in a pocket, bag, or convenient pouch. If the caster is ever stripped of her possessions and can't get the materials she needs, she reduces all arcane skill rolls by 4 until they're restored (50gp x the caster's Rank at a shop or a day's worth of gathering or foraging in an appropriate environment with a Survival roll per Rank).<br /> A caster also runs out of material components if she rolls a Critical Failure and may replenish as above."
+    },
+    {
+        "_id": "FCH015",
+        "name": "Selfless",
+        "level": 1,
+        "effect": "You think of others before yourself. You sleep on the floor to give another the bed. You pretend to be full to give your friends the last bite of meat. You stand before your friends when the dragon breathes fire. You buy the book that everyone else in your adventuring party reads—a true hero!<br /> The extent and frequency of your sacrifice determines whether this is a Minor or Major Hindrance."
+    },
+    {
+        "_id": "FCH016",
+        "name": "Selfless",
+        "level": 2,
+        "effect": "You think of others before yourself. You sleep on the floor to give another the bed. You pretend to be full to give your friends the last bite of meat. You stand before your friends when the dragon breathes fire. You buy the book that everyone else in your adventuring party reads—a true hero!<br /> The extent and frequency of your sacrifice determines whether this is a Minor or Major Hindrance."
+    },
+    {
+        "_id": "FCH017",
+        "name": "Talisman",
+        "level": 1,
+        "effect": "Only characters with an Arcane Background Edge can take this Hindrance. The caster is dependent on a physical item to activate his powers. The Talisman might be a magic staff, a sacred symbol, a wand, a weapon, or any other transportable item.<br /> When caught without it, he subtracts 1 from all arcane skill rolls, and is Stunned if the roll is a Critical Failure.<br /> Replacing a lost Talisman depends on the object, but should usually require getting it back from whoever took it. If it was destroyed, the Game Master should work with the player to figure out what might make a suitable replacement and how it might be gained."
+    },
+    {
+        "_id": "FCH018",
+        "name": "Talisman",
+        "level": 2,
+        "effect": "Only characters with an Arcane Background Edge can take this Hindrance. The caster is dependent on a physical item to activate his powers. The Talisman might be a magic staff, a sacred symbol, a wand, a weapon, or any other transportable item.<br /> When caught without it, he subtracts 2 from all arcane skill rolls, and is Stunned if the roll is a Critical Failure.<br /> Replacing a lost Talisman depends on the object, but should usually require getting it back from whoever took it. If it was destroyed, the Game Master should work with the player to figure out what might make a suitable replacement and how it might be gained."
+    }
+]

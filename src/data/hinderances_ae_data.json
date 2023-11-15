@@ -1,0 +1,482 @@
+[
+    {
+        "_id": "SWH001",
+        "name": "All Thumbs",
+        "level": 1,
+        "effect": "Due to upbringing, lack of exposure, or pure bad luck, some individuals are “all thumbs” when it comes to mechanical or technological devices.<br /> All Thumbs inflicts a −2 penalty when using mechanical or electrical devices. If he rolls a Critical Failure while using such a device (and it doesn't already have a built-in effect), it's broken. If the GM feels it's appropriate, it can be fixed with a Repair roll and 1d6 hours."
+    },
+    {
+        "_id":"SWH002",
+        "name": "Anemic",
+        "level": 1,
+        "effect": "Anemic characters are particularly susceptible to sickness, disease, environmental effects, and fatigue. They subtract 2 from Vigor rolls made to resist Fatigue (see Hazards, starting on page 125)."
+    },
+    {
+        "_id":"SWH003",
+        "name": "Arrogant",
+        "level": 2,
+        "effect": "Your hero doesn't think he's the best—he knows he is. Whether it's swordsmanship, kung fu, or painting, few compare to his skills and he flaunts it every chance he gets.<br /> Winning isn't enough for this champion. He wants to dominate his opponent and prove there's no one better. He's the kind of fighter who disarms an opponent in a duel just to pick the sword up and hand it back with a smirk. Arrogant individuals look for the greatest threat in battle, hacking their way through lesser minions only because they're in the way."
+    },
+    {
+        "_id":"SWH004",
+        "name": "Bad Eyes",
+        "level": 1,
+        "effect": "Your hero's eyes aren't what they used to be. He suﬀers a -1 penalty to any Trait roll dependent on vision (such as ranged attacks and Notice rolls).<br /> In settings where glasses are available, they negate the penalty when worn. If lost or broken during a combat (generally a 50% chance when he's Wounded, falls, or suﬀers some other trauma), the character is Distracted (and Vulnerable if a Major Hindrance) until the end of their next turn."
+    },
+    {
+        "_id":"SWH005",
+        "name": "Bad Eyes",
+        "level": 2,
+        "effect": "Your hero's eyes aren't what they used to be. He suﬀers a -2 penalty to any Trait roll dependent on vision (such as ranged attacks and Notice rolls).<br /> In settings where glasses are available, they negate the penalty when worn. If lost or broken during a combat (generally a 50% chance when he's Wounded, falls, or suﬀers some other trauma), the character is Distracted (and Vulnerable if a Major Hindrance) until the end of their next turn."
+    },
+    {
+        "_id":"SWH006",
+        "name": "Bad Luck",
+        "level": 2,
+        "effect": "Your hero is a little less lucky than most. He gets one less Benny per game session than normal. A character cannot have both Bad Luck and the Luck Edge."
+    },
+    {
+        "_id":"SWH007",
+        "name": "Big Mouth",
+        "level": 1,
+        "effect": "Loose lips sink ships, the saying goes. This hero's mouth could drown an armada. The blabbermouth can't keep a secret very well. He reveals plans and gives away things best kept among friends, usually at the worst possible times."
+    },
+    {
+        "_id":"SWH008",
+        "name": "Blind",
+        "level": 2,
+        "effect": "The individual is completely without sight. He suffers a -6 to all physical tasks that require vision (GM's call). On the plus side, Blind characters gain their choice of a free Edge to compensate for this particularly difficult Hindrance."
+    },
+    {
+        "_id":"SWH009",
+        "name": "Bloodthirsty",
+        "level": 2,
+        "effect": "Your hero never takes prisoners unless under the direct supervision of a superior. His cold-blooded ruthlessness causes enemies to respond in kind, often costs vital information, creates constant enemies, and may get him in trouble with his superiors or the authorities, depending on the setting."
+    },
+    {
+        "_id":"SWH010",
+        "name": "Can't Swim",
+        "level": 1,
+        "effect": "Most people in the 21st century can swim thanks to swimming pools, easy travel to lakes and beaches, or educational efforts. Historically, however, those who weren't raised around a temperate body of water could not. <br /> Characters with this Hindrance suffer a -2 penalty to the Athletics skill when swimming and each inch moved in water costs 3″ of Pace. See Movement (page 92) for more details and Drowning (page 126)."
+    },
+    {
+        "_id":"SWH011",
+        "name": "Cautious",
+        "level": 1,
+        "effect": "This planner personifies restraint and carefulness. He never makes rash decisions and likes to plot things out in detail long before any action is taken."
+    },
+    {
+        "_id":"SWH012",
+        "name": "Clueless",
+        "level": 2,
+        "effect": "Your hero doesn't pay much attention to the world around him and can't seem to find a haystack in a small pile of needles.<br />He suffers a -1 penalty to Common Knowledge and Notice rolls."
+    },
+    {
+        "_id":"SWH013",
+        "name": "Clumsy",
+        "level": 2,
+        "effect": "Your hero is an uncoordinated klutz who trips over air and is always the last one picked for sports. He subtracts 2 from Athletics and Stealth rolls."
+    },
+    {
+        "_id":"SWH014",
+        "name": "Code of Honor",
+        "level": 2,
+        "effect": "Honor is very important to your character. He keeps his word, doesn't abuse or kill prisoners, and generally tries to operate within his world's particular notion of proper gentlemanly or ladylike behavior."
+    },
+    {
+        "_id":"SWH015",
+        "name": "Curious",
+        "level": 2,
+        "effect": "It killed the cat, and it might kill your warrior as well. Curious characters have to check out everything and always want to know what's behind a potential mystery or secret."
+    },
+    {
+        "_id":"SWH016",
+        "name": "Death Wish",
+        "level": 1,
+        "effect": "Having a death wish doesn't mean your adventurer is suicidal— they might just think his life is worth less than some noble but clearly deadly goal.<br /> Those with a Death Wish don't throw their lives away for no reason, but when there's a chance to complete a goal they do anything—and take any risk—to achieve it."
+    },
+    {
+        "_id":"SWH017",
+        "name": "Delusional",
+        "level": 1,
+        "effect": "Your hero believes something that is considered quite strange by everyone else. Minor Delusions are harmless or the character generally keeps it to himself the government puts sedatives in soft drinks, dogs can talk, we're all just characters in some bizarre game, etc.)."
+    },
+    {
+        "_id":"SWH018",
+        "name": "Delusional",
+        "level": 2,
+        "effect": "Your hero believes something that is considered quite strange by everyone else. With a Major Delusion, he expresses his view on the situation frequently and it can occasionally lead to danger (the government is run by aliens, hospitals are deadly, I'm allergic to armor, zombies are my friends)."
+    },
+    {
+        "_id":"SWH019",
+        "name": "Doubting Thomas",
+        "level": 1,
+        "effect": "Some people don’t believe in the supernatural until they're halfway down some creature's gullet. Doubting Thomases are skeptics who try their best to rationalize supernatural events. They walk right into danger they don't believe in and look for alternate explanations to every supernatural event. <br /> Even after being confronted with undeniable truth, the doubter's mind eventually begins to doubt what he saw, rationalizes it away, or compartmentalizes the event as “one of a kind” while continuing to doubt the next mystery."
+    },
+    {
+        "_id":"SWH020",
+        "name": "Driven",
+        "level": 1,
+        "effect": "A vow is a commitment to others. Driven characters want something for themselves. It may be to protect the realm, become a decorated officer, prove you're the best gladiator in Rome, or the best pilot in the galactic fleet.<br /> The Minor version shapes the character and pushes his decisions but either happens rarely or is fairly harmless."
+    },
+    {
+        "_id":"SWH021",
+        "name": "Driven",
+        "level": 2,
+        "effect": "A vow is a commitment to others. Driven characters want something for themselves. It may be to protect the realm, become a decorated officer, prove you're the best gladiator in Rome, or the best pilot in the galactic fleet. br /> As a Major Hindrance it's an overriding desire that comes up frequently or causes peril for the heroine and those around her."
+    },
+    {
+        "_id":"SWH022",
+        "name": "Elderly",
+        "level": 2,
+        "effect": "Your adventurer is getting on in years, but he's not quite ready for the nursing home yet. His Pace is reduced by 1, and he subtracts 1 from running rolls (minimum 1). He also suffers a -1 penalty to Agility, Strength (including damage), and Vigor rolls, but not linked skills.<br /> On the plus side, the wisdom of his years grants the hero 5 extra skill points which may be used for any skills linked to Smarts."
+    },
+    {
+        "_id":"SWH023",
+        "name": "Enemy",
+        "level": 1,
+        "effect": "Someone out there hates the character and wants him ruined, locked away, or dead. The value of the Hindrance depends on how powerful the enemy is and how often he might show up.<br /> A Minor Enemy might be a lone gunslinger out for vengeance or a betrayed brotherhood that's deadly but appears rarely.<br /> If the enemy is one day defeated, the GM should gradually work in a replacement, or the hero may buy off the Hindrance by sacrificing an Advance."
+    },
+    {
+        "_id":"SWH024",
+        "name": "Enemy",
+        "level": 2,
+        "effect": "Someone out there hates the character and wants him ruined, locked away, or dead. The value of the Hindrance depends on how powerful the enemy is and how often he might show up. <br /> A Major Enemy might represent powerful authorities, a band of outlaws, or a single very powerful and relentless rival.<br /> If the enemy is one day defeated, the GM should gradually work in a replacement, or the hero may buy off the Hindrance by sacrificing an Advance."
+    },
+    {
+        "_id":"SWH025",
+        "name": "Greedy",
+        "level": 1,
+        "effect": "A miser measures worth in material possessions or wealth. If a Minor Hindrance, he argues bitterly for more than his fair share of any loot or reward the party might come across."
+    },
+    {
+        "_id":"SWH026",
+        "name": "Greedy",
+        "level": 2,
+        "effect": "A miser measures worth in material possessions or wealth. As a Major Hindrance, he fights over anything he considers unfair, and may even kill for it if he feels slighted or covets something he cannot have."
+    },
+    {
+        "_id":"SWH027",
+        "name": "Habit",
+        "level": 1,
+        "effect": "Your warrior has an annoying or dangerous compulsion. A Minor Habit irritates those around her but isn't dangerous. Maybe she picks her nose, can't stop fiddling with her phone, says “y'know” in the middle of every sentence, or chews and smacks her gum loudly and often. Allies avoid her if possible."
+    },
+    {
+        "_id":"SWH028",
+        "name": "Habit",
+        "level": 2,
+        "effect": "Your warrior has an annoying or dangerous compulsion. A Major Habit is a physical or mental addiction of some sort that is debilitating or possibly even deadly. This includes drug use, chronic drinking, or perhaps even an addiction to virtual reality in a hightech setting.<br /> An addict who doesn’t get his fix must make a Vigor roll every 24 hours he goes without or take a level of Fatigue (see page 100). Once every 24 hours, a Healing roll with some sort of appropriate medicine removes one level of Fatigue for four hours. After that the Fatigue returns and can only be recovered with the addicting substance."
+    },
+    {
+        "_id":"SWH029",
+        "name": "Hard of Hearing",
+        "level": 1,
+        "effect": "Characters who have lost some or all of their hearing have this disadvantage. As a Minor Hindrance, it subtracts 4 from all Notice rolls made to hear, including awaking due to loud noises.<br /> Hearing aids reduce the penalty by 2, but require batteries and have a 50% chance of falling out when he's Wounded, falls, or suffers some other trauma."
+    },
+    {
+        "_id":"SWH030",
+        "name": "Hard of Hearing",
+        "level": 2,
+        "effect": "Characters who have lost some or all of their hearing have this disadvantage. A Major Hindrance means the character is deaf. She cannot hear and automatically fails all Notice rolls that depend on hearing."
+    },
+    {
+        "_id":"SWH031",
+        "name": "Heroic",
+        "level": 2,
+        "effect": "This noble soul never says no to a person in need. She doesn't have to be happy about it, but she always comes to the rescue of those she feels can't help themselves. She's the first one to run into a burning building, usually agrees to hunt monsters for little or no pay, and is generally a pushover for a sob story."
+    },
+    {
+        "_id":"SWH032",
+        "name": "Hesitant",
+        "level": 1,
+        "effect": "Your hero hesitates in stressful situations. Draw two Action Cards in combat and act on the lowest. If you draw a Joker, use it normally and ignore the Hindrance for the round (hence this being a Minor Hindrance, it actually increases your chances of drawing a Joker!)<br /> Hesitant characters cannot take the Quick or Level Headed Edges."
+    },
+    {
+        "_id":"SWH033",
+        "name": "Illiterate",
+        "level": 1,
+        "effect": "Your hero cannot read. He can sign his name and knows what a STOP sign says, but little else. He also doesn't know much about math. He can probably do 2 + 2 = 4, but multiplication and the like are beyond him.<br /> Illiterate characters can't read or write in any language, by the way, no matter how many they actually speak."
+    },
+    {
+        "_id":"SWH034",
+        "name": "Impulsive",
+        "level": 2,
+        "effect": "The daredevil almost always leaps before he looks. He rarely thinks things through before taking action."
+    },
+    {
+        "_id":"SWH035",
+        "name": "Jealous",
+        "level": 1,
+        "effect": "Insecurity leads to envy of others' accomplishments or being overly possessive of what this disgruntled soul feels belongs to him. He often complains, pouts, covets others' possessions or accolades, claims credit for another's work, disobeys commands, and generally causes problems.<br /> As a Minor Hindrance, the character's jealousy is focused on one particular subject such as his “unrivaled” skill as a pilot or a romantic interest)."
+    },
+    {
+        "_id":"SWH036",
+        "name": "Jealous",
+        "level": 2,
+        "effect": "Insecurity leads to envy of others' accomplishments or being overly possessive of what this disgruntled soul feels belongs to him. He often complains, pouts, covets others' possessions or accolades, claims credit for another's work, disobeys commands, and generally causes problems.<br /> As a Major Hindrance, the character is jealous of anyone and everyone he feels outshines him. He consistently bad-mouths his rivals, tries to upstage them, or actively plots to discredit those who threaten his ego."
+    },
+    {
+        "_id":"SWH037",
+        "name": "Loyal",
+        "level": 1,
+        "effect": "This stalwart defender risks her life for her friends without hesitation. Some Loyal heroes may not act that way, but are the first to come to their friends' rescue when they're threatened."
+    },
+    {
+        "_id":"SWH038",
+        "name": "Mean",
+        "level": 1,
+        "effect": "This curmudgeon is ill-tempered and disagreeable. He has trouble doing anything kind for anyone else, must be paid for his troubles, and doesn't accept awards or favors graciously. Besides the obvious roleplaying issues, Mean characters subtract 1 from Persuasion rolls."
+    },
+    {
+        "_id":"SWH039",
+        "name": "Mild Mannered",
+        "level": 1,
+        "effect": "Your milquetoast just isn't threatening. Maybe he's a little doughy around the middle, has a kind face, or a soft voice. Whatever the issue, he has a hard time looking tough. He subtracts 2 when making Intimidation rolls."
+    },
+    {
+        "_id":"SWH040",
+        "name": "Mute",
+        "level": 2,
+        "effect": "Due to trauma or birth, your character has lost the ability to speak. He can write messages to others when needed, use sign language, or some combination of visual communication. <br /> Vison-based communication may require a Notice roll to perceive correctly (illumination and similar penalties apply)."
+    },
+    {
+        "_id":"SWH041",
+        "name": "Obese",
+        "level": 1,
+        "effect": "Those who carry their weight well have the Brawny Edge. Those who don't are Obese. A character cannot be both Brawny and Obese, and this Hindrance can't increase your Size above +3.<br /> An Obese hero's Size (and therefore Toughness) increase by +1. His Pace is reduced by 1, and his running die one die type (minimum d4). Strength is considered one die type less (minimum d4) for armor and worn gear (not weapons). They may also have difficulty finding armor or clothing that fits or entering confined spaces."
+    },
+    {
+        "_id":"SWH042",
+        "name": "Obligation",
+        "level": 1,
+        "effect": "Your hero has a responsibility she must attend to on a daily or regular basis. It could be a job, volunteer work, taking care of family or friends, etc. <br /> The Obligation consumes about 20 hours most weeks. Exactly what that entails should be discussed between the player and the Game Master."
+    },
+    {
+        "_id":"SWH043",
+        "name": "Obligation",
+        "level": 2,
+        "effect": "Your hero has a responsibility she must attend to on a daily or regular basis. It could be a job, volunteer work, taking care of family or friends, etc.<br /> The Obligation consumes about 40+ hours most weeks for the Major version. Exactly what that entails should be discussed between the player and the Game Master."
+    },
+    {
+        "_id":"SWH044",
+        "name": "One Arm",
+        "level": 2,
+        "effect": "By birth or battle, your hero has lost an arm. Fortunately, his other arm is (now) his “good” one. Tasks that require two hands, such as some Athletics rolls (GM's call) or using a two-handed weapon, suffer a -4 modifier."
+    },
+    {
+        "_id":"SWH045",
+        "name": "One Eye",
+        "level": 2,
+        "effect": "This veteran lost an eye and has trouble with depth perception. He subtracts 2 from any Trait roll dependent on vision and more than 5″ (10 yards) distant."
+    },
+    {
+        "_id":"SWH046",
+        "name": "Outsider",
+        "level": 1,
+        "effect": "In a society made up of only a few types of people, your hero isn't one of them. A Native American in a Western town, an alien in a scifi game of human marines, or a half-orc in a party of elves, dwarves, and humans are all examples. Locals are likely to raise prices on her, ignore pleas for help, and generally treat her as lower class.<br /> Outsiders subtract 2 from Persuasion rolls made to influence those who aren't her own kind."
+    },
+    {
+        "_id":"SWH047",
+        "name": "Outsider",
+        "level": 2,
+        "effect": "In a society made up of only a few types of people, your hero isn't one of them. A Native American in a Western town, an alien in a scifi game of human marines, or a half-orc in a party of elves, dwarves, and humans are all examples. Locals are likely to raise prices on her, ignore pleas for help, and generally treat her as lower class.<br /> Outsiders subtract 2 from Persuasion rolls made to influence those who aren't her own kind. The Major version also means the character has few or no legal rights in the main campaign area. She might be a different species among xenophobes, the civilization may be cruel and unenlightened toward strangers, or she might even be an artificial intelligence whose sapience isn't acknowledged by the law."
+    },
+    {
+        "_id":"SWH048",
+        "name": "Overconfident",
+        "level": 2,
+        "effect": "There's nothing out there your hero can't defeat. At least that's what he thinks. He believes he can do most anything and never wants to retreat from a challenge. He's not suicidal, but he certainly takes on more than common sense dictates."
+    },
+    {
+        "_id":"SWH049",
+        "name": "Pacifist",
+        "level": 1,
+        "effect": "Your hero absolutely despises violence. Minor pacifism means he only fights when given no other choice and never allows the killing of prisoners or other defenseless victims. <br />Note that undeniably evil creatures, undead, demons, and the like are fair game even for Major Pacifists!"
+    },
+    {
+        "_id":"SWH050",
+        "name": "Pacifist",
+        "level": 2,
+        "effect": "Your hero absolutely despises violence.  Major Pacifists won't fight living characters under any circumstances. They may defend themselves, but won't do anything to permanently harm sapient, living creatures. They may use nonlethal methods (see page 104), but only in self-defense or the defense of others.<br /> Note that undeniably evil creatures, undead, demons, and the like are fair game even for Major Pacifists!"
+    },
+    {
+        "_id":"SWH051",
+        "name": "Phobia",
+        "level": 1,
+        "effect": "Phobias are overwhelming and irrational fears that plague a hero's psyche. Whenever a character is in the presence of his phobia (GM's call, but generally sight), he subtracts 1 from all his Trait rolls if it's a Minor Hindrance.<br /> Phobias shouldn't be too obvious; everyone should be afraid of vampires, for example, so it's not a phobia, it's common sense. Instead, the phobia usually centers on some random element the mind associates with the event. Remember, phobias are irrational fears."
+    },
+    {
+        "_id":"SWH052",
+        "name": "Phobia",
+        "level": 2,
+        "effect": "Phobias are overwhelming and irrational fears that plague a hero's psyche. Whenever a character is in the presence of his phobia (GM's call, but generally sight), he subtracts 2 from all his Trait rolls if it's a Major Hindrance. <br /> Phobias shouldn't be too obvious; everyone should be afraid of vampires, for example, so it's not a phobia, it's common sense. Instead, the phobia usually centers on some random element the mind associates with the event. Remember, phobias are irrational fears."
+    },
+    {
+        "_id":"SWH053",
+        "name": "Poverty",
+        "level": 1,
+        "effect": "It's said a fool and his money are soon parted. Your hero is one of them. He starts with half the usual money for your setting and just can't seem to hang on to funds acquired after play begins. In general, the player halves his total funds every game week."
+    },
+    {
+        "_id":"SWH054",
+        "name": "Quirk",
+        "level": 1,
+        "effect": "This individual has some minor foible that is usually humorous but can occasionally cause him real trouble. A swashbuckler may always try to slash his initials on his foes, a dwarf may brag constantly about his culture, or a snobby débutante might not eat, drink, or socialize with the lower class, for example."
+    },
+    {
+        "_id":"SWH055",
+        "name": "Ruthless",
+        "level": 1,
+        "effect": "The fanatic will do most anything to accomplish her goals. As a Minor Hindrance, she stops short of true harm to anyone except those who directly oppose her."
+    },
+    {
+        "_id":"SWH056",
+        "name": "Ruthless",
+        "level": 2,
+        "effect": "The fanatic will do most anything to accomplish her goals. As a Major Hindrance, she harms anyone and everyone who gets in her way."
+    },
+    {
+        "_id":"SWH057",
+        "name": "Secret",
+        "level": 1,
+        "effect": "Your hero has a secret she keeps to protect herself or others. As a Minor Hindrance, the secret is troublesome but not life-threatening. If it ever becomes public knowledge, she should trade it for Enemy, Shamed, Wanted, or another appropriate Hindrance approved by the GM."
+    },
+    {
+        "_id":"SWH058",
+        "name": "Secret",
+        "level": 2,
+        "effect": "Your hero has a secret she keeps to protect herself or others.  The Major version would cause severe problems if discovered. If it ever becomes public knowledge, she should trade it for Enemy, Shamed, Wanted, or another appropriate Hindrance approved by the GM."
+    },
+    {
+        "_id":"SWH059",
+        "name": "Shamed",
+        "level": 1,
+        "effect": "Something haunts your adventurer. Maybe he made a vow he didn't keep. Maybe he was defeated in an honorable fight and ordered the death of his foe anyway for some greater principle. Maybe he isn't actually cowardly but once ran from a battle and left others to die.<br /> As a Minor Hindrance, the shameful circumstances aren't generally known—it just haunts the hero. He might go out of his way, against all reason, not to repeat the mistake. Or he might give in to the same set of circumstances and hate himself for it."
+    },
+    {
+        "_id":"SWH060",
+        "name": "Shamed",
+        "level": 2,
+        "effect": "Something haunts your adventurer. Maybe he made a vow he didn't keep. Maybe he was defeated in an honorable fight and ordered the death of his foe anyway for some greater principle. Maybe he isn't actually cowardly but once ran from a battle and left others to die.<br /> As a Major Hindrance, his deed is wellknown— or at least known among those he cares about. The other player characters should be told the tale as soon as possible (preferably at character creation). If not, it should be revealed by nonplayer characters at some point, and occasionally used against the hero."
+    },
+    {
+        "_id":"SWH061",
+        "name": "Slow",
+        "level": 1,
+        "effect": "A disability or past injury has hindered this hero's mobility. As a Minor Hindrance, reduce his Pace by 1 and his running die one step (if already d4, reduce to d4 - 1 ). As a <br /> Slow characters may not take the Fleet- Footed Edge. <br /> Prosthesis: A character with the Minor version of this Hindrance may have a prosthesis. If the prosthesis is lost, he suffers the effects of the Major version of Slow. <br />Wheelchairs: From about the Victorian era forward, Slow heroes may start with a manual wheelchair at no cost. In the modern era (1980s and on), the character may also choose from an ultralight or powered chair. <br />All wheelchairs require reasonably smooth ground to operate (GM's call). <br />MANUAL: Pace is half Athletics die (max of 3) and cannot run. <br />ULTRALIGHT: Pace is half Athletics die and may run at d4 (Minor) or d4 − 1 (Major). <br />POWERED: Pace 6 on flat, even ground, Pace 3 on uneven ground, cannot run. Most powered chairs can go about 10 miles before requiring a recharge."
+    },
+    {
+        "_id":"SWH062",
+        "name": "Slow",
+        "level": 2,
+        "effect": "A disability or past injury has hindered this hero's mobility. step (if already d4, reduce to d4 - 1 ). As a Major Hindrance, reduce the running die a step, Pace by 2, and subtract 2 from Athletics rolls and rolls to resist Athletics (such as Tests or Grappling). <br />Slow characters may not take the Fleet- Footed Edge. <br />Prosthesis: A character with the Minor version of this Hindrance may have a prosthesis. If the prosthesis is lost, he suffers the effects of the Major version of Slow. <br />Wheelchairs: From about the Victorian era forward, Slow heroes may start with a manual wheelchair at no cost. In the modern era (1980s and on), the character may also choose from an ultralight or powered chair. <br />All wheelchairs require reasonably smooth ground to operate (GM's call). <br /> MANUAL: Pace is half Athletics die (max of 3) and cannot run. <br />ULTRALIGHT: Pace is half Athletics die and may run at d4 (Minor) or d4 - 1 (Major). <br />POWERED: Pace 6 on flat, even ground, Pace 3 on uneven ground, cannot run. Most powered chairs can go about 10 miles before requiring a recharge."
+    },
+    {
+        "_id":"SWH063",
+        "name": "Small",
+        "level": 1,
+        "effect": "This adventurer is very skinny, very short, or both. His Size (see page 106) is reduced by 1, which reduces his Toughness as well. <br />Size can't be reduced below -1, but the Toughness penalty remains. A Small half-folk, for example, remains Size -1 and loses a point of Toughness."
+    },
+    {
+        "_id":"SWH064",
+        "name": "Stubborn",
+        "level": 1,
+        "effect": "Stubborn individuals always want their way and never admit they're wrong. Even when it's painfully obvious they've made a mistake they try to justify it with half-truths and rationalizations."
+    },
+    {
+        "_id":"SWH065",
+        "name": "Suspicious",
+        "level": 1,
+        "effect": "Your character is suspicious of everyone. As a Minor Hindrance, his paranoia causes frequent trust issues. He might demand full payment before doing a task, want every agreement in writing, or believe even his friends are out to get him."
+    },
+    {
+        "_id":"SWH066",
+        "name": "Suspicious",
+        "level": 2,
+        "effect": "Your character is suspicious of everyone. As a Major Hindrance, Support rolls to aid the distrustful individual are made at -2."
+    },
+    {
+        "_id":"SWH067",
+        "name": "Thin Skinned",
+        "level": 1,
+        "effect": "Personal attacks really get under thisindividual's skin. As a Minor Hindrance, he subtracts 2 when resisting Taunt attacks."
+    },
+    {
+        "_id":"SWH068",
+        "name": "Thin Skinned",
+        "level": 2,
+        "effect": "Personal attacks really get under thisindividual's skin. As a Minor Hindrance, he subtracts 4 when resisting Taunt attacks."
+    },
+    {
+        "_id":"SWH069",
+        "name": "Tongue-Tied",
+        "level": 2,
+        "effect": "Your adventurer flubs cool lines (or thinks of them afterwards!), goes off on tangents when he's trying to talk someone into something, and generally miscommunicates most everything he says. <br />He suffers a -1 penalty to Intimidation, Performance, Persuasion, and Taunt rolls that involve speech."
+    },
+    {
+        "_id":"SWH070",
+        "name": "Ugly",
+        "level": 1,
+        "effect": "Attractive people get all the breaks. This unfortunate individual isn't one of them. He subtracts 1 from his Persuasion rolls."
+    },
+    {
+        "_id":"SWH071",
+        "name": "Ugly",
+        "level": 2,
+        "effect": "Attractive people get all the breaks. This unfortunate individual isn't one of them. He subtracts 2 from his Persuasion rolls if taken as a Major Hindrance."
+    },
+    {
+        "_id":"SWH072",
+        "name": "Vengeful",
+        "level": 1,
+        "effect": "Payback is…well…bad news for someone, and this adventurer is going to get it. <br />As a Minor Hindrance she usually seeks vengeance legally. The method varies by situation. Some plot and scheme for months while others demand immediate results."
+    },
+    {
+        "_id":"SWH073",
+        "name": "Vengeful",
+        "level": 2,
+        "effect": "Payback is…well…bad news for someone, and this adventurer is going to get it. <br />Those with the Major version of this Hindrance don't let anything prevent them from a reckoning. This doesn't mean they immediately resort to violence, but their actions always escalate until total and complete satisfaction is achieved."
+    },
+    {
+        "_id":"SWH074",
+        "name": "Vow",
+        "level": 1,
+        "effect": "The character has sworn an oath to someone or something he believes in. <br />The danger in fulfilling the Vow and how often it might occur determines the level of the Hindrance. A Minor Vow might be to serve an order with a broad mandate that rarely conflicts with the party's goals."
+    },
+    {
+        "_id":"SWH075",
+        "name": "Vow",
+        "level": 2,
+        "effect": "The character has sworn an oath to someone or something he believes in. <br />The danger in fulfilling the Vow and how often it might occur determines the level of the Hindrance. <br /> A Major Vow makes long-term and frequent demands on the servant's time and results in great risks to his life."
+    },
+    {
+        "_id":"SWH076",
+        "name": "Wanted",
+        "level": 1,
+        "effect": "Your hero has committed some crime and will be arrested if discovered by the authorities. This assumes the setting actually has laws and police officers to enforce them.<br />The level of the Hindrance depends on how serious the crime was and how active the hunters are. A hero with numerous unpaid parking tickets (in a game where he might have to drive occasionally) has a Minor Hindrance, as does someone wanted for more serious crimes away from the main campaign area."
+    },
+    {
+        "_id":"SWH077",
+        "name": "Wanted",
+        "level": 2,
+        "effect": "Your hero has committed some crime and will be arrested if discovered by the authorities. This assumes the setting actually has laws and police officers to enforce them. <br />The level of the Hindrance depends on how serious the crime was and how active the hunters are. Being accused of murder is a Major Hindrance in almost any setting if there's someone around to seek justice (or vengeance)."
+    },
+    {
+        "_id":"SWH078",
+        "name": "Yellow",
+        "level": 2,
+        "effect": "Not everyone has ice water in their veins. Your hero is squeamish at the sight of blood and gore and terrified of coming to harm. He subtracts 2 from Fear checks and when resisting Intimidation."
+    },
+    {
+        "_id":"SWH079",
+        "name": "Young",
+        "level": 1,
+        "effect": "The hero is 12-15 years old (in human years— adjust this for other races). He has only 4 points to adjust his attributes instead of 5, and 10 skill points instead of 12. He may also have legal restrictions depending on the setting (can't drive, own a firearm, and so on).<br /> On the plus side, youths have a fair amount of luck. They draw one extra Benny at the beginning of each game session (this stacks with other Edges such Luck or Great Luck).<br /> Most Young characters should also take the Small Hindrance, but it's not mandatory."
+    },
+    {
+        "_id":"SWH080",
+        "name": "Young",
+        "level": 2,
+        "effect": "The hero is 12-15 years old (in human years— adjust this for other races). He has only 4 points to adjust his attributes instead of 5, and10 skill points instead of 12. He may also have legal restrictions depending on the setting (can't drive, own a firearm, and so on).<br /> On the plus side, youths have a fair amount of luck. They draw one extra Benny at the beginning of each game session (this stacks with other Edges such Luck or Great Luck).<br /> As a Major Hindrance, the character is Very Young (8 to 11 years old). He has only 3 points for attributes and 10 for skills, and the Small Hindrance. Very Young heroes draw two extra Bennies at the start of each session."
+    }
+]

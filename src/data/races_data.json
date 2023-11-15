@@ -1,0 +1,862 @@
+[
+    {
+        "name":"Aquarian",
+        "description":"From the crushing ocean depths come aquatic folk. They are thick and sturdy beneath the waves but often vulnerable in the dry air or searing heat of the surface.",
+        "abilites":[
+            {
+                "title":"Aquatic",
+                "effect":"Aquarians cannot drown in water and move at their full Pace when swimming. See Movement on page 92 for normal swimming rates."
+            },
+            {
+                "title":"Dependency",
+                "effect":"Aquarians must immerse themselves in water one hour out of every 24 or become automatically Fatigued each day until they are Incapacitated. The day after Incapacitation from dehydration, they perish. Each hour spent in water restores one level of Fatigue."
+            },
+            {
+                "title":"Low Light Vision",
+                "effect":"Aquarians are used to the darkness of the depths. They ignore penalties for Dim and Dark Illumination."
+            },
+            {
+                "title":"Toughness",
+                "effect":"Life in the depths of their watery worlds has made aquarian flesh tough and resilient. Add +1 to their Toughness."
+            }
+        ]
+    },
+    {
+        "name":"Avion",
+        "description":"Avions are humanoids with wings. They tend to be very slight of build owing to their hollow bones. Some are feathered while others are leathery or even scaled.",
+        "abilites":[
+            {
+                "title":"Can't Swim",
+                "effect":"Avions' wings are a hazard in water. They subtract 2 from Athletics (swimming) rolls and each inch moved in water costs them 3″ of Pace."
+            },
+            {
+                "title":"Flight",
+                "effect":"Avions fly at Pace 12 per round. Use Athletics when maneuvering."
+            },
+            {
+                "title":"Frail",
+                "effect":"Avions have -1 Toughness due to their hollow bones."
+            },
+            {
+                "title":"Keen Senses",
+                "effect":"Avions are more perceptive than most. They begin with a d6 in Notice (instead of d4) and may raise the skill to d12 + 1."
+            },
+            {
+                "title":"Reduced Pace",
+                "effect":"Dependence on flight and bulky wings make avions slightly slower when walking. Decrease their walking Pace by 1 and their running die by one step."
+            }
+        ]
+    },
+    {
+        "name":"Celestials",
+        "description":"In many worlds, the gods and goddesses take an active interest in the affairs of mortals, sending angels into the mortal realm to serve as their representatives. Celestials have many forms, but their most noteworthy trait is a pair of white, feathery wings sprouting from their back.",
+        "abilites":[
+            {
+                "title":"Flight",
+                "effect":"Celestials fly at a Pace 12 per round. Use Athletics when maneuvering."
+            },
+            {
+                "title":"Attractive",
+                "effect":"Celestials have an unearthly beauty, giving them the Attractive Edge."
+            },
+            {
+                "title":"Code of Honor",
+                "effect":"Celestials are innately moral. They abhor lies, protect the weak, and seek justice for wrongs."
+            },
+            {
+                "title":"Vow (Major)",
+                "effect":"Serve the deity who created them."
+            }
+        ]
+    },
+    {
+        "name":"Centaurs",
+        "description":"Centaurs have the lower body of a horse and the upper body of a man. Most stand as tall as humans, though larger lines exist. Centaurs encompasses all horse-human hybrids, including those descended from exotic species such as pegasi or zebras.",
+        "abilites":[
+            {
+                "title":"Dependency",
+                "effect":"Centaurs need to gallop beneath the open sky at least one hour out of every 24. They take a level of Fatigue each day if they can't, and recover a level per hour spent out of doors once free to do so. This cannot lead to Incapacitation."
+            },
+            {
+                "title":"Hooves",
+                "effect":"A centaur's hooves do Str+d4 damage, and Edges that increase the centaur's natural weapons, such as Martial Artist, apply to their kicks as well as other natural attacks."
+            },
+            {
+                "title":"Size +1",
+                "effect":"Average centaurs are human-size with the additional hindquarters of a horse. Their size adds +1 to their Toughness."
+            },
+            {
+                "title":"Pace +4",
+                "effect":"Centaurs are swift runners. They have a Pace of 10 and a d10 running die."
+            },
+            {
+                "title":"Unusual Form",
+                "effect":"Centaurs cannot ride mounts or use certain types of armor, gear, or other equipment that does not fit their form (GM's call)."
+            }
+        ]
+    },
+    {
+        "name":"Dragonfolk",
+        "description":"The humanoid dragonfolk hail from scorching deserts, volcanic caves, or steaming jungles. Some say their temperaments are almost as fiery as the lands they call home. They are similar to other lizard-like humanoids but have the ability to breathe fire like the great dragons themselves. Variant Ideas: The dragonfolk presented here are",
+        "abilites":[
+            {
+                "title":"Armor +2",
+                "effect":"Dragonfolk have thick, scaly skin."
+            },
+            {
+                "title":"Bite/Claws",
+                "effect":"Str+d4, AP 2. Note that Bite allows a character to bite grappled prey rather than just crush; and claws add +2 to Athletics when climbing most surfaces."
+            },
+            {
+                "title":"Breath Weapon",
+                "effect":"Dragonfolk can breathe an impressive gout of fire. This takes an Athletics roll, may be Evaded, and causes 2d6 damage in a Cone Template or a 12” line (choose one during character creation). A Critical Failure on the attack causes Fatigue."
+            },
+            {
+                "title":"Cold-Blooded",
+                "effect":"Dragonfolk subtract 1 from Agility, Strength, and Vigor rolls after spending more than ten minutes in temperatures below 18° Celsius (60° Fahrenheit)."
+            },
+            {
+                "title":"Environmental Resistance (Heat)",
+                "effect":"Dragonfolk receive a +4 bonus to resist heat or fire based effects and reduce damage from such sources a like amount."
+            },
+            {
+                "title":"Environmental Weakness (Cold)" ,
+                "effect":"Dragonfolk are poorly suited to frigid conditions. They subtract 4 from rolls made to resist cold or -based effects and take +4 damage from such attacks."
+            },
+            {
+                "title":"Ill-Tempered",
+                "effect":"Dragonfolk are proud of the mighty dragons to which they're related. This gives them the Arrogant Hindrance. If the dragon folk of your setting don't have this trait, pick two points of Negative Racial Penalties that better suit their background or society instead."
+            }
+        ]
+    },
+    {
+        "name":"Dwarves",
+        "description":"Dwarves are short but stout, hardy people who come from massive caverns or high mountains. They are a proud, warlike race, usually made so by frequent contact with hostile races such as orcs and goblins. <br /> Dwarves usually live upwards of 200 years. In most fantasy campaigns, they have ruddy skin and all human hair colors.",
+        "abilites":[
+            {
+                "title":"Low Light Vision",
+                "effect":"Dwarven eyes are accustomed to the dark of the underearth. They ignore penalties for Dim and Dark Illumination."
+            },
+            {
+                "title":"Reduced Pace",
+                "effect":"Dwarves have short legs compared to most races. Decrease their Pace by 1 and their running die one die type."
+            },
+            {
+                "title":"Tough",
+                "effect":"Dwarves are stout and tough. They start with a d6 Vigor instead of a d4. This increases maximum Vigor to d12 + 1."
+            }
+        ]
+    },
+    {
+        "name":"Elemental Scions - Water",
+        "description":"Elemental scions are somehow connected by birth to one of the four elements: earth, fire, water, or air. The type here looks mostly human, but may have telltale signs of their heritage. Air scions have white hair that continuously stirs as if blown in a phantom wind. Earth scions have gravelly voices, brawny bodies, and a ruddy cast to their skin. Fire scions have a shock of bright orange or yellow hair, sibilant voices, and red pupils. Water scions have a bluish tint to their skin and hair, and speak with silvery voices.",
+        "abilites":[
+            {
+                "title":"Environmental Resistance",
+                "effect":"Elemental scions receive a +4 bonus to resist negative effects from their ancestral element, and damage from that element is also reduced by 4."
+            },
+            {
+                "title":"Outsider (Minor)",
+                "effect":"Most people find it difficult to relate to elemental scions. They have the Outsider (Minor) Hindrance, subtracting 2 from Persuasion rolls with all but others of their own kind."
+            },
+            {
+                "title":"Aquatic",
+                "effect":"Water scions cannot drown in water and move at their full Pace when swimming."
+            }
+        ]
+    },
+    {
+        "name":"Elemental Scions - Air",
+        "description":"Elemental scions are somehow connected by birth to one of the four elements: earth, fire, water, or air. The type here looks mostly human, but may have telltale signs of their heritage. Air scions have white hair that continuously stirs as if blown in a phantom wind. Earth scions have gravelly voices, brawny bodies, and a ruddy cast to their skin. Fire scions have a shock of bright orange or yellow hair, sibilant voices, and red pupils. Water scions have a bluish tint to their skin and hair, and speak with silvery voices.",
+        "abilites":[
+            {
+                "title":"Environmental Resistance",
+                "effect":"Elemental scions receive a +4 bonus to resist negative effects from their ancestral element, and damage from that element is also reduced by 4."
+            },
+            {
+                "title":"Outsider (Minor)",
+                "effect":"Most people find it difficult to relate to elemental scions. They have the Outsider (Minor) Hindrance, subtracting 2 from Persuasion rolls with all but others of their own kind."
+            },
+            {
+                "title":"Inner Air",
+                "effect":"Air scions do not need to breathe. They aren't affected by inhaled toxins, can't drown, and don't suffocate in a vacuum."
+            }
+        ]
+    },
+    {
+        "name":"Elemental Scions - Fire",
+        "description":"Elemental scions are somehow connected by birth to one of the four elements: earth, fire, water, or air. The type here looks mostly human, but may have telltale signs of their heritage. Air scions have white hair that continuously stirs as if blown in a phantom wind. Earth scions have gravelly voices, brawny bodies, and a ruddy cast to their skin. Fire scions have a shock of bright orange or yellow hair, sibilant voices, and red pupils. Water scions have a bluish tint to their skin and hair, and speak with silvery voices.",
+        "abilites":[
+            {
+                "title":"Environmental Resistance",
+                "effect":"Elemental scions receive a +4 bonus to resist negative effects from their ancestral element, and damage from that element is also reduced by 4."
+            },
+            {
+                "title":"Outsider (Minor)",
+                "effect":"Most people find it difficult to relate to elemental scions. They have the Outsider (Minor) Hindrance, subtracting 2 from Persuasion rolls with all but others of their own kind."
+            },
+            {
+                "title":"Quick",
+                "effect":"Fire scions are frenetic and always in motion. They have the Quick Edge."
+            }
+        ]
+    },
+    {
+        "name":"Elemental Scions - Earth",
+        "description":"Elemental scions are somehow connected by birth to one of the four elements: earth, fire, water, or air. The type here looks mostly human, but may have telltale signs of their heritage. Air scions have white hair that continuously stirs as if blown in a phantom wind. Earth scions have gravelly voices, brawny bodies, and a ruddy cast to their skin. Fire scions have a shock of bright orange or yellow hair, sibilant voices, and red pupils. Water scions have a bluish tint to their skin and hair, and speak with silvery voices.",
+        "abilites":[
+            {
+                "title":"Environmental Resistance",
+                "effect":"Elemental scions receive a +4 bonus to resist negative effects from their ancestral element, and damage from that element is also reduced by 4."
+            },
+            {
+                "title":"Outsider (Minor)",
+                "effect":"Most people find it difficult to relate to elemental scions. They have the Outsider (Minor) Hindrance, subtracting 2 from Persuasion rolls with all but others of their own kind."
+            },
+            {
+                "title":"Rock Solid",
+                "effect":"Earth scions are born sturdy. They start with a d6 in Vigor instead of a d4. This increases their maximum Vigor to d12+1."
+            }
+        ]
+    },
+    {
+        "name":"Elves",
+        "description":"Elves are tall, thin souls with pointed ears and deep-set eyes of various colors. Whether they hail from the deep forests or hidden valleys, they are all born more graceful than humans, though somewhat slighter. Most elves live upwards of 300 years. They have fair skin and their hair includes all human colors, plus shades of silver, blue, and gold.",
+        "abilites":[
+            {
+                "title":"Agile",
+                "effect":"Elves are graceful and agile. They start with a d6 in Agility instead of a d4. This increases maximum Agility to d12 + 1."
+            },
+            {
+                "title":"All Thumbs",
+                "effect":"Elves have an inherent dislike of mechanical objects, and thus have the All Thumbs Hindrance. They shun most mechanical items and designs."
+            },
+            {
+                "title":"Low Light Vision",
+                "effect":"Elven eyes amplify light. Other races often claim they can see stars in the elves' eyes. They ignore penalties for Dim and Dark Illumination."
+            }
+        ]
+    },
+    {
+        "name":"Fairies",
+        "description":"Fairies are an integral part of high fantasy. They are small, often-impetuous winged creatures who serve a fairy queen, king, or court. Danger is always close at hand in a world of much larger creatures, so they must choose their battles carefully, perhaps relying on traps, tricks, or alliances with larger beings to defeat their foes.",
+        "abilites":[
+            {
+                "title":"All Thumbs",
+                "effect":"Traditional fairies have great disdain for mechanical objects. They have the All Thumbs Hindrance."
+            },
+            {
+                "title":"Big Mouth",
+                "effect":"Though they are full of secrets, they rarely keep them to themselves."
+            },
+            {
+                "title":"Curious",
+                "effect":"Fairies have endless questions and curiosities about life, especially for affairs outside their homelands."
+            },
+            {
+                "title":"Flight",
+                "effect":"Fairies flit about at Pace 6."
+            },
+            {
+                "title":"Impulsive",
+                "effect":"Restraint is not a quality often found in fairies."
+            },
+            {
+                "title":"Diminutive",
+                "effect":"Fairies are Tiny (see the ability description on page 8). They benefit from Scale modifiers, subtract 4 from their Toughness and damage rolls, and have a maximum Strength of d4."
+            }
+        ]
+    },
+    {
+        "name":"Gnomes",
+        "description":"Gnomes are small humanoids who live in deep forests, mountain caves, or other dark and isolated places. They are often mistaken for half-folk, but the type here is better proportioned and have less hair.",
+        "abilites":[
+            {
+                "title":"Cunning",
+                "effect":"Gnomes start with a d6 in Smarts instead of a d4. This increases maximum Smarts to d12+1."
+            },
+            {
+                "title":"Low Light Vision",
+                "effect":"Gnomish eyes can see in darkness. They ignore penalties for Dim and Dark Illumination."
+            },
+            {
+                "title":"Keen Senses",
+                "effect":"Gnomes start with a d6 in Notice instead of a d4. This increases their maximum to d12+1 as well."
+            },
+            {
+                "title":"Size -1",
+                "effect":"Adult gnomes are typically four feet tall, reducing their Size and Toughness by 1."
+            },
+            {
+                "title":"Reduced Pace",
+                "effect":"Decrease the character’s Pace by 1 and running die one die type."
+            }
+        ]
+    },
+    {
+        "name":"Goblins",
+        "description":"Few argue that goblins are quarrelsome beings. Most serve orcs, ogres, or other larger humanoids, acting as scouts, weapon carriers, or even food. Sometimes tribes are brought together by circumstance, opportunity, or cunning leaders, but most have short and brutal lives thanks to their larger cousins, bloodthirsty adventurers, or hungry predators.",
+        "abilites":[
+            {
+                "title":"Infravision",
+                "effect":"Goblins can see in the infrared spectrum, halving penalties for bad lighting when attacking targets that radiate heat or cold"
+            },
+            {
+                "title":"Mean",
+                "effect":"\\“Vicious\\” and \\“cruel\\” are the two adjectives most used to describe goblins. They subtract 1 from Persuasion rolls."
+            },
+            {
+                "title":"Short",
+                "effect":"Goblins average only about 4' tall, reducing their Size (and therefore Toughness) by 1."
+            },
+            {
+                "title":"Sneaky",
+                "effect":"Goblins quickly learn how to sneak around more ferocious masters who want to kill or harm them. They start with a d6 in Stealth, which increases their skill limit to d12+1."
+            },
+            {
+                "title":"Survivors",
+                "effect":"Goblins develop numerous tactics to survive in their savage and violent environs. They start with a free Novice Edge of their choice (though they must still meet all the Edge’s Requirements)."
+            }
+        ]
+    },
+    {
+        "name":"Golems",
+        "description":"Golems are generally mindless automatons created by a sorcerer or inventor to protect their lairs. But some are either gifted with sentience or come into it through arcane accidents, powerful spells, blessings by benevolent deities, or other unorthodox means.",
+        "abilites":[
+            {
+                "title":"Armor +2",
+                "effect":"Stone golems are made of rock."
+            },
+            {
+                "title":"Big",
+                "effect":"Golems subtract 2 from Trait rolls when using equipment made for Normal Size Humanoids."
+            },
+            {
+                "title":"Clueless",
+                "effect":"Lacking life experiences, golems subtract 1 from Common Knowledge and Notice rolls."
+            },
+            {
+                "title":"Clumsy",
+                "effect":"Golems subtract 2 from Athletics and Stealth rolls."
+            },
+            {
+                "title":"Construct",
+                "effect":"+2 to recover from being Shaken, ignores 1 point of Wound penalties, doesn't breathe or eat, immune to disease and poison, doesn't Bleed Out, Wounds are removed with Repair instead of Healing and there is no \\“Golden Hour.\\”"
+            },
+            {
+                "title":"No Vital Organs",
+                "effect":"Called shots do no extra damage to golems."
+            },
+            {
+                "title":"Reduced Core Skills",
+                "effect":"Golems aren't raised like biological beings, and so don't start with Common Knowledge, Persuasion, or Stealth."
+            },
+            {
+                "title":"Reduced Pace",
+                "effect":"Golems are slow and clumsy. Their Pace is 5 and their running die is a d4."
+            },
+            {
+                "title":"Size +2",
+                "effect":"Golems are dense, hulking creatures weighing around 900 lbs. This adds +2 to their Toughness."
+            }
+        ]
+    },
+    {
+        "name":"Graveborn",
+        "description":"The mysterious and rare graveborn—sometimes called “dhampyres”—are the offspring of a living parent and a vampire. Most do not survive into adulthood, succumbing to ill health, the unforgiving sun, or superstitious villagers, but those who do can be very powerful indeed. <br /> Graveborn are not undead but have a sickly gray complexion, stringy hair, and dark eyes. Their frail appearance belies abnormal strength, however. They have an innate connection to the dead and cause other living creatures around them—especially animals—to feel uneasy.",
+        "abilites":[
+            {
+                "title":"Animal Aversion",
+                "effect":"Animals find graveborn unnerving. They won't willingly approach within 5” (10 yards). In addition, graveborn subtract 2 from rolls to control or ride animals, except wolves, rats, ravens, and other animals commonly associated with the undead in that setting (GM's call)."
+            },
+            {
+                "title":"Bite",
+                "effect":"Graveborn have fangs that cause Str+d4 damage."
+            },
+            {
+                "title":"Blood Drinker",
+                "effect":"Once per game session, a graveborn can drink humanoid blood to make a natural healing roll. Causing a Wound with his Bite provides enough blood for the attempt, as does drinking from a downed (but living) foe. If the latter, the victim makes a Vigor roll to see if they survives."
+            },
+            {
+                "title":"Low Light Vision",
+                "effect":"Night is when graveborn feel most at home. They ignore penalties for Dim and Dark Illumination."
+            },
+            {
+                "title":"Outsider (Major)",
+                "effect":"Graveborn give off an uneasy aura even to their allies. Others may mistake them for true vampires—fearing or hunting them as fits their nature."
+            },
+            {
+                "title":"Sunlight Sensitivity",
+                "effect":"Graveborn must cover themselves completely or be Distracted as long as they're exposed to sunlight or magical / artificial equivalent."
+            },
+            {
+                "title":"Unnatural Strength",
+                "effect":"Graveborn are stronger than their human counterparts. Their starting Strength is d6 and their limit is increased to d12+1."
+            },
+            {
+                "title":"cold Resistance",
+                "effect":"Graveborn are cool to the touch and hardly notice chilly temperatures. They have a +4 bonus to resist the negative effects of cold, and reduce cold damage by 4."
+            }
+        ]
+    },
+    {
+        "name":"Half-Elves",
+        "description":"Half-elves gain the elves’ grace but none of their elegant frailty. Most are well-adjusted, but some are shunned by one side of the family or the other and grow resentful. Others may even be mistreated. Their lifespans are closer to their human parent than those of their elven kin, living only to about 100 years.",
+        "abilites":[
+            {
+                "title":"Heritage",
+                "effect":"Half-elves may retain the grace of their elven parent or the adaptability of their human ancestry. A half-elf may either start with a free Novice Edge of his choice or a d6 in Agility instead of a d4 (which also increases his Agility maximum to d12 + 1)."
+            },
+            {
+                "title":"Low Light Vision",
+                "effect":"Half-elves ignore penalties for Dim and Dark Illumination."
+            },
+            {
+                "title":"Outsider (Minor)",
+                "effect":"Half-elves are never quite comfortable in human or elven society, having a foot in both worlds but never fully standing in either. They subtract 2 from Persuasion rolls with all but others of their kind."
+            }
+        ]
+    },
+    {
+        "name":"Half-Folk",
+        "description":"Half-folk are small, nimble people with fuzzy brown or black hair. Though they are frail compared to most other races, their cheerful optimism (or wily cunning) gives them a “never say die” attitude that makes them more than a match for creatures twice their size. Half-folk see no reason to invite trouble and tend to live in their own close-knit communities far off the beaten path.",
+        "abilites":[
+            {
+                "title":"Luck",
+                "effect":"Half-folk draw one additional Benny per game session."
+            },
+            {
+                "title":"Reduced Pace",
+                "effect":"Decrease the character's Pace by 1 and their running die one die type."
+            },
+            {
+                "title":"Size",
+                "effect":"Half-folk average only about four feet tall, reducing their Size (and therefore Toughness) by 1."
+            },
+            {
+                "title":"Spirited",
+                "effect":"Half-folk are generally optimistic beings. They start with a d6 Spirit instead of a d4. This increases their maximum Spirit to d12 + 1."
+            }
+        ]
+    },
+    {
+        "name":"Half-Giants",
+        "description":"Tribes of these outcasts can be found in distant hills, yawning chasms, and towering mountains. They are strong, unstoppable forces well-suited to battling their way through the most savage environments.",
+        "abilites":[
+            {
+                "title":"Big",
+                "effect":"Half-giants subtract two when using equipment designed for smaller beings, and cannot wear humanoid armor or clothing. Equipment, armor, food and clothing cost double the listed price."
+            },
+            {
+                "title":"Boneheaded",
+                "effect":"Half-giants' thick skulls mean they tend to be relatively simple thinkers. Smarts rolls are made at -1."
+            },
+            {
+                "title":"Clueless",
+                "effect":"Half-giants reduce Common Knowledge and Notice rolls by one."
+            },
+            {
+                "title":"Illiterate",
+                "effect":"Half-giants cannot read or write. They may buy off this Hindrance with an Advance."
+            },
+            {
+                "title":"Outsider (Major)",
+                "effect":"Half-giants folk are terrifying to most humanoid races. They subtract 2 from Persuasion rolls and may not have basic rights outside their own familial clans."
+            },
+            {
+                "title":"Size +3",
+                "effect":"Half-giants are 10’ tall, towering over most humanoids. This adds +3 to their Toughness."
+            },
+            {
+                "title":"Very Strong",
+                "effect":"The half-giants’ size increases their starting Strength to d8 and their maximum Strength to d12+2."
+            },
+            {
+                "title":"Very Tough",
+                "effect":"Half-giants are tough, hardy beings. Their starting Vigor is d8, and the limit is increased to d12+2."
+            }
+        ]
+    },
+    {
+        "name":"Half-Orcs",
+        "description":"Half-orcs are the offspring of an orc and a human or another half-orc. They are usually accepted by orcish communities but shunned by most other races, including humans, elves, and dwarves. Some half-orcs choose to join the “civilized” races, turning their backs on their barbaric roots. They vary greatly in appearance. Some are large and powerful, like orcs, while others can pass for human without close examination.",
+        "abilites":[
+            {
+                "title":"Infravision",
+                "effect":"Half-orcs can see in the infrared spectrum, halving penalties for bad lighting when attacking targets that radiate heat."
+            },
+            {
+                "title":"Outsider (Minor)",
+                "effect":"Half-orcs aren’t t rusted by most other \\“civilized\\” races. They subtract two from Persuasion rolls when interacting with beings besides half-orcs."
+            },
+            {
+                "title":"Hardened",
+                "effect":"Half-orcs inherit some of the prowess of their orc parent. They start with either a d6 Strength or d6 Vigor instead of a d4. This increases the limit of the chosen attribute to d12+1 as well."
+            },
+            {
+                "title":"",
+                "effect":""
+            },
+            {
+                "title":"",
+                "effect":""
+            }
+        ]
+    },
+    {
+        "name":"Humans",
+        "description":"Humans in most settings get one free Edge of their choice. This option reflects their versatility and adaptability compared to most other races. <br /> For more variety, the GM might give humans abilities based on culture rather than race. For instance, a nomadic, horsebased society might start with skill points in Riding and Survival. Cultural templates are designed just like making new races, though GMs should allow for more exceptions than usual since the abilities tend to be learned rather than truly innate.",
+        "abilites":[
+            {
+                "title":"Adaptable",
+                "effect":"Humans begin play with any Novice Edge of their choosing. They must meet its Requirements as usual."
+            }
+        ]
+    },
+    {
+        "name":"Infernals",
+        "description":"Infernals have demonic or devilish blood in their line. They are not inherently evil, but most are mischievous, either by nature or perhaps because they are expected to be by others. They come in many shapes and sizes, but all have some sort of telltale physical trait, such as a tail, horns, or serpent-like eyes.<br /> The abilities below reflect a devilish individual with reddish skin, small horns, and a thin tail. The template reflects a fairly high-fantasy world where infernals may be viewed with suspicion but aren’t generally hunted on sight.",
+        "abilites":[
+            {
+                "title":"Darkvision",
+                "effect":"Infernals’ ancestors hail from the darkest abyss. They ignore penalties for Illumination up to 10” (20 yards)."
+            },
+            {
+                "title":"Devilish Nature",
+                "effect":"An infernal’s true nature is always just below the surface and they can reveal it when they wish. They add +1 to Intimidation rolls."
+            },
+            {
+                "title":"Environmental Resistance (Heat)",
+                "effect":"Infernals receive a +4 bonus to resist heat or fire based effects and reduce damage from such sources a like amount."
+            },
+            {
+                "title":"Environmental Weakness (Cold)",
+                "effect":"Infernals detest frigid climes. They subtract 4 from rolls made to resist cold or cold-based effects and take +4 damage from such attacks."
+            },
+            {
+                "title":"Horns",
+                "effect":"The infernal's horns cause Str+d4 damage, and cause +4 damage if the character runs at least 5” (10 yards) and hits with them."
+            },
+            {
+                "title":"Outsider (Major)",
+                "effect":"No one truly trusts someone of devilish heritage, even in a high fantasy setting. The character has the Outsider (Minor) Hindrance."
+            }
+        ]
+    },
+    {
+        "name":"Insectoids",
+        "description":"Insectoids or insectfolk come in many varieties. The template here features an ant-like being of roughly human size.<br /> Culturally, most insectoids come from highlyorganized societies built around roles assigned at birth and tend to be obedient to a fault.",
+        "abilites":[
+            {
+                "title":"Additional Actions",
+                "effect":"The character has four usable arms. This reduces their total Multi-Action penalty by two as long as at least one of the actions makes use of their limbs (typically Agility, Strength, or linked skills)."
+            },
+            {
+                "title":"Armor +2",
+                "effect":"Insectoids have thick exoskeletons."
+            },
+            {
+                "title":"Hive Minded",
+                "effect":"Insectoids have the Driven (Major) and Loyal Hindrances when it comes to serving their “colony” (their community, adventuring party, etc.). Once set upon a path, they stay on it until the task is complete. This causes them great stress when their goal contradicts their inherent loyalty."
+            },
+            {
+                "title":"Bit or Claw",
+                "effect":"Insectfolk mandibles or pincers deal Strength +d4 damage."
+            },
+            {
+                "title":"Outsider (Minor)",
+                "effect":"Other races find Insectfolk unsettling and alien. The character has the Outsider (Minor) Hindrance."
+            },
+            {
+                "title":"Unusual Body Shape",
+                "effect":"An insectoid's unique physiology means they can't use most clothing, armor, or furniture fitted for humanoids. They can use weapons and other hand-held equipment normally."
+            },
+            {
+                "title":"Wall Walker",
+                "effect":"Insectfolk may walk on vertical surfaces normally, or inverted surfaces at half Pace."
+            }
+        ]
+    },
+    {
+        "name":"Minotaur",
+        "description":"Minotaurs have a human body and the head and musculature of a bull. They may be mythological creatures, created by deities as a form of punishment, or simply a humanoid species with their own culture and customs. Regardless of origin, minotaurs are known for their physical strength, ill tempers, and wicked horns. They are fearsome in one-on-one combat.",
+        "abilites":[
+            {
+                "title":"Thin Skinned",
+                "effect":"Minotaurs are quick to lose their temper when Taunted. They have the Thin Skinned (Major) Hindrance."
+            },
+            {
+                "title":"Size +1",
+                "effect":"Minotaurs are tall and broad, adding +1 to their Toughness."
+            },
+            {
+                "title":"Very Strong",
+                "effect":"Minotaurs start with Strength d8, increasing their maximum Strength to d12+2."
+            },
+            {
+                "title":"Horns",
+                "effect":"Minotaur horns cause Strength+d6 damage, adding +4 if the character runs at least 5” (10 yards) and hits with them."
+            },
+            {
+                "title":"Uneducated",
+                "effect":"Minotaur society favors physical prowess over intellectual ability. Smarts rolls are made at -1."
+            },
+            {
+                "title":"Tough",
+                "effect":"Minotaurs' starting Vigor is d6, increasing the limit to d12+1."
+            },
+            {
+                "title":"Big",
+                "effect":"Their muscular frame causes minotaurs to subtract two when using equipment designed for smaller beings, and they cannot wear humanoid armor or clothing. Equipment, armor, food and clothing cost double the listed price."
+            },
+            {
+                "title":"Mean",
+                "effect":"Taught that might makes right, minotaurs struggle with diplomacy and tact. They have the Mean Hindrance."
+            }
+        ]
+    },
+    {
+        "name":"Mouselings",
+        "description":"These tiny creatures resemble ordinary mice except for being bipedal and intelligent. Perhaps they were normal mice given sentience by a magical mishap. Or maybe they have always existed, hiding in the shadows of the larger races.",
+        "abilites":[
+            {
+                "title":"Diminutive",
+                "effect":"Mouselings stand only about six inches tall. This makes them Size -4 and grants them the benefits of being Tiny (see Scale modifiers in Savage Worlds). They subtract 4 from their Toughness and have a Strength of d4. See Diminutive on page 8 for more information."
+            },
+            {
+                "title":"Low Light Vision",
+                "effect":"Mouselings are accustomed to living in tiny, dark crawlspaces or burrows. They ignore penalties for Dim or Dark Illumination."
+            },
+            {
+                "title":"Outsider (Major)",
+                "effect":"Mouselings are cute novelties to most humanoid races. They subtract 2 from Persuasion rolls and may not have basic rights outside their own people."
+            },
+            {
+                "title":"Phobia (Minor) Cats",
+                "effect":"Cats provoke an instinctual fear in mouselings."
+            },
+            {
+                "title":"Reduced Pace",
+                "effect":"Short legs and stature reduces Pace by 1 and the Running die to d4."
+            },
+            {
+                "title":"Unimposing",
+                "effect":"Most foes don't consider mouselings a t hreat. They have the Mild Mannered Hindrance."
+            }
+        ]
+    },
+    {
+        "name":"Ogres",
+        "description":"The proud and vicious ogres live in tribes most others see as savage and cruel. They pride themselves on gluttony and great feats of bravery or cunning. Whether they roam as nomads, rule a vital pass in the highest mountains, or lair in massive caverns near their “cousins” the orcs and goblins, their rowdy campfire feasts and the tales that come with them are legendary.",
+        "abilites":[
+            {
+                "title":"Arrogant",
+                "effect":"The culture of ogre-kind is one of great boasts and deeds. Others see them as haughty and distant, giving them the Arrogant Hindrance."
+            },
+            {
+                "title":"Big",
+                "effect":"Ogres are thick and burly creatures with wide shoulders and great guts they take immense pride in. They subtract 2 when using equipment designed for smaller beings, and cannot wear humanoid armor or clothing. Equipment, armor, food and clothing cost double the listed price."
+            },
+            {
+                "title":"Clueless",
+                "effect":"Ogres subtract 1 from Common Knowledge and Notice rolls."
+            },
+            {
+                "title":"Clumsy",
+                "effect":"Ogres subtract 2 from Athletics and Stealth rolls."
+            },
+            {
+                "title":"Outsider (Minor)",
+                "effect":"Their awkward and imposing size makes other beings nervous. Ogres subtract 2 from Persuasion rolls."
+            },
+            {
+                "title":"Hardy",
+                "effect":"Ogres are exceptionally tough. A second Shaken result from damage does not cause a Wound."
+            },
+            {
+                "title":"Size +1",
+                "effect":"Ogres are eight to nine feet tall. This adds +1 to their Toughness."
+            },
+            {
+                "title":"Very Strong",
+                "effect":"Ogres have a starting Strength of d8 and a maximum Strength of d12+2."
+            },
+            {
+                "title":"Very Tough",
+                "effect":"An ogre's starting Vigor is d8, and the limit is increased to d12+2."
+            }
+        ]
+    },
+    {
+        "name":"Orcs",
+        "description":"Orcs have a reputation for being savage, feral, brutish, and violent. This isn't entirely unearned—marauding bands of orcs are terrors wherever they roam in most fantasy worlds. But where others see predation and cruelty, orcs see an uncomplicated struggle for survival. After all, in nature, the strongest outlast their enemies, and orcs see themselves no differently. Their social structure reflects this as tribes are ruled by the largest and toughest warriors, winning their thrones through honest but bloody combat rather than the guile and manipulation of more “civilized” societies.",
+        "abilites":[
+            {
+                "title":"Infravision",
+                "effect":"Orcs can see in the infrared spectrum, halving penalties for bad lighting when attacking targets that radiate heat."
+            },
+            {
+                "title":"Outsider (Major)",
+                "effect":"Orcs subtract 2 from Persuasion rolls and may be treated as monsters outside their own clans."
+            },
+            {
+                "title":"Size +1",
+                "effect":"Orcs are 7 to 8 feet tall. This adds +1 to their Toughness."
+            },
+            {
+                "title":"Strong",
+                "effect":"Orcs start with a d6 Strength instead of a d4. This increases their limit to d12+1 as well."
+            },
+            {
+                "title":"Tough",
+                "effect":"An orc’s Strength is matched by his endurance. They start with a d6 Vigor instead of a d4. This increases their maximum to d12+1 as well."
+            }
+        ]
+    },
+    {
+        "name":"Rakashans",
+        "description":"Rakashans are humanoid felines. Some have the bright colors of tigers, the speckled hides of leopards, or the exotic look of Siamese cats. All have sharp claws and teeth, and a cruel nature when it comes to dealing with their prey. <br /> Rakashans can be found in their own remote and exotic cities or as fringe elements of normal society. They are often too clever and beautiful to be shunned, but too cunning to gain others' complete trust.",
+        "abilites":[
+            {
+                "title":"Agile",
+                "effect":"Feline grace gives rakashans a d6 Agility attribute instead of a d4. This increases maximum Agility to d12 + 1."
+            },
+            {
+                "title":"Bite/Claws",
+                "effect":"Rakashan fangs and claws are Natural Weapons (page 104) that cause Strength+d4 damage."
+            },
+            {
+                "title":"Bloodthirsty",
+                "effect":"Rakashans can be cruel to their foes, often toying with them for simple amusement. They rarely take prisoners and feel little compunction about punishing captured foes."
+            },
+            {
+                "title":"Can't Swim",
+                "effect":"Rakashans actually can swim, they just shun it and are not particularly good at it. They subtract 2 from Athletics (swimming) rolls and each tabletop inch of movement in water uses 3″ of Pace."
+            },
+            {
+                "title":"Low Light Vision",
+                "effect":"Rakashan eyes amplify light. They ignore penalties for Dim and Dark Illumination."
+            },
+            {
+                "title":"Ancestral Enemy",
+                "effect":"Rakashan society rose at the expense of another. Pick a common race in your setting. Members of each culture subtract 2 from Persuasion when dealing with each other and often attack on sight."
+            }
+        ]
+    },
+    {
+        "name":"Ratlings",
+        "description":"Natural-born survivors, ratlings are furry humanoids with hunched bodies, ratlike faces, and hairless tails. Opportunistic by necessity, their species has long been forced into sewers, tunnels, and slums by their many enemies. There they form loose packs, working together as long as it’s expedient, but their social cohesion tends to fall apart in the face of perilous threats or undeniable opportunities.",
+        "abilites":[
+            {
+                "title":"Bite",
+                "effect":"Ratling fangs cause Str+d4 damage and may be used against grappled foes."
+            },
+            {
+                "title":"Claws",
+                "effect":"The ratfolk’s claws cause Str+d4 damage and add +2 to Athletics (Climbing) rolls."
+            },
+            {
+                "title":"Natural Resistance",
+                "effect":"Ratlings spend their lives scavenging in filth, making them immune to poison and disease."
+            },
+            {
+                "title":"Low Light Vision",
+                "effect":"Ratlings ignore penalties for Dim or Dark Illumination."
+            },
+            {
+                "title":"Scavenger",
+                "effect":"Ratlings obsessively collect items wherever they go, carrying them on their bodies and in their burrows. They have the Scavenger Edge."
+            },
+            {
+                "title":"Size -1",
+                "effect":"Ratlings are about four feet tall, reducing their Size (and therefore Toughness) by 1."
+            },
+            {
+                "title":"Outsider (Major)",
+                "effect":"Ratlings are typically despised by other peoples. They subtract 2 from Persuasion rolls and are treated as monstrous vermin outside their own packs."
+            },
+            {
+                "title":"Craven",
+                "effect":"Ratlings learn early that discretion is the better part of valor. They have the Yellow Hindrance."
+            },
+            {
+                "title":"Greedy (Minor)",
+                "effect":"Acquiring new treasures is every ratling’s obsession. They have the Greedy (minor) Hindrance."
+            }
+        ]
+    },
+    {
+        "name":"Saurians",
+        "description":"Lizard men typically come from steaming jungles or deep deserts where they have unique civilizations unknown to other sentient races.",
+        "abilites":[
+            {
+                "title":"Armor +2",
+                "effect":"Saurians have scaly skin that acts as leather armor."
+            },
+            {
+                "title":"Bite",
+                "effect":"A saurian’s fangs are Natural Weapons (page 104) that cause Strength+d4 damage."
+            },
+            {
+                "title":"Environmental Weakness",
+                "effect":"Though not truly cold-blooded, saurians are poorly suited for frigid conditions. They suffer a -4 penalty to resist cold environmental effects, and suffer +4 damage from cold-based attacks."
+            },
+            {
+                "title":"Keen Senses",
+                "effect":"Saurians have acute senses, giving them the Alertness Edge"
+            },
+            {
+                "title":"Outsider (Minor)",
+                "effect":"Most races distrust saurians for some reason. Perhaps it is their strange ways and customs, their often-sibilant speech, or an ancient subconscious fear of their reptilian ancestors. Saurians subtract 2 from Persuasion rolls with all but others of their kind"
+            }
+        ]
+    },
+    {
+        "name":"Serpentfolk",
+        "description":"Slithering forth from great warrens or isolated nests are a variety of serpentine humanoids. Species vary greatly between the broader genus, representing constrictors and vipers of various types, but share the same humanoid physiology and serpent-like heads.",
+        "abilites":[
+            {
+                "title":"Cold-Blooded",
+                "effect":"Serpentfolk subtract 1 from Agility, Strength, and Vigor rolls after spending more than ten minutes in temperatures below 18° Celsius (60° Fahrenheit)."
+            },
+            {
+                "title":"Environmental Weakness (Cold)",
+                "effect":"Serpentfolk suffer a -4 penalty to resist cold environmental effects, and damage from cold-based attacks is increased by +4."
+            },
+            {
+                "title":"Infravision",
+                "effect":"Serpentfolk can detect heat thanks to pit organs, halving penalties for bad lighting when attacking targets that radiate heat."
+            },
+            {
+                "title":"Pace",
+                "effect":"10, Running die d10. Serpent folk move as quickly as the snakes they descend from."
+            },
+            {
+                "title":"Venomous Bite",
+                "effect":"Victims Shaken or Wounded by a serpentfolk's bite must make a Vigor roll or suffer the effects of a Mild Poison."
+            },
+            {
+                "title":"Outsider (Minor)",
+                "effect":"Serpentfolk are rarely trusted by most other races. They subtract 2 from Persuasion rolls outside their own clans."
+            }
+        ]
+    },
+    {
+        "name":"Shapeshifters",
+        "description":"These peculiar and often mistrusted creatures have the ability to change their appearance to look like someone else. They are the ultimate social chameleons, moving stealthily through society. Some unscrupulous shapeshifters use this ability to become con artists, thieves, or even assassins, while others use it while entertaining to enhance their performance. Their “true” form is disturbing to behold—a largely featureless humanoid with gray skin and pupilless eyes.",
+        "abilites":[
+            {
+                "title":"Charismatic",
+                "effect":"Shapeshifters quickly learn to navigate tricky conversations to fit in with new communities. They gain the Charismatic Edge for free."
+            },
+            {
+                "title":"Change Shape",
+                "effect":"Shapeshifters have the Arcane Background Gifted) Edge. As a limited free action, they may change their physical appearance as per the disguise power with the Personal Limitation."
+            },
+            {
+                "title":"Secret",
+                "effect":"A shapeshifter's true nature is rarely known—even to other shapeshifters. They keep their ability close to the chest, granting them the Secret (Major) Hindrance. Should they ever be discovered by anyone other than their closest allies, they trade this Hindrance for Enemy, Shamed, Wanted, Outsider, or another appropriate Hindrance."
+            }
+        ]
+    }
+]
