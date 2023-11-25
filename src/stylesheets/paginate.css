@@ -1,0 +1,33 @@
+ul.paginate {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0 5rem;
+  }
+  
+  ul.paginate li a {
+    border-radius: 7px;
+    padding: 0.1rem 1rem;
+    border: gray 1px solid;
+    cursor: pointer;
+  }
+  ul.paginate li.previous a,
+  ul.paginate li.next a,
+  ul.paginate li.break a {
+    border-color: transparent;
+  }
+  ul.paginate li.selected a {
+    background-color: #0366d6;
+    border-color: transparent;
+    color: white;
+    min-width: 32px;
+  }
+  ul.paginate li.disabled a {
+    color: grey;
+  }
+  ul.paginate li.disable,
+  ul.paginate li.disabled a {
+    cursor: default;
+  }

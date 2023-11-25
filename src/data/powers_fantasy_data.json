@@ -8,7 +8,7 @@
         "duration":"One Year",
         "trappings":"Prayers, chanting, festivals.",
         "effect":"The people of the land depend on priests, shamans, and other caretakers to bless their communities. This powerful spell allows them to bless the crops, the children, and the beasts of the fields.<br /> The caretaker must spend an hour walking about the town and its fields,praying, chanting, sprinkling holy water, shaking sage, and otherwise asking for divine or magical aid. The arcane skill roll is attempted afterwards.<br /> If failed, the caster must start over. With a Critical Failure, the priest may not cast a blessing on these subjects again for one year. If successful, the area's crops come in hale and hearty, sickness and disease are rare, and couples are fertile and prosperous. The effects are relative. Casting blessing in a blighted land may only raise a community to subsistence-level.",
-        "modifiers":""
+        "modifiers":[]
     },
     {
         "_id":"FCP002",
@@ -19,7 +19,20 @@
         "duration":"One Year",
         "trappings":"Light that forms the item's silhouette, reaching into a magic bag, shaping dirt or clay into the item, pulling the item from a drawing or painting.",
         "effect":"The caster can create an object weighing up to one pound for every 2 Power Points spent. The item must be a simple, mundane object made of a common material (GM's call) such as a 10-foot pole, blanket, shield, etc. A raise on the arcane skill roll produces a more durable version of the conjured item. <br /> Conjured items appear in the hands of the caster or on the ground nearby. Once the Duration expires, the item fades from reality. This can cause issues, for example, if the conjured item holds a door open or was given as a gift.",
-        "modifiers":"- <b>COMPLETE (+1):</b> The object is a complete set, such as a chess set or a quiver of arrows. The set must fit under the weight limit. <br />- <b>CREATE FOOD AND WATER (Special):</b> Instead of an object, every 1 Power Point creates enough food and water to sustain a Size 0 humanoid for one day. The nourishing food is permanent (doesn't disappear after you eat it), though it decays and is inedible after 24 hours if not consumed. The water is just like clean rainwater and does not spoil. <br /> - <b>ENDURING (+1 per pound):</b> The object's Duration becomes “permanent” until dispelled. The Power Points are “invested” and unavailable until it's destroyed, dispelled, or dismissed by the caster. The conjurer may dismiss the object at any time, regardless of sight, distance, or other factors. His Power Points then begin recharging normally."
+        "modifiers":[
+                        {
+                            "name":"COMPLETE (+1)",
+                            "effect":"The object is a complete set, such as a chess set or a quiver of arrows. The set must fit under the weight limit."
+                        },
+                        {
+                            "name":"CREATE FOOD AND WATER (Special)",
+                            "effect":"Instead of an object, every 1 Power Point creates enough food and water to sustain a Size 0 humanoid for one day. The nourishing food is permanent (doesn't disappear after you eat it), though it decays and is inedible after 24 hours if not consumed. The water is just like clean rainwater and does not spoil."
+                        },
+                        {
+                            "name":"ENDURING (+1 per pound)",
+                            "effect":"The object's Duration becomes “permanent” until dispelled. The Power Points are “invested” and unavailable until it's destroyed, dispelled, or dismissed by the caster. The conjurer may dismiss the object at any time, regardless of sight, distance, or other factors. His Power Points then begin recharging normally."
+                        }
+        ]
     },
     {
         "_id":"FCP003",
@@ -30,7 +43,12 @@
         "duration":"Special",
         "trappings":"Effigy, ritualistic words, touch.",
         "effect":"Some practitioners of the arcane arts heal their allies. Others inflict sickness upon their enemies. To use this particularly nasty spell, the caster makes an arcane skill roll opposed by the victim's Spirit roll. Failure means the victim suffers a level ofFatigue immediately and at sunset each day thereafter (further castings of curse have no additional effect).<br /> The Fatigue cannot be recovered until the curse is l ifted, a nd once t he accursed becomes Incapacitated, he makes a Vigor roll each day to avoid death. A caster may not attempt to curse an individual more than once per day.<br /> <b>Breaking the Curse:</b> The curse can be lifted by the original caster at will, and ends automatically if she's slain. Dispel also removes a curse (at -2), t hough each individual may only try once—if failed it's beyond her abilities.",
-        "modifiers":"<b>TURN TO STONE (+5):</b> The accursed must make a Spirit roll every round or take a level of Fatigue. When Incapacitated, the victim turns to stone (his Toughness becomes Hardness). The curse must be broken to stop the effect (see above)."
+        "modifiers":[
+                        {
+                            "name":"TURN TO STONE (+5)",
+                            "effect":"The accursed must make a Spirit roll every round or take a level of Fatigue. When Incapacitated, the victim turns to stone (his Toughness becomes Hardness). The curse must be broken to stop the effect (see above)."
+                        }
+        ]
     },
     {
         "_id":"FCP004",
@@ -41,7 +59,12 @@
         "duration":"10 Minutes",
         "trappings":"A floating crystal over a map,message in the clouds, a ray of light.",
         "effect":"Sometimes it's literally impossible to find something via mundane means. Locate allows the caster to find these hidden things.<br /> When casters use this power, they choose an object, creature, or location. If the caster has never seen the target, the roll is at -2. A success gives a sense of the general direction and distance of the target. A raise also gives an impression of the target (e.g., the creature is asleep, the object is in a strongbox, the secret door is behind a bookshelf). <br /> <b>Running Water:</b> Running water blocks locate if it's in the path between the caster and the target.",
-        "modifiers":"<b>FIND THE PATH (+1):</b> In addition to the direction and distance to a target, the caster also has a supernatural sense of the best or fastest way to navigate to its general area."
+        "modifiers":[
+                        {
+                            "name":"FIND THE PATH (+1)",
+                            "effect":"In addition to the direction and distance to a target, the caster also has a supernatural sense of the best or fastest way to navigate to its general area."
+                        }
+        ]
     },
     {
         "_id":"FCP005",
@@ -52,7 +75,12 @@
         "duration":"Permanent (lock); Instant (unlock)",
         "trappings":"A skeleton key, miming opening or locking a lock.",
         "effect":"Lock magically seals a door, window, container, envelope, drawer, box, or other closeable item. Any attempt to open a magically locked container, door, or portal suffers a -4 penalty. Any further attempts by a character automatically fail until he increases his skill, at which point he may try again. A raise when magically locking the container means it can only be unlocked via the unlock version of this power (at the -4 penalty listed above) or by dispelling the magical lock then picking the lock as usual.<br /> The caster may set a passphrase when the lock is created; the portal opens for anyone who speaks the phrase and remains open until the phrase is repeated. <br /> Unlock may be used in place of Repair or Thievery (but not Strength) when attempting to unlock a container, door, or portal. It ignores up to 4 points of penalties to the task, and with a raise disarms any  traps or alarms on the portal as well. <br /> Neither spell has any effect on barriers, barricades, or blockages—only distinct objects which can be opened or shut.",
-        "modifiers":"<b>ALERT (+1):</b> Lock only. If the magically locked object is opened, the caster instantly knows this happened (and which object was unlocked if multiple instances of this power are in effect). A being who speaks the password (determined at the time of casting) doesn't set off the alert. This warning lasts 1 day."
+        "modifiers":[
+                        {
+                            "name":"ALERT (+1)",
+                            "effect":"Lock only. If the magically locked object is opened, the caster instantly knows this happened (and which object was unlocked if multiple instances of this power are in effect). A being who speaks the password (determined at the time of casting) doesn't set off the alert. This warning lasts 1 day."
+                        }
+        ]
     },
     {
         "_id":"FCP006",
@@ -63,7 +91,7 @@
         "duration":"Special",
         "trappings":"Prayer, rituals, sacrifices, special artifacts or relics.",
         "effect":"Sometimes even a wizard's best spell or a cleric's greatest miracle isn't enough. In times of great need, casters must turn to greater powers than their own and ask a patron to take a personal hand in the affairs of mortals. <br /> Mystic intervention allows a caster to trigger a great event of some sort. The event should be epic in proportions, such as saving a city from a siege, causing an earthquake to level a city, raising a legendary creature such as the Century Beast, bringing a centuriesdead hero to life, or closing the gate to some terrible and otherworldly dimension. <br /> The caster must stand in a magical ring, divine circle, sacred site, or other place of power and use the Ritual Magic rules to cast (see page 112). (Power Points are listed for that purpose—it can never be cast without ritual magic.) <br /> If successful, he's Exhausted for the next five days but some version of the desired effect, narrated by the Game Master as she sees fit, happens with a great display of magical energy. <br /> If the ritual's Dramatic Task fails, the caster is Exhausted as above and may not attempt the ritual again for five days or until some narrative goal is met (finding rare replacement components, the conjunction of the moons, or whatever the GM feels is appropriate). A Critical Failure also causes 5d6 damage in a 20” (40 yard) radius as well. <br /> Mystic intervention should give the heroes respite from major events but shouldn't short circuit the Game Master's entire campaign. For example it may not slay a powerful foe outright, but may provide a weapon that aids in the fight against it. Or a besieging army might be swept away by a great flood—but another approaches in a month. The city of a great enemy might be leveled by an earthquake, but the citizens begin to rebuild mere hours afterwards.<br /> Finally, the power can't override free will. It can't make a good person evil, fall in love with someone they're not, or otherwise change their nature. It might give an individual new perspective or a moment of empathy somehow, but true change is always a choice.",
-        "modifiers":""
+        "modifiers":[]
     },
     {
         "_id":"FCP007",
@@ -74,7 +102,7 @@
         "duration":"Instant",
         "trappings":"A summoning circle, an enchanted, iron casket, magical chains.",
         "effect":"The caster summons a creature from another plane, trapping them in some sort of prison, such as a binding circle. The trap is created with chalk, salt, glyphs and wards, or other materials prior to the power's activation, and takes ten minutes to prepare. <br /> Once the trap is prepared, the caster selects an extra-planar entity to summon. She must know about the creature somehow, perhaps by previous encounter, access to books and scrolls, or an Occult roll with a modifier set by the Game Master. The caster can summon a specific entity if she knows its proper name. <br /> Casting is an opposed roll between the caster's arcane skill and the entity's Spirit. If the spell fails the entity knows who attempted to bind it. If the caster rolls a Critical Failure, the creature may appear if it chooses to and is unbound—it may do as it wishes and its abilities allow. If the caster wins, the creature is summoned into the trap and magically bound there until it agrees to perform a service for the caster or breaks free (see below). The Power Points used to bind the target are invested and unavailable until the creature breaks free or completes its task. <br /> <b>Bargaining:</b> Casters summon creatures to task them with a “service” of some sort, such as taking part in a difficult battle, acting as a bodyguard, or some difficult or unpleasant task. The negotiation can usually be handled through roleplaying (and perhaps a Persuasion or Intimidation roll). <br />  Cunning creatures require more incentive. An evil being might ask for time to wander the earth and wreak havoc, a sacrifice, or some other “devil's bargain” proportionalto the service required. A good or noble creature might aid the summoner without reward if the cause is just, or might require she perform some task for her followers orsphere of influence. Entities never agree to impossible or unreasonable demands.<br /> Once the creature agrees to the terms, it must carry them out to the best of its ability. The caster does not have to live up to any promisess he set—though entities might seek revenge if deceived or their kind are summoned too often. Casters must be wary of this, especially if the beings have a way back to the prime material plane!<br /> <b>Breaking Free:</b> If no agreement is made after 24 hours, the caster must renew the mystic bonds by making another opposed roll of her arcane skill versus the creature's Spirit. This continues every 24 hours until an agreement is reached or the creature breaks free. The entity can't use any other power or ability to escape.",
-        "modifiers":""
+        "modifiers":[]
     },
     {
         "_id":"FCP008",
@@ -85,7 +113,20 @@
         "duration":"Instant",
         "trappings":"Cosmic hole in space, circle of magic runes.",
         "effect":"Plane shift allows the caster to move directly to another plane of existence (see page 255). If plane shifting to a known location, a success indicates the target appears within 10d10 miles of the intended location. With a raise, the mage appears half that distance away. <br /> If the caster doesn't know exactly where he wants to go, he can research locations within that plane to target a specific city, geographic location, etc. Failure means he arrives at a completely random location on that plane. Success puts him in the general vicinity, and a raise puts him closer to the desired locale. This is in addition to the accuracy of the arcane skill roll.",
-        "modifiers":"- <b>ADDITIONAL RECIPIENTS (+1):</b> The power may affect more than one target for 1 additional Power Point each. <br /> - <b>EXTRA-DIMENSIONAL SPACE (+1):</b> Instead of traveling to a known plane, the recipient travels to a pocket dimension where he’s conjured a magical shelter or similar structure with basic necessities, food, and water for up to five people. The structure remains afterward, so the mage and his companions may return to this space or to a new one, as desired. <br /> - <b>TRANSPORT FOE (+2):</b> The caster sends an unwilling target to another plane or extra-dimensional space. The being resists the casting with a Spirit roll. If failed, he's transported to another plane of the caster’s choice for three rounds (five rounds with a raise) before returning (or as close as possible if the space is occupied)."
+        "modifiers":[
+                        {
+                            "name":"ADDITIONAL RECIPIENTS (+1)",
+                            "effect":"The power may affect more than one target for 1 additional Power Point each."
+                        },
+                        {
+                            "name":"EXTRA-DIMENSIONAL SPACE (+1)",
+                            "effect":"Instead of traveling to a known plane, the recipient travels to a pocket dimension where he’s conjured a magical shelter or similar structure with basic necessities, food, and water for up to five people. The structure remains afterward, so the mage and his companions may return to this space or to a new one, as desired."
+                        },
+                        {
+                            "name":"TRANSPORT FOE (+2)",
+                            "effect":"The caster sends an unwilling target to another plane or extra-dimensional space. The being resists the casting with a Spirit roll. If failed, he's transported to another plane of the caster’s choice for three rounds (five rounds with a raise) before returning (or as close as possible if the space is occupied)."
+                        }
+        ]
     },
     {
         "_id":"FCP009",
@@ -96,7 +137,16 @@
         "duration":5,
         "trappings":"Words of power, holy symbol, glowing light",
         "effect":"Sanctuary protects the caster against area effect attacks, Tests, powers, and even ranged attacks that would affect her. Any evil creature that attempts to directly targetthe caster or recipient in a negative waymust make a Spirit roll as a free action (at -2 if cast with a raise). If the roll fails, the attempt fails and the creature loses that action.<br /> Sanctuary works both ways, however. If anyone under the effects of the power attempts to harm another creature (evil or otherwise), the power instantly terminates for everyone.<br /> Sanctuary trumps any ward the caster may be holding or protected by. If the creature overcomes the sanctuary spell, it ignores any wards that turn as well.",
-        "modifiers":"- <b>AREA EFFECT (+2/+3):</b> For + 2 points the power affects all allies within a Medium Blast Template centered on the recipient. For +3 points the area of effect is increased to a Large Blast Template.<br /> - <b>STRONG (+1):</b> Spirit rolls by the creature are made at −2 (−4 with a raise)."
+        "modifiers":[
+                        {
+                            "name":"AREA EFFECT (+2/+3)",
+                            "effect":"For + 2 points the power affects all allies within a Medium Blast Template centered on the recipient. For +3 points the area of effect is increased to a Large Blast Template."
+                        },
+                        {
+                            "name":"STRONG (+1)",
+                            "effect":"Spirit rolls by the creature are made at −2 (−4 with a raise)."
+                        }
+        ]
     },
     {
         "_id":"FCP010",
@@ -107,7 +157,12 @@
         "duration":5,
         "trappings":"Images on a reflected surface, glowing eyes, a crystal ball.",
         "effect":"Scrying allows the c aster to spy on a distant target. Preparing the spell takes one uninterrupted minute while the caster focuses on a target item, creature, or location. This makes her Vulnerable and unable to take any other actions. If she's Shaken or Stunned during this time, the spell fails.<br /> If the caster has never seen the target herself, she makes her arcane skill roll at -2. Scrying on a target in a different plane of existence also imposes a -2 penalty.<br /> Scrying is opposed by the subject's Spirit. If the target wins, he knows he's beingspied on. If the caster wins, he can see and hear the target and the area around it but cannot move his perspective. With a raise, he can shift perspective and follow the target at a Pace 24.<br /> A scrying “eye” may be seen with detect arcana (but not detect magic). It may also be dispelled (at -2 if suspected but not revealed).",
-        "modifiers":"GROUP SIGHT (+1): The caster may share her perception with allies within a Range of Smarts for the power's Duration."
+        "modifiers":[
+                        {
+                            "name":"GROUP SIGHT (+1)",
+                            "effect":"The caster may share her perception with allies within a Range of Smarts for the power's Duration."
+                        }
+        ]
     },
     {
         "_id":"FCP011",
@@ -118,7 +173,20 @@
         "duration":5,
         "trappings":"Clay figure that grows into a servant, a tattoo",
         "effect":"This power channels beasts of the natural world to perform tasks or attack one's foes. From mighty elephants to spying rats such creatures are powerful friends in the right circumstances. <br /> Summoned animals are loyal to the caster (but may be taken over by beast friend using the Bestarium modifier or similar abilities, see page 118). <br /> They understand simple commands such as attack a particular target, push that rock, and so on, but are animals and act as such. Summoned animals act on the caster's Action Card. They (or their corpses) return to wherever they came from when the spell expires.",
-        "modifiers":"- <b>ADDITIONAL ANIMALS (Varies):</b> Additional allies of the same type may be summoned at the same time for half the Power Points cost of the original summons (total cost including modifiers, rounded up). <br /> - <b>INCREASED TRAIT (+1):</b> The caster can increase a Trait one die type for one Power Point. She may do this for as many Traits as she likes, but only once per Trait. <br /> - <b>MIND RIDER (+1):</b> The caster can communicate and sense through any of the animals summoned in this casting."
+        "modifiers":[
+                        {
+                            "name":"ADDITIONAL ANIMALS (Varies)",
+                            "effect":"Additional allies of the same type may be summoned at the same time for half the Power Points cost of the original summons (total cost including modifiers, rounded up)."
+                        },
+                        {
+                            "name":"INCREASED TRAIT (+1)",
+                            "effect":"The caster can increase a Trait one die type for one Power Point. She may do this for as many Traits as she likes, but only once per Trait."
+                        },
+                        {
+                            "name":"MIND RIDER (+1)",
+                            "effect":"The caster can communicate and sense through any of the animals summoned in this casting."
+                        }
+        ]
     },
     {
         "_id":"FCP012",
@@ -129,7 +197,20 @@
         "duration":5,
         "trappings":"Clay figure that grows into a servant, a tattoo",
         "effect":"Conjuring a mindless ally or simple beast is one thing. But summoning a monster is a true display of a sorcerer’s power!<br /> Summoned monsters are loyal to the caster, understand simple commands, and act on the caster's Action Card.<br /> Monsters return from whence they came when the spell expires.",
-        "modifiers":"<b>ADDITIONAL MONSTERS (Varies):</b> Additional allies of the same type may be summoned at the same time for half the Power Points cost of the original summons (total cost including modifiers, rounded up). <br /> - <b>INCREASED TRAIT (+1):</b> The caster can increase the monster's Trait one die type for one Power Point. She may do this for as many Traits as she likes, but only once per Trait.<br /> -<b> MIND RIDER (+1):</b> The caster can communicate and sense through any of the monsters conjured in this casting."
+        "modifiers":[
+                        {
+                            "name":"ADDITIONAL MONSTERS (Varies)",
+                            "effect":"Additional allies of the same type may be summoned at the same time for half the Power Points cost of the original summons (total cost including modifiers, rounded up)."
+                        },
+                        {
+                            "name":"INCREASED TRAIT (+1)",
+                            "effect":"The caster can increase the monster's Trait one die type for one Power Point. She may do this for as many Traits as she likes, but only once per Trait."
+                        },
+                        {
+                            "name":"MIND RIDER (+1)",
+                            "effect":"The caster can communicate and sense through any of the monsters conjured in this casting."
+                        }
+        ]
     },
     {
         "_id":"FCP013",
@@ -140,7 +221,20 @@
         "duration":5,
         "trappings":"Clay figure that grows into a servant, a tattoo",
         "effect":"The zombie power (page 145) raises basic undead that serve a necromancer's whims for an hour. Summon undead doesn't require existing corpses but brings them from wherever they currently haunt to the necromancer's current location. They serve for a limited time, but are much more powerful than those typically summoned in groaning hordes of walking dead or clinking mobs of chattering skeletons.<br /> Summoned undead appear as listed in the Bestiary of this book or Savage Worlds, including any equipment in their profile. <br /> When the power expires, the loathsome dead fade back through shadow to their original location.",
-        "modifiers":"- <b>ADDITIONAL UNDEAD (Varies) :</b> Additional undead of the same type may be summoned at the same time for half the Power Points cost of the original summons (total cost including modifiers, rounded up). <br /> - <b>INCREASED TRAIT (+1):</b> The caster can increase the monster’s Trait one die type for one Power Point. She may do this for as many Traits as she likes, but only once per Trait.<br /> - <b>MIND RIDER (+1):</b> The caster can communicate and sense through the undead."
+        "modifiers":[
+                        {
+                            "name":"ADDITIONAL UNDEAD (Varies)",
+                            "effect":"Additional undead of the same type may be summoned at the same time for half the Power Points cost of the original summons (total cost including modifiers, rounded up)."
+                        },
+                        {
+                            "name":"INCREASED TRAIT (+1)",
+                            "effect":"The caster can increase the monster’s Trait one die type for one Power Point. She may do this for as many Traits as she likes, but only once per Trait."
+                        },
+                        {
+                            "name":"MIND RIDER (+1)",
+                            "effect":"The caster can communicate and sense through the undead."
+                        }
+        ]
     },
     {
         "_id":"FCP014",
@@ -151,7 +245,7 @@
         "duration":"Instant",
         "trappings":"A glowing hourglass, floating ice particles, blurring.",
         "effect":"Time is a constant for most, but not this spellcaster. Time stop stops time for all but the caster, granting her 1d4+1 new turns, which she must take immediately after she finishes this one. During these turns the caster may act as normal on her current Action Card. With a raise, she may choose to draw a new Action Card each turn. Time stop ends if any of the caster;s action affect another character or creature.",
-        "modifiers":""
+        "modifiers":[]
     },
     {
         "_id":"FCP015",
@@ -161,7 +255,7 @@
         "range":"Smarts",
         "duration":"Instant",
         "trappings":"A jinn from a bottle, clicked heels, an incantation, a monkey's paw.",
-        "effect":"Wish allows a character to bend reality to his will. It is taxing to alter reality, however, so the caster must permanently sacrifice 3 of his own Power Points (after the spell is cast). A raise on the arcane skill roll eliminates this cost. <br /> A caster may wish for any one of the following effects per casting, chosen before the roll is made:<br /> - <b>ACTIVATE A POWER:</b> Wish casts any other available power, including modifiers, available in the campaign with a raise. If the spell is opposed, the target rolls with a -2 penalty on top of any other modifiers. If the Power Points required to activate the power and modifiers are greater than the cost of wish, the caster must pay the difference. <br /> - <b>INTERCESSION:</b> The caster wishes for some form of aid, which typically appears after a short period of time. A party trapped in a collapsed dungeon might wish for escape only to be rescued by a party of dwarven miners. A spellcaster could wish to know the true name of a powerful demon and be contacted the next day by a traitorous subordinate of the creature. <br /> - <b>GAIN AN EDGE:</b> The caster can gain (or grant another) a permanent Edge. The recipient must meet the Edge's Requirements and can never gain more than one Edge from a wish. <br /> - <b>WEALTH:</b> The spellcaster wishes for up to 10,000 gp worth of goods, including anything from transportation to supplies to magic items. Such goods generally sell for a quarter of their value. The wealth doesn't appear from nothing but rather comes to the caster via events contrived by the GM.<br /> - <b>TRAVEL BACK THROUGH TIME:</b> The caster travels back in time for a short period: one minute outside of combat or back to the start of the current round in combat. Everything that happened in that period is reversed except for the caster's Power Points, Bennies, and Wounds. The GM should do her best to remember all other actors' state of things from the start of the round, but warping time is imperfect so don't worry about getting everything exactly right. Once reversed, only the caster remembers the alternate sequence of events, and that period of time cannot be altered again.<br /> - <b>SEE THE FUTURE:</b> The caster peers into the near or far future. A look into the near future grants her three Conviction tokens that must be used by the caster or anyone she's currently in contact with (mental, verbal, in sight, etc.) within the next five rounds. At the end of the fifth round, any remaining tokens are discarded. A look into the far future allows the caster to ask the Game Master one question about the future and receive as accurate an answer as possible. Actions by the spellcaster can change the future, however, so this may only be the most likely path or a warning of future dangers.<br /> - <b>RAISE A TRAIT:</b> Wish can permanently increase a Trait one die type. This increases the Trait's limit by one die type as well. A recipient may never have more than one Trait raised by a wish.  - <b>RESTORE FATE:</b> The hero and all Wild Cards in Range may refill their Bennies to their usual starting maximum.<br /> - <b>SPECIAL:</b> The character may change relatively minor aspects of herself, others, or the world around her (if the subject of the wish doesn't want to be affected, it's resisted with a Spirit roll at -2). This shouldn't cause any far-reaching changes to the world or history, shouldn't be covered by one of the abilities above, and is completely at the whim of the Game Master. A caster can change her gender, ancestry, languages, etc., but these changes do not alter time and are thus not retroactive. <br /> Wish can improve someone's mood (and their attitude on the Reaction Table, if appropriate), but it can't permanently affect free will. It can't force a change of heart or make someone harm themselves.",
-        "modifiers":""
+        "effect":"Wish allows a character to bend reality to his will. It is taxing to alter reality, however, so the caster must permanently sacrifice 3 of his own Power Points (after the spell is cast). A raise on the arcane skill roll eliminates this cost. <br /> A caster may wish for any one of the following effects per casting, chosen before the roll is made:<li></li> <b>ACTIVATE A POWER:</b> Wish casts any other available power, including modifiers, available in the campaign with a raise. If the spell is opposed, the target rolls with a -2 penalty on top of any other modifiers. If the Power Points required to activate the power and modifiers are greater than the cost of wish, the caster must pay the difference. <li></li> <b>INTERCESSION:</b> The caster wishes for some form of aid, which typically appears after a short period of time. A party trapped in a collapsed dungeon might wish for escape only to be rescued by a party of dwarven miners. A spellcaster could wish to know the true name of a powerful demon and be contacted the next day by a traitorous subordinate of the creature. <li></li> <b>GAIN AN EDGE:</b> The caster can gain (or grant another) a permanent Edge. The recipient must meet the Edge's Requirements and can never gain more than one Edge from a wish. <li></li> <b>WEALTH:</b> The spellcaster wishes for up to 10,000 gp worth of goods, including anything from transportation to supplies to magic items. Such goods generally sell for a quarter of their value. The wealth doesn't appear from nothing but rather comes to the caster via events contrived by the GM.<li></li> <b>TRAVEL BACK THROUGH TIME:</b> The caster travels back in time for a short period: one minute outside of combat or back to the start of the current round in combat. Everything that happened in that period is reversed except for the caster's Power Points, Bennies, and Wounds. The GM should do her best to remember all other actors' state of things from the start of the round, but warping time is imperfect so don't worry about getting everything exactly right. Once reversed, only the caster remembers the alternate sequence of events, and that period of time cannot be altered again.<li></li> <b>SEE THE FUTURE:</b> The caster peers into the near or far future. A look into the near future grants her three Conviction tokens that must be used by the caster or anyone she's currently in contact with (mental, verbal, in sight, etc.) within the next five rounds. At the end of the fifth round, any remaining tokens are discarded. A look into the far future allows the caster to ask the Game Master one question about the future and receive as accurate an answer as possible. Actions by the spellcaster can change the future, however, so this may only be the most likely path or a warning of future dangers.<li></li> <b>RAISE A TRAIT:</b> Wish can permanently increase a Trait one die type. This increases the Trait's limit by one die type as well. A recipient may never have more than one Trait raised by a wish.  - <b>RESTORE FATE:</b> The hero and all Wild Cards in Range may refill their Bennies to their usual starting maximum.<li></li> <b>SPECIAL:</b> The character may change relatively minor aspects of herself, others, or the world around her (if the subject of the wish doesn't want to be affected, it's resisted with a Spirit roll at -2). This shouldn't cause any far-reaching changes to the world or history, shouldn't be covered by one of the abilities above, and is completely at the whim of the Game Master. A caster can change her gender, ancestry, languages, etc., but these changes do not alter time and are thus not retroactive. <br /> Wish can improve someone's mood (and their attitude on the Reaction Table, if appropriate), but it can't permanently affect free will. It can't force a change of heart or make someone harm themselves.",
+        "modifiers":[]
     }
 ] 

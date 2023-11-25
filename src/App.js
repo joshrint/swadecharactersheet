@@ -11,6 +11,8 @@ import CharacterList from './components/CharacterList';
 import TopNav from './components/tools/TopNav';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import PowerList from './components/tools/PowerList';
+import EdgeList from './components/tools/EdgeList';
 
 Amplify.configure(awsconfig);
 
@@ -21,7 +23,7 @@ function App({user}) {
 
   useEffect(() =>{
     axios
-      .get('https://swade-api.azurewebsites.net/api/GetAllCharactersNames')
+      .get('https://swade-api.azurewebsites.net/api/GetAllCharacters')
       .then((res) => {
         setCharNames(res.data);
       })
@@ -41,6 +43,8 @@ function App({user}) {
             <Route exact path='/' element={<CharacterList characters={charNames} username={user.username} />} />
             <Route path='/create-character' element={<CreateCharacter username={user.username} />} />
             <Route path='/character/:id' element={<CharacterSheet />} />
+            <Route path='/info/powers' element={<PowerList />} />
+            <Route path='/info/edges' element={<EdgeList />} />
           </Routes>
         </Col>
       </Row>

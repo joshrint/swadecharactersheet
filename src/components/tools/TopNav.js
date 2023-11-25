@@ -3,7 +3,7 @@ import {Drawer, ListItem, ListItemIcon, ListItemText, Divider} from '@mui/materi
 import {Auth} from 'aws-amplify';
 import { useLocation, useNavigate} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faCirclePlus, faRightFromBracket, faUser, faDiceD20, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faCirclePlus, faRightFromBracket, faUser, faDiceD20, faBars, faTrophy, faSkull, faWandSparkles } from '@fortawesome/free-solid-svg-icons';
 import '../../stylesheets/Nav.css';
 
 export default function TopNav({characters, username}) {
@@ -54,6 +54,11 @@ export default function TopNav({characters, username}) {
         {name:'Home', icon: <FontAwesomeIcon icon={faHouse} />, path:"/"},
         {name:'New Character', icon:<FontAwesomeIcon icon={faCirclePlus} />, path:'/create-character'}
     ]
+    const secondaryData = [
+        {name:'Edges', icon: <FontAwesomeIcon icon={faTrophy} />, path:'/info/edges'},
+        {name: 'Hinderance', icon: <FontAwesomeIcon icon={faSkull} />, path:'/info/hinderances'},
+        {name: 'Powers', icon: <FontAwesomeIcon icon={faWandSparkles} />, path:'/info/powers'}
+    ]
     
     const charList =         
         characters.length === 0 ? 'No characters on record' : characters.map((character, c) => 
@@ -65,7 +70,7 @@ export default function TopNav({characters, username}) {
             : <div key={c}></div>
         )
     
-    const getList = () => (
+    const getList = (data) => (
         <div style={{ width: 250}}>
             {data.map((item, index) =>(
                 <ListItem button key={index} onClick={()=>handleNav(item.path)}>
@@ -89,7 +94,7 @@ export default function TopNav({characters, username}) {
                     <ListItemText primary={username} />
                 </ListItem>
                 <Divider />
-                {getList()}
+                {getList(data)}
                 <Divider />
                     <ListItem>
                         <ListItemIcon><FontAwesomeIcon icon={faDiceD20} /></ListItemIcon>
@@ -97,10 +102,13 @@ export default function TopNav({characters, username}) {
                     </ListItem>
                     {charList}
                 <Divider />
+                {getList(secondaryData)}
+                <Divider />
                     <ListItem button onClick={signOut}>
                         <ListItemIcon><FontAwesomeIcon icon={faRightFromBracket} /></ListItemIcon>
                         <ListItemText primary="Log Out"/>
                     </ListItem>
+                
             </Drawer>
     </>
   )
